@@ -1,0 +1,19 @@
+.commands-data-table.left {
+  text-align: left;
+}
+
+.commands-data-table.right {
+  text-align: right;
+}
+
+.commands-data-table, .commands-data-table.center {
+  text-align: center;
+}
+
+.col-url {
+  white-space: nowrap; 
+  text-overflow:ellipsis; 
+  overflow: hidden;
+  max-width: 400px;
+  width: 80%;
+}
