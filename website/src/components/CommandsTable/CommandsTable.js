@@ -169,7 +169,7 @@ function GlobalFilter({
           setValue(e.target.value);
           onChange(e.target.value);
         }}
-        placeholder={`Search commands...`}
+        placeholder={`Search links...`}
       />
     </label>
   );

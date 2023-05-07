@@ -26,7 +26,7 @@ export function SelectColumnFilter({
             setFilter(e.target.value || undefined);         
         }}
       >
-        <option value="">All Microsoft Portals</option>
+        <option value="">All links</option>
         {options.map((option, i) => (
           <option key={i} value={option}>
             {option}

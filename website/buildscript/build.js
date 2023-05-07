@@ -134,7 +134,7 @@ async function run() {
             json.categoryShortName = 'github'
         }
         else if(json.url.includes('/graph/')) {
-            json.categoryShortName = 'github'
+            json.categoryShortName = 'graph'
         }
         //Next check if icon was present
         else if(json.category && svgFiles.includes(json.category)){ 
