@@ -1,7 +1,7 @@
 {
   "linkName": "ad/legacymfa",
   "title": "Legacy MFA",
-  "autoCrawledTitle": "Sign in to your account",
+  "autoCrawledTitle": "",
   "keywords": "",
   "tags": "azuread",
   "linkUrl": "https://account.activedirectory.windowsazure.com/UserManagement/MfaSettings.aspx"

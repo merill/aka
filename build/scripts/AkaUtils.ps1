@@ -92,3 +92,8 @@ function Update-Title {
         }
     }
 }
+
+function Update-All {
+    Update-Urls
+    Update-Title
+}

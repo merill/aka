@@ -1,0 +1,8 @@
+{
+  "linkName": "aadtls",
+  "title": "",
+  "autoCrawledTitle": "Gets a list of sign-ins that use older versions of TLS. This can be queried using either PowerShell or by querying log analytics. Learn more about AAD TLS deprecation today https://docs.microsoft.com/en-us/troubleshoot/azure/active-directory/enable-support-tls-environment?tabs=azure-monitor#overview-of-new-telemetry-in-the-sign-in-logs · GitHub",
+  "keywords": "",
+  "tags": "",
+  "linkUrl": "https://gist.github.com/merill/379c76c3fa4b6c003207ede4f9a5406d"
+}
