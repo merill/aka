@@ -61,7 +61,7 @@ function Get-AllAkaFromFolder {
 function Update-Urls {
     $akaLinks = Get-AllAkaFromFolder
     foreach ($akaLink in $akaLinks) {
-        Write-Host "Checking https://aka.ms/"$akaLink.linkName
+        Write-Host "Update url: https://aka.ms/"$akaLink.linkName
         $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.linkName)" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
         if ($request.Headers.Location) {
             $uri = $request.Headers.Location[0]
@@ -71,9 +71,24 @@ function Update-Urls {
             else {
                 $akaLink.linkUrl = $uri
             }
-            
         }
 
         Write-ObjectToJsonFile $akaLink
+    }
+}
+
+function Update-Title {
+    $akaLinks = Get-AllAkaFromFolder
+    foreach ($akaLink in $akaLinks) {
+        Write-Host "Update title: https://aka.ms/"$akaLink.linkName
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.linkName)" -UseBasicParsing
+        
+        if($request.Content -match "<title>(?<title>.*)</title>") {
+            $title = $Matches.title
+            if($title -ne "Sign in to your account") {
+                $akaLink.autoCrawledTitle = $Matches.title
+                Write-ObjectToJsonFile $akaLink    
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 {
   "linkName": "mfasetup",
   "title": "Alternative for My Security",
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Sign in to your account",
   "keywords": "",
   "tags": "azuread",
   "linkUrl": "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1"

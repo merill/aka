@@ -1,7 +1,7 @@
 {
   "linkName": "ad/logs",
   "title": "Sign in Logs",
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Microsoft Entra admin center",
   "keywords": "",
   "tags": "azuread",
   "linkUrl": "https://entra.microsoft.com/#view/Microsoft_AAD_IAM/SignInEventsV3Blade"

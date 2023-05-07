@@ -1,7 +1,7 @@
 {
   "linkName": "ad/support",
   "title": "Support",
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Microsoft Entra admin center",
   "keywords": "",
   "tags": "azuread",
   "linkUrl": "https://entra.microsoft.com/#view/Microsoft_Azure_Support/NewSupportRequestV3Blade/callerName/ActiveDirectory/issueType/technical"
