@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+title: 🖥 Home
+slug: /
+hide_table_of_contents: true
+custom_edit_url: null
+pagination_next: null
+pagination_prev: null
+---
+<head>
+  <link rel="search" type="application/opensearchdescription+xml" title="[aka.cmd.ms] Search" href="/opensearch.xml" />
+</head>
+
+import { CommandsTable } from "@site/src/components/CommandsTable";
+import { commands } from "@site/src/tableHome/commands.table";
+import { columns } from "@site/src/tableHome/columns.table";
+
+# Your [aka.ms](https://aka.cmd.ms) quick links all in one place!
+
+Do you have trouble remembering Microsoft's [aka.ms](https://aka.cmd.ms) links? This community contributed list of aka.ms links is for you.
+
+✅ 🙏 You can add new [aka.ms](https://aka.cmd.ms) by selecting 'Add New aka.ms link'.
+
+Remember to [check out the browser extensions](/docs/tips) that add support for auto-complete in the address bar.
+
+<CommandsTable
+  columns={columns}
+  data={commands}
+/>
+
