@@ -59,6 +59,14 @@ const config = {
         },
         items: [
           {
+            href: 'https://cmd.ms',
+            label: 'cmd.ms'
+          },
+          {
+            href: 'https://merill.net',
+            label: 'merill.net',
+          },
+          {
             href: 'https://github.com/merill/aka',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',

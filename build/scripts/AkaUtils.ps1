@@ -69,7 +69,7 @@ function Update-Urls {
                 Write-Error "aka.ms/$($akaLink.link) is not a valid aka.ms link."
             }
             else {
-                $akaLink.linkUrl = $uri
+                $akaLink.url = $uri
             }
         }
 

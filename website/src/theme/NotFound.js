@@ -16,15 +16,15 @@ export default function NotFound() {
         })}
       />
       <Layout>
-        <main className="container margin-vert--xl">
+        <main className="container margin-vert--lg">
           <div className="row">
-            <div className="col col--6 col--offset-0">
+            <div className="col col--offset-0">
               <h1 className="hero__title">
                 <Translate
                   id="theme.NotFound.title"
                   description="The title of the 404 page"
                 >
-                  Command Not Found
+                  Page Not Found
                 </Translate>
               </h1>
               <p>
@@ -32,15 +32,8 @@ export default function NotFound() {
                   id="theme.NotFound.p1"
                   description="The first paragraph of the 404 page"
                 >
-                  Use the table below to look up the command.
+                  Use the table below to look up aka.ms links.
                 </Translate>
-              </p>
-              <p>
-                If the command you want is not yet available in <b>cmd.ms</b>{" "}
-                you can use the {" "}
-                <a href="https://github.com/merill/cmd/issues/new?assignees=&labels=enhancement&template=new-command-request.md&title=">
-                  Propose New Command form
-                </a> to make a request.
               </p>
             </div>
             <div className="col col--offset-0">
