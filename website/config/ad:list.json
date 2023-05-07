@@ -3,6 +3,6 @@
   "title": "List all these shortcuts",
   "autoCrawledTitle": "GitHub - microsoft/aka: Doc page listing all public aka.ms links for Microsoft admin portals",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://github.com/microsoft/aka#readme"
+  "category": "azuread",
+  "url": "https://github.com/microsoft/aka#readme"
 }

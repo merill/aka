@@ -3,6 +3,6 @@
   "title": "Self Service Password Reset",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://passwordreset.microsoftonline.com/"
+  "category": "azuread",
+  "url": "https://passwordreset.microsoftonline.com/"
 }

@@ -3,6 +3,6 @@
   "title": "Microsoft Defender for Cloud Apps (MDA)",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "defender",
-  "linkUrl": "https://portal.cloudappsecurity.com/"
+  "category": "defender",
+  "url": "https://portal.cloudappsecurity.com/"
 }

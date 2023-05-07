@@ -3,6 +3,6 @@
   "title": "Device Login - Work or School Account",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://login.microsoftonline.com/common/oauth2/deviceauth"
+  "category": "azuread",
+  "url": "https://login.microsoftonline.com/common/oauth2/deviceauth"
 }

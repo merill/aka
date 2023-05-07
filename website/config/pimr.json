@@ -3,6 +3,6 @@
   "title": "Privileged Identity Management - Roles",
   "autoCrawledTitle": "Microsoft Entra admin center",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://entra.microsoft.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadmigratedroles"
+  "category": "azuread",
+  "url": "https://entra.microsoft.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadmigratedroles"
 }

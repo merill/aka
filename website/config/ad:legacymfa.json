@@ -3,6 +3,6 @@
   "title": "Legacy MFA",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://account.activedirectory.windowsazure.com/UserManagement/MfaSettings.aspx"
+  "category": "azuread",
+  "url": "https://account.activedirectory.windowsazure.com/UserManagement/MfaSettings.aspx"
 }

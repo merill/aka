@@ -3,6 +3,6 @@
   "title": "My Access Packages",
   "autoCrawledTitle": "My Staff",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://mystaff.microsoft.com/"
+  "category": "azuread",
+  "url": "https://mystaff.microsoft.com/"
 }

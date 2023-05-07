@@ -1,9 +1,10 @@
 /**
  * @name build.js
- * @description Creates Cloudflare _redirect file based on ./config/commands.csv
+ * @description Creates source code from .json config files.
  */
 
 const fs = require('fs');
+const path = require('path');
 const { parse } = require('csv-parse');
 const os = require('os');
 
@@ -103,12 +104,20 @@ async function run() {
     jsonsInDir.forEach(file => {
         const fileData = fs.readFileSync(path.join('./config', file));
         const json = JSON.parse(fileData.toString());
+        if(json.title === ''){
+            if(json.autoCrawledTitle != '') {
+                json.title = json.autoCrawledTitle
+            }
+            else {
+                json.title = json.link
+            }
+        }
         akaLinks.push(json);
     });
 
         //allCommands = expandAlias(commands);
         //validateCommands(allCommands);
-        createJsonFile(commands);
+        createJsonFile(akaLinks);
         //createJsonFileForExtension(commands);
 }
 

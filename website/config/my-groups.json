@@ -3,6 +3,6 @@
   "title": "My Groups",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://account.activedirectory.windowsazure.com/r#/groups"
+  "category": "azuread",
+  "url": "https://account.activedirectory.windowsazure.com/r#/groups"
 }

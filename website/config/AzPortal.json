@@ -3,6 +3,6 @@
   "title": "Azure Portal",
   "autoCrawledTitle": "Microsoft Azure",
   "keywords": "",
-  "tags": "azure",
-  "linkUrl": "https://portal.azure.com/"
+  "category": "azure",
+  "url": "https://portal.azure.com/"
 }

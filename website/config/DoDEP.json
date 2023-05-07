@@ -3,6 +3,6 @@
   "title": "DoD - Endpoint Manager",
   "autoCrawledTitle": "Microsoft Intune Government admin center",
   "keywords": "",
-  "tags": "microsoft365",
-  "linkUrl": "https://endpoint.microsoft.us/"
+  "category": "microsoft365",
+  "url": "https://endpoint.microsoft.us/"
 }

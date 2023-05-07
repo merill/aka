@@ -3,6 +3,6 @@
   "title": "Intune admin center",
   "autoCrawledTitle": "Microsoft Intune admin center",
   "keywords": "",
-  "tags": "intune",
-  "linkUrl": "https://intune.microsoft.com/"
+  "category": "intune",
+  "url": "https://intune.microsoft.com/"
 }

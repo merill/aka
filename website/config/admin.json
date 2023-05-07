@@ -3,6 +3,6 @@
   "title": "M365 Admin Portal",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://admin.microsoft.com/"
+  "category": "azuread",
+  "url": "https://admin.microsoft.com/"
 }

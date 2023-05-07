@@ -3,6 +3,6 @@
   "title": "Attack simulation training",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "defender",
-  "linkUrl": "https://security.microsoft.com/attacksimulator"
+  "category": "defender",
+  "url": "https://security.microsoft.com/attacksimulator"
 }

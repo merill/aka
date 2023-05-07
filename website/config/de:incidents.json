@@ -3,6 +3,6 @@
   "title": "Incidents",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "defender",
-  "linkUrl": "https://security.microsoft.com/incidents"
+  "category": "defender",
+  "url": "https://security.microsoft.com/incidents"
 }

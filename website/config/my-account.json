@@ -3,6 +3,6 @@
   "title": "My Account",
   "autoCrawledTitle": "My Account",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://myaccount.microsoft.com/"
+  "category": "azuread",
+  "url": "https://myaccount.microsoft.com/"
 }

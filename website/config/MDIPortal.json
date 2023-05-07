@@ -3,6 +3,6 @@
   "title": "Microsoft Defender for Identity (MDI)",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "defender",
-  "linkUrl": "https://portal.atp.azure.com/"
+  "category": "defender",
+  "url": "https://portal.atp.azure.com/"
 }

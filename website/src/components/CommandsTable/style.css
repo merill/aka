@@ -17,3 +17,11 @@
   max-width: 400px;
   width: 80%;
 }
+
+.col-title {
+  white-space: nowrap; 
+  text-overflow:ellipsis; 
+  overflow: hidden;
+  max-width: 400px;
+  width: 80%;
+}

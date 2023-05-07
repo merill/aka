@@ -3,6 +3,6 @@
   "title": "Azure AD Portal",
   "autoCrawledTitle": "Microsoft Azure",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview"
+  "category": "azuread",
+  "url": "https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview"
 }

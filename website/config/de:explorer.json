@@ -3,6 +3,6 @@
   "title": "Explorer",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "defender",
-  "linkUrl": "https://security.microsoft.com/threatexplorer"
+  "category": "defender",
+  "url": "https://security.microsoft.com/threatexplorer"
 }

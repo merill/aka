@@ -60,8 +60,8 @@ export const columns = [
     ),    
   },
   {
-    Header: "aka.ms",
-    accessor: "command",
+    Header: "Link",
+    accessor: "link",
     className: "commands-data-table left",
     Cell: ({ cell: { value }, row: { original } }) => (
       <a href={`https://aka.ms/${value}`} target="blank" rel="noreferrer noopener">
@@ -71,8 +71,8 @@ export const columns = [
   },
   {
     Header: "Title",
-    accessor: "description",
-    className: "commands-data-table whitespace-nowrap left",
+    accessor: "title",
+    className: "commands-data-table whitespace-nowrap left col-title",
     Cell: ({ cell: { value }, row: { original } }) => (
       <a href={`${original.url}`} target="blank" rel="noreferrer noopener">
         {value}

@@ -3,6 +3,6 @@
   "title": "Conditional Access What If",
   "autoCrawledTitle": "Microsoft Azure",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://portal.azure.com/#view/Microsoft_AAD_ConditionalAccess/WhatIfBlade"
+  "category": "azuread",
+  "url": "https://portal.azure.com/#view/Microsoft_AAD_ConditionalAccess/WhatIfBlade"
 }

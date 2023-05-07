@@ -3,6 +3,6 @@
   "title": "Secure Score",
   "autoCrawledTitle": "Microsoft Entra admin center",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://entra.microsoft.com/#view/Microsoft_AAD_IAM/SecurityMenuBlade/~/IdentitySecureScore/menuId/IdentitySecureScore"
+  "category": "azuread",
+  "url": "https://entra.microsoft.com/#view/Microsoft_AAD_IAM/SecurityMenuBlade/~/IdentitySecureScore/menuId/IdentitySecureScore"
 }

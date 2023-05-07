@@ -3,6 +3,6 @@
   "title": "Microsoft Login Page",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://login.microsoftonline.com/"
+  "category": "azuread",
+  "url": "https://login.microsoftonline.com/"
 }

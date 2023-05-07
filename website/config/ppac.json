@@ -3,6 +3,6 @@
   "title": "Power Platform",
   "autoCrawledTitle": "Power Platform admin center",
   "keywords": "",
-  "tags": "power platform",
-  "linkUrl": "https://admin.powerplatform.microsoft.com/"
+  "category": "powerplatform",
+  "url": "https://admin.powerplatform.microsoft.com/"
 }

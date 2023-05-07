@@ -3,6 +3,6 @@
   "title": "My Apps",
   "autoCrawledTitle": "My Apps",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://myapplications.microsoft.com/"
+  "category": "azuread",
+  "url": "https://myapplications.microsoft.com/"
 }

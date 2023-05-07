@@ -3,6 +3,6 @@
   "title": "Users",
   "autoCrawledTitle": "Microsoft Entra admin center",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/AllUsers/menuId/AllUsers"
+  "category": "azuread",
+  "url": "https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/AllUsers/menuId/AllUsers"
 }

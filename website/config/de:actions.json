@@ -3,6 +3,6 @@
   "title": "Action Center",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "defender",
-  "linkUrl": "https://security.microsoft.com/action-center"
+  "category": "defender",
+  "url": "https://security.microsoft.com/action-center"
 }

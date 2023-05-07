@@ -3,6 +3,6 @@
   "title": "Alternative for My Security",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1"
+  "category": "azuread",
+  "url": "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1"
 }

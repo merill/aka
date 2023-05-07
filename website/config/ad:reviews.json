@@ -3,6 +3,6 @@
   "title": "Access Reviews",
   "autoCrawledTitle": "Microsoft Entra admin center",
   "keywords": "",
-  "tags": "azuread",
-  "linkUrl": "https://entra.microsoft.com/#view/Microsoft_AAD_ERM/DashboardBlade/~/Controls"
+  "category": "azuread",
+  "url": "https://entra.microsoft.com/#view/Microsoft_AAD_ERM/DashboardBlade/~/Controls"
 }

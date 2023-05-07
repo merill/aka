@@ -3,6 +3,6 @@
   "title": "Microsoft Remote Connectivity Analyzer",
   "autoCrawledTitle": "Microsoft Remote Connectivity Analyzer",
   "keywords": "",
-  "tags": "microsoft365",
-  "linkUrl": "https://testconnectivity.microsoft.com/"
+  "category": "microsoft365",
+  "url": "https://testconnectivity.microsoft.com/"
 }

@@ -3,6 +3,6 @@
   "title": "DoD - Defender Admin Center",
   "autoCrawledTitle": "",
   "keywords": "",
-  "tags": "microsoft365",
-  "linkUrl": "https://securitycenter.windows.us/"
+  "category": "microsoft365",
+  "url": "https://securitycenter.windows.us/"
 }
