@@ -99,11 +99,16 @@ async function run() {
     console.log('Reading aka .json files');
 
     const jsonsInDir = fs.readdirSync('./config').filter(file => path.extname(file) === '.json');
+    const svgsInDir = fs.readdirSync('./static/img').filter(file => path.extname(file) === '.svg');
+    const svgFiles = svgsInDir.map(filename => filename.replace(/\.[^/.]+$/, "")); //Remove all file extensions to compare with category
+
     let akaLinks = [];
 
     jsonsInDir.forEach(file => {
         const fileData = fs.readFileSync(path.join('./config', file));
         const json = JSON.parse(fileData.toString());
+
+        //Calculate the title to display
         if(json.title === ''){
             if(json.autoCrawledTitle != '') {
                 json.title = json.autoCrawledTitle
@@ -112,6 +117,15 @@ async function run() {
                 json.title = json.link
             }
         }
+
+        //Calculate the icon to show
+        json.categoryShortName = 'general' //Default icon
+        if(json.category){
+            if(svgFiles.includes(json.category)){ //Check if we have an icon for this tag
+                json.categoryShortName = json.category
+            }
+        }
+        
         akaLinks.push(json);
     });
 

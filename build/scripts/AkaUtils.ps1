@@ -14,7 +14,7 @@ function Get-AkaCustomObject ($item) {
         title            = $item.title
         autoCrawledTitle = $item.autoCrawledTitle
         keywords         = $item.keywords
-        category             = $item.category
+        category         = $item.category
         url              = $item.url
     }
 
