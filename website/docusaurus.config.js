@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '[aka.cmd.ms]',
-  tagline: 'aka.cmd.ms: Find all your aka.ms quick links in one place!',
+  tagline: 'aka.cmd.ms: Find all your aka.ms links in one place!',
   url: 'https://aka.cmd.ms',
   baseUrl: '/',
   onBrokenLinks: 'throw',

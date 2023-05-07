@@ -135,8 +135,24 @@ li > a.menu__link {
   content:url('/static/img/intune.svg');
 }
 
+.cat-microsoft {
+  content:url('/static/img/microsoft.svg');
+}
+
+.cat-github {
+  content:url('/static/img/github.svg');
+}
+
+.cat-graph {
+  content:url('/static/img/graph.svg');
+}
+
 .cat-microsoft365 {
   content:url('/static/img/m365.svg');
+}
+
+.cat-dynamics365 {
+  content:url('/static/img/dynamics365.svg');
 }
 
 .cat-mypages {

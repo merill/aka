@@ -120,14 +120,35 @@ async function run() {
 
         //Calculate the icon to show
         json.categoryShortName = 'general' //Default icon
-        if(json.category){
-            if(svgFiles.includes(json.category)){ //Check if we have an icon for this tag
-                json.categoryShortName = json.category
-            }
+        //Domain based icons override others
+        if(json.url.includes('entra.microsoft.com') || json.url.includes('/azure/active-directory')) {
+            json.categoryShortName = 'azuread'
+        }
+        else if(json.url.includes('intune.microsoft.com') || json.url.includes('/mem/intune')) {
+            json.categoryShortName = 'intune'
+        }
+        if(json.url.includes('dynamics.com') || json.url.includes('/dynamics365/') || json.url.includes('dynamicspartners.transform.microsoft.com')) {
+            json.categoryShortName = 'dynamics365'
+        }
+        else if(json.url.includes('github.com')) {
+            json.categoryShortName = 'github'
+        }
+        else if(json.url.includes('/graph/')) {
+            json.categoryShortName = 'github'
+        }
+        //Next check if icon was present
+        else if(json.category && svgFiles.includes(json.category)){ 
+            json.categoryShortName = json.category
+        }
+        //Finally use generic learn.microsoft.com if it is there.
+        else if(json.url.includes('learn.microsoft.com')) {
+            json.categoryShortName = 'microsoft'
         }
         
         akaLinks.push(json);
     });
+
+    akaLinks.sort((a, b) => a.link.localeCompare(b.link));
 
         //allCommands = expandAlias(commands);
         //validateCommands(allCommands);
