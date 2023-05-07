@@ -8,6 +8,18 @@ $folderPath = Split-Path $filePath -Parent
 $configPath = $folderPath -replace "aka/build/scripts", "aka/website/config"
 $csvFilePath = Join-Path $configPath "aka.csv"
 
+function Get-AkaCustomObject ($item) {
+    $akaLink = [PSCustomObject]@{
+        linkName         = $item.linkName
+        title            = $item.title
+        autoCrawledTitle = $item.autoCrawledTitle
+        keywords         = $item.keywords
+        tags             = $item.tags
+        linkUrl          = $item.linkUrl
+    }
+    return $akaLink
+}
+
 function Convert-AkaCsvToJson {
     Write-Host "Reading csv file from $csvFilePath"
 
@@ -16,39 +28,43 @@ function Convert-AkaCsvToJson {
     $akaLinks = @{}
 
     foreach ($line in $csv) {   
-        $akaLink = [PSCustomObject]@{
-            linkName = $line.linkName
-            title = $line.title
-            autoCrawledTitle = $line.autoCrawledTitle
-            keywords = $line.keywords
-            tags = $line.tags
-            linkUrl = $line.linkUrl
-        }
+        $akaLink = Get-AkaCustomObject $line
         $akaLinks.Add($akaLink.linkName, $akaLink)
-
-        $jsonFileName = $akaLink.linkName -replace "/", ":"
-        Write-Host "Writing to $jsonFileName.json"
-        $akaLink | ConvertTo-Json | Out-File (Join-Path $configPath "$($jsonFileName).json") -Encoding utf8
+        Write-ObjectToJsonFile $akaLink
     }
 }
 
+function Write-ObjectToJsonFile ($akaLink) {
+    $jsonFileName = $akaLink.linkName -replace "/", ":"
+    Write-Host "Writing to $jsonFileName.json"
+    $akaLink | ConvertTo-Json | Out-File (Join-Path $configPath "$($jsonFileName).json") -Encoding utf8
+}
 function Convert-AkaJsonToCsv {
+    Get-AllAkaFromFolder | Export-Csv $csvFilePath -Encoding utf8 -NoTypeInformation
+}
+
+function Get-AllAkaFromFolder {
     $jsonFiles = Get-ChildItem $configPath -Filter *.json
 
-    $csv = @()
+    $akaLinks = @{}
     foreach ($jsonFile in $jsonFiles) {
         Write-Host "Reading " $jsonFile.FullName
         $json = Get-Content $jsonFile.FullName | Out-String | ConvertFrom-Json
-        $csvLine = [PSCustomObject]@{
-            linkName = $json.linkName
-            title = $json.title
-            autoCrawledTitle = $json.autoCrawledTitle
-            keywords = $json.keywords
-            tags = $json.tags
-            linkUrl = $json.linkUrl
-        }
-        $csv += $csvLine
+
+        $akaLink = Get-AkaCustomObject $json
+        $akaLinks.Add($akaLink.linkName, $akaLink)
     }
 
-    $csv | Export-Csv $csvFilePath -Encoding utf8 -NoTypeInformation
+    return $akaLinks
+}
+function Update-Urls {
+    $akaLinks = Get-AllAkaFromFolder
+    foreach($akaLink in $akaLinks.Values) {
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.linkName)" -Method Head
+        $akaLink.linkUrl = $request.BaseResponse.ResponseUri.AbsoluteUri
+    }
+
+    foreach($akaLink in $akaLinks.Values) {
+        Write-ObjectToJsonFile $akaLink
+    }
 }
