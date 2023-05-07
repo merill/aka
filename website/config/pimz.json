@@ -1,8 +1,8 @@
 {
-  "linkName": "ad/pimz",
+  "linkName": "pimz",
   "title": "Privileged Identity Management - Azure Resources",
   "autoCrawledTitle": "",
   "keywords": "",
   "tags": "azuread",
-  "linkUrl": ""
+  "linkUrl": "https://entra.microsoft.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/azurerbac"
 }

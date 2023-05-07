@@ -17,6 +17,7 @@ function Get-AkaCustomObject ($item) {
         tags             = $item.tags
         linkUrl          = $item.linkUrl
     }
+
     return $akaLink
 }
 
@@ -25,11 +26,11 @@ function Convert-AkaCsvToJson {
 
     $csv = Import-Csv $csvFilePath
 
-    $akaLinks = @{}
+    $akaLinks = @()
 
     foreach ($line in $csv) {   
         $akaLink = Get-AkaCustomObject $line
-        $akaLinks.Add($akaLink.linkName, $akaLink)
+        $akaLinks += $akaLink
         Write-ObjectToJsonFile $akaLink
     }
 }
@@ -46,25 +47,33 @@ function Convert-AkaJsonToCsv {
 function Get-AllAkaFromFolder {
     $jsonFiles = Get-ChildItem $configPath -Filter *.json
 
-    $akaLinks = @{}
+    $akaLinks = @()
     foreach ($jsonFile in $jsonFiles) {
         Write-Host "Reading " $jsonFile.FullName
         $json = Get-Content $jsonFile.FullName | Out-String | ConvertFrom-Json
 
         $akaLink = Get-AkaCustomObject $json
-        $akaLinks.Add($akaLink.linkName, $akaLink)
+        $akaLinks += $akaLink
     }
 
     return $akaLinks
 }
 function Update-Urls {
     $akaLinks = Get-AllAkaFromFolder
-    foreach($akaLink in $akaLinks.Values) {
-        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.linkName)" -Method Head
-        $akaLink.linkUrl = $request.BaseResponse.ResponseUri.AbsoluteUri
-    }
+    foreach ($akaLink in $akaLinks) {
+        Write-Host "Checking https://aka.ms/"$akaLink.linkName
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.linkName)" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
+        if ($request.Headers.Location) {
+            $uri = $request.Headers.Location[0]
+            if($uri -like "https://www.bing.com/?ref=aka*") {
+                Write-Error "aka.ms/$($akaLink.linkName) is not a valid aka.ms link."
+            }
+            else {
+                $akaLink.linkUrl = $uri
+            }
+            
+        }
 
-    foreach($akaLink in $akaLinks.Values) {
         Write-ObjectToJsonFile $akaLink
     }
 }
