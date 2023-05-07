@@ -10,7 +10,7 @@ $csvFilePath = Join-Path $configPath "aka.csv"
 
 function Get-AkaCustomObject ($item) {
     $akaLink = [PSCustomObject]@{
-        linkName         = $item.linkName
+        link             = $item.link
         title            = $item.title
         autoCrawledTitle = $item.autoCrawledTitle
         keywords         = $item.keywords
@@ -36,7 +36,7 @@ function Convert-AkaCsvToJson {
 }
 
 function Write-ObjectToJsonFile ($akaLink) {
-    $jsonFileName = $akaLink.linkName -replace "/", ":"
+    $jsonFileName = $akaLink.link -replace "/", ":"
     Write-Host "Writing to $jsonFileName.json"
     $akaLink | ConvertTo-Json | Out-File (Join-Path $configPath "$($jsonFileName).json") -Encoding utf8
 }
@@ -61,12 +61,12 @@ function Get-AllAkaFromFolder {
 function Update-Urls {
     $akaLinks = Get-AllAkaFromFolder
     foreach ($akaLink in $akaLinks) {
-        Write-Host "Update url: https://aka.ms/"$akaLink.linkName
-        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.linkName)" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
+        Write-Host "Update url: https://aka.ms/"$akaLink.link
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.link)" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
         if ($request.Headers.Location) {
             $uri = $request.Headers.Location[0]
             if($uri -like "https://www.bing.com/?ref=aka*") {
-                Write-Error "aka.ms/$($akaLink.linkName) is not a valid aka.ms link."
+                Write-Error "aka.ms/$($akaLink.link) is not a valid aka.ms link."
             }
             else {
                 $akaLink.linkUrl = $uri
@@ -80,8 +80,8 @@ function Update-Urls {
 function Update-Title {
     $akaLinks = Get-AllAkaFromFolder
     foreach ($akaLink in $akaLinks) {
-        Write-Host "Update title: https://aka.ms/"$akaLink.linkName
-        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.linkName)" -UseBasicParsing
+        Write-Host "Update title: https://aka.ms/"$akaLink.link
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLink.link)" -UseBasicParsing
         
         if($request.Content -match "<title>(?<title>.*)</title>") {
             $title = $Matches.title

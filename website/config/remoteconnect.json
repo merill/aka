@@ -1,5 +1,5 @@
 {
-  "linkName": "remoteconnect",
+  "link": "remoteconnect",
   "title": "Device Login - Microsoft account or MSA (Personal Account)",
   "autoCrawledTitle": "Microsoft account",
   "keywords": "",

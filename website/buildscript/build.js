@@ -95,29 +95,21 @@ function getTruncatedUrl(url){
 
 async function run() {
 
-    let commands = [];
+    console.log('Reading aka .json files');
 
-    console.log('Parsing commands.csv');
-    await fs.createReadStream('./config/commands.csv')
-    .pipe(parse({ delimiter: ',', from_line: 2 }))
-    .on('data', function (row) {
-        let cmd = {
-            command: row[0],
-            alias: row[1].replaceAll('|', ','),
-            description: row[2],
-            keywords:row[3],
-            category: row[4],
-            categoryShortName: row[4].replaceAll(' ', '-').toLowerCase(),
-            url: row[5]
-        }
-        commands.push(cmd);
-    })
-    .on('end', function(){
-        allCommands = expandAlias(commands);
-        validateCommands(allCommands);
-        createJsonFile(commands);
-        createJsonFileForExtension(commands);
+    const jsonsInDir = fs.readdirSync('./config').filter(file => path.extname(file) === '.json');
+    let akaLinks = [];
+
+    jsonsInDir.forEach(file => {
+        const fileData = fs.readFileSync(path.join('./config', file));
+        const json = JSON.parse(fileData.toString());
+        akaLinks.push(json);
     });
+
+        //allCommands = expandAlias(commands);
+        //validateCommands(allCommands);
+        createJsonFile(commands);
+        //createJsonFileForExtension(commands);
 }
 
 run();

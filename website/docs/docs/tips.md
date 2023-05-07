@@ -25,8 +25,6 @@ Get the browser extension for your favorite browser from the links below.
 
 :::
 
-![Search bar demo](/demos/browserdemo.gif)
-
 ## cmd.ms/{command}
 
 [cmd.ms] also supports the **cmd.ms/{command}** format for those who prefer it over **{command}.cmd.ms**.
