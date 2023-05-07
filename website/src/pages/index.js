@@ -10,14 +10,14 @@ export default function Start() {
   return (
     <>
       <PageMetadata
-        title='aka.cmd.ms'
+        title='Search aka.ms'
       />
       <Layout>
         <main className="container margin-vert--lg">
           <div className="row">
             <div className="col col--offset-0">
               <h1 className="hero__title">
-                  💻→aka.cmd.ms | Search for aka.ms!
+                  💻 <span className="topBannerTitleText_Ferb">→aka.cmd.ms = Search for aka.ms!</span>
               </h1>
               <p>🚀 Is your favorite aka.ms link missing? <a href='https://github.com/aka/issues/...'>Click here to add aka.ms link.</a></p>
             </div>

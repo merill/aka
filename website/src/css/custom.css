@@ -21,6 +21,12 @@
   outline:  #b4d0fd;
 }
 
+.topBannerTitleText_Ferb {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(45deg,#ff00cc,#0575E6 80%);
+  -webkit-background-clip: text;
+  background-clip: text
+}
 
 /* You can override the default Infima variables here. */
 :root {
