@@ -19,7 +19,7 @@ export default function Start() {
               <h1 className="hero__title">
                   💻→aka.cmd.ms | Search for aka.ms!
               </h1>
-              <p>📌 Is your favorite aka.ms link missing? Click <a href='Add New aka.ms link'></a></p>
+              <p>🚀 Is your favorite aka.ms link missing? <a href='https://github.com/aka/issues/...'>Click here to add aka.ms link.</a></p>
             </div>
             <div className="col col--offset-0">
               <CommandsTable columns={columns} data={commands} applyFilter="" />

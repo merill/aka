@@ -65,7 +65,7 @@ export const columns = [
     className: "commands-data-table left",
     Cell: ({ cell: { value }, row: { original } }) => (
       <a href={`https://aka.ms/${value}`} target="blank" rel="noreferrer noopener">
-        https://aka.ms/<b>{value}</b>
+        aka.ms/<b>{value}</b>
       </a>
     ),
   },
