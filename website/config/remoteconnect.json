@@ -1,0 +1,8 @@
+{
+  "linkName": "remoteconnect",
+  "title": "Device Login - Microsoft account or MSA (Personal Account)",
+  "autoCrawledTitle": "Microsoft account",
+  "keywords": "",
+  "tags": "azuread",
+  "linkUrl": "https://login.live.com/oauth20_remoteconnect.srf"
+}
