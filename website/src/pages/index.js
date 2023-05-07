@@ -17,9 +17,9 @@ export default function Start() {
           <div className="row">
             <div className="col col--offset-0">
               <h1 className="hero__title">
-                  💻 <span className="topBannerTitleText_Ferb">→aka.cmd.ms = Search for aka.ms!</span>
+                🚀 <span className="topBannerTitleText_Ferb">→aka.cmd.ms = Search for aka.ms!</span>
               </h1>
-              <p>🚀 Is your favorite aka.ms link missing? <a href='https://github.com/aka/issues/...'>Click here to add aka.ms link.</a></p>
+              <p>🗣️ Is your favorite aka.ms link missing? <a href='https://github.com/aka/issues/...'>Click here to add aka.ms link.</a></p>
             </div>
             <div className="col col--offset-0">
               <CommandsTable columns={columns} data={commands} applyFilter="" />
