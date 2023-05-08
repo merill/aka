@@ -1,5 +1,5 @@
 name: Add new aka.ms link
-description: Use this form to submit an aka.ms link to the [aka.cmd.ms](https://aka.cmd.ms) search database.
+description: Use this form to submit an [aka.ms] link to the [aka.cmd.ms] search database.
 title: "New aka.ms link "
 body:
   - type: markdown
