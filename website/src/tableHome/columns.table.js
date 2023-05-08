@@ -23,7 +23,7 @@ export function SelectColumnFilter({
         id={id}
         value={filterValue || "All"}
         onChange={(e) => {
-            setFilter(e.target.value || undefined);         
+          setFilter(e.target.value || undefined);
         }}
       >
         <option value="">All links</option>
@@ -37,6 +37,13 @@ export function SelectColumnFilter({
   );
 }
 
+export function handleClick (e){
+  // setOpen(true);
+  
+  const url = `https://aka.ms/${e.currentTarget.value}`;
+  navigator.clipboard.writeText(url);
+};
+
 export const columns = [
   {
     Header: "",
@@ -44,29 +51,34 @@ export const columns = [
     className: "commands-data-table",
     Filter: SelectColumnFilter,
     filter: (rows, id, filterValue) => {
-      return rows.filter(row => {
+      return rows.filter((row) => {
         const rowValue = row.values[id];
-        console.log(rowValue, filterValue);
-        if(filterValue === ''){
+        if (filterValue === "") {
           return true;
-        }
-        else {
+        } else {
           return filterValue === rowValue;
         }
       });
     },
     Cell: ({ cell: { value }, row: { original } }) => (
-      <img alt="{value}" class={`cat-${original.categoryShortName}`}/>
-    ),    
+      <img alt="{value}" className={`cat-${original.categoryShortName}`} />
+    ),
   },
   {
     Header: "Link",
     accessor: "link",
-    className: "commands-data-table left",
+    className: "commands-data-table whitespace-nowrap left",
     Cell: ({ cell: { value }, row: { original } }) => (
-      <a href={`https://aka.ms/${value}`} target="blank" rel="noreferrer noopener">
-        aka.ms/<b>{value}</b>
-      </a>
+      <>
+        <a
+          href={`https://aka.ms/${value}`}
+          target="blank"
+          rel="noreferrer noopener"
+        >
+          aka.ms/<b>{value}</b>
+        </a>
+        <button className="copyButton" type="button" onClick={handleClick} value={value} ><img alt={value} className={`copy`} /></button>
+      </>
     ),
   },
   {
@@ -77,7 +89,7 @@ export const columns = [
       <a href={`${original.url}`} target="blank" rel="noreferrer noopener">
         {value}
       </a>
-    ),    
+    ),
   },
   {
     Header: "Url",
@@ -87,6 +99,6 @@ export const columns = [
       <a href={value} target="blank" rel="noreferrer noopener">
         {value}
       </a>
-    ),    
+    ),
   },
 ];

@@ -127,6 +127,10 @@ li>a.menu__link {
   content: url(/static/img/defender.svg);
 }
 
+.copy {
+  content: url('/static/img/copy.svg');
+}
+
 .cat-azure {
   content: url('/static/img/azure.svg');
 }
