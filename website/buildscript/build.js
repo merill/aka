@@ -109,8 +109,8 @@ async function run() {
         const json = JSON.parse(fileData.toString());
 
         //Calculate the title to display
-        if(json.title === ''){
-            if(json.autoCrawledTitle != '') {
+        if(!json.title){
+            if(json.autoCrawledTitle) {
                 json.title = json.autoCrawledTitle
             }
             else {
