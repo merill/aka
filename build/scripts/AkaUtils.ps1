@@ -119,6 +119,18 @@ function Update-AkaAll {
     Update-AkaTitle
 }
 
+function Set-AkaGitHubAuth(){
+    $token = $env:GITHUB_TOKEN
+    if([string]::IsNullOrEmpty($token)) {
+        Write-Error "GITHUB_TOKEN environment variable is not set. Please set it to a valid GitHub token."
+    }
+    else {
+        $secureString = ConvertTo-SecureString -String $token -AsPlainText -Force
+        $cred = New-Object System.Management.Automation.PSCredential "username is ignored", $secureString
+        Set-GitHubAuthentication -Credential $cred -SessionOnly
+    }
+}
+
 function New-AkaLinkFromIssue {
     param(
         [Parameter(Mandatory=$true)]
@@ -170,5 +182,14 @@ function New-AkaLinkFromIssue {
         Write-Host $message
         New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
         Update-GitHubIssue -Issue $issueNumber -State Closed -Label $state -OwnerName merill -RepositoryName aka | Out-Null
+
+        Update-AkaGitPush
     }
+}
+
+function Update-AkaGitPush(){
+    git config --global user.name 'merill'
+    git config --global user.email 'merill@users.noreply.github.com'
+    git commit -am "Automated push from new issue request"
+    git push
 }

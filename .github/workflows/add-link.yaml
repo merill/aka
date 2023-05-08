@@ -12,14 +12,20 @@ jobs:
         run: |
           echo $EVENT_CONTEXT
           
-  validate_and_add:
+  update_issue:
     runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
     steps:
       - uses: actions/checkout@v3
-      
-      - uses: stefanbuck/github-issue-parser@v3
-        id: issue-parser
-        with:
-          template-path: .github/ISSUE_TEMPLATE/add-link.yaml
-          
-      - run: echo '${{ steps.issue-parser.outputs.jsonString }}'
+      - name: Process new link request
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module -Name PowerShellForGitHub
+          . ./build/scripts/AkaUtils.ps1
+          Set-AkaGitHubAuth
+          New-AkaLinkFromIssue -issueNumber ${{ github.event.issue.number }}
