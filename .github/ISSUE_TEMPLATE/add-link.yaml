@@ -24,7 +24,6 @@ body:
     attributes:
       label: Category (Optional. Leave blank to auto-select)
       description: The category will allow the link to be grouped with other products.
-      placeholder: ex. azure
       options:
         - azure
         - azuread
