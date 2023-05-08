@@ -30,7 +30,7 @@ export default function Start() {
           <meta name="twitter:image" content="https://aka.cmd.ms/OpenGraphImage.png" />
           <meta property="twitter:image:alt" content="Screenshot of aka.cmd.ms home page with the text 'Looking for aka.ms links? Find them at aka.cmd.ms'" />
         </Head>
-
+        
         <main className="container margin-vert--lg">
           <div className="row">
             <div className="col col--offset-0">
