@@ -81,7 +81,7 @@ function Get-AkaLongUrl($akaLinkName) {
     if ($request.Headers.Location) {
         $uri = $request.Headers.Location[0]
         if($uri -like "https://www.bing.com/?ref=aka*") {
-            Write-Error "aka.ms/$($akaLink.link) is not a valid aka.ms link."
+            Write-Host "Warning: aka.ms/$($akaLinkName) is not a valid aka.ms link."
         }
         else {
             $result = $uri
