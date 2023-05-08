@@ -19,7 +19,7 @@ body:
       placeholder: ex. intune
     validations:
       required: true
-  - type: input
+  - type: dropdown
     id: category
     attributes:
       label: Category (Optional. Leave blank to auto-select)
