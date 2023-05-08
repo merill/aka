@@ -14,6 +14,14 @@
   max-width: 10px;
 }
 
+.selectFilter {
+  max-width: 100px;
+
+  @media screen and (max-width: 450px) {
+    width: 70px;
+  }
+}
+
 .col-link {
   white-space: nowrap; 
   text-overflow:ellipsis; 
@@ -39,18 +47,13 @@
 }
 
 .copyButton {
-  float: right;
-  cursor: pointer;
-  background: none;
   border: none;
-  padding-top: 5px;
-}
-
-.copyButton img:hover {
-  opacity:1;
-}
+} 
 
 .copyButton {
+  padding-top: 5px;
+  background: none;
+  float: right;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;

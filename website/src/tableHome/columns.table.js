@@ -17,7 +17,7 @@ export function SelectColumnFilter({
   return (
     <label className="flex gap-x-2 items-baseline">
       <select
-        className="mt-1 block rounded-md border-gray-300  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50  dark:bg-zinc-800 dark:border-gray-700"
+        className="selectFilter mt-1 block rounded-md border-gray-300  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50  dark:bg-zinc-800 dark:border-gray-700"
         aria-label="Select category"
         name={id}
         id={id}
@@ -26,7 +26,7 @@ export function SelectColumnFilter({
           setFilter(e.target.value || undefined);
         }}
       >
-        <option value="">All links</option>
+        <option value="">⚡️</option>
         {options.map((option, i) => (
           <option key={i} value={option}>
             {option}
@@ -92,7 +92,7 @@ export const columns = [
     ),
   },
   {
-    Header: Url,
+    Header: "Url",
     accessor: "url",
     className: "commands-data-table left col-url",
     Cell: ({ cell: { value }, row: { original } }) => (

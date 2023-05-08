@@ -21,11 +21,16 @@
 .searchbox:focus-visible {
   outline: #b4d0fd;
 }
-
 .addbutton {
-  line-height: 2.0rem;
+  padding-top: .5rem;
+  margin-top: .4rem;
 }
 
+@media screen and (max-width: 450px) {
+  .addLong {
+      display: none;
+    }
+}
 
 .topBannerTitleText_Ferb {
   -webkit-text-fill-color: transparent;
