@@ -10,12 +10,24 @@
   text-align: center;
 }
 
+.col-category {
+  max-width: 10px;
+}
+
+.col-link {
+  white-space: nowrap; 
+  text-overflow:ellipsis; 
+  overflow: hidden;
+  max-width: 400px;
+  width: 20%;
+}
+
 .col-url {
   white-space: nowrap; 
   text-overflow:ellipsis; 
   overflow: hidden;
   max-width: 400px;
-  width: 80%;
+  width: 50%;
 }
 
 .col-title {
@@ -23,7 +35,7 @@
   text-overflow:ellipsis; 
   overflow: hidden;
   max-width: 400px;
-  width: 80%;
+  width: 50%;
 }
 
 .copyButton {

@@ -48,7 +48,7 @@ export const columns = [
   {
     Header: "",
     accessor: "category",
-    className: "commands-data-table",
+    className: "commands-data-table col-category",
     Filter: SelectColumnFilter,
     filter: (rows, id, filterValue) => {
       return rows.filter((row) => {
@@ -67,7 +67,7 @@ export const columns = [
   {
     Header: "Link",
     accessor: "link",
-    className: "commands-data-table whitespace-nowrap left",
+    className: "commands-data-table whitespace-nowrap left col-link",
     Cell: ({ cell: { value }, row: { original } }) => (
       <>
         <a
@@ -92,7 +92,7 @@ export const columns = [
     ),
   },
   {
-    Header: "Url",
+    Header: Url,
     accessor: "url",
     className: "commands-data-table left col-url",
     Cell: ({ cell: { value }, row: { original } }) => (
