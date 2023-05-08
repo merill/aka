@@ -190,6 +190,7 @@ function New-AkaLinkFromIssue {
 function Update-AkaGitPush(){
     git config --global user.name 'merill'
     git config --global user.email 'merill@users.noreply.github.com'
+    git add --all
     git commit -am "Automated push from new issue request"
     git push
 }
