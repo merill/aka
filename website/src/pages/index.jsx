@@ -38,7 +38,7 @@ export default function Start() {
               <h1 className="hero__title">
                 🚀 <span className="topBannerTitleText_Ferb">→aka.cmd.ms = Search for aka.ms!</span>
               </h1>
-              <p>🗣️ Is your favorite aka.ms link missing? <a href='https://github.com/aka/issues/...'>Click here to add aka.ms link.</a></p>
+              <p>🗣️ Is your favorite aka.ms link missing? <a href='https://github.com/merill/aka/issues/new?assignees=&labels=&template=add-link.yaml&title=New+aka.ms+link+'>Click here to add aka.ms link.</a></p>
             </div>
             <div className="col col--offset-0">
               <CommandsTable columns={columns} data={commands} applyFilter="" />
