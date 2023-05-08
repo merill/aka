@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        🙏 Thank you for taking the time to submit a new aka.ms link to aka.cmd.ms!
+        🙏 Thank you for taking the time to submit a new aka.ms link to [aka.cmd.ms](https://aka.cmd.ms]!
         
         A few notes:
         * It will take a few minutes after you submit for the link to appear at [aka.cmd.ms](https://aka.cmd.ms).
