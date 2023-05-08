@@ -6,8 +6,8 @@ body:
     attributes:
       value: |
         🙏 Thank you for taking the time to submit a new aka.ms link to aka.cmd.ms!
-        A few notes
         
+        A few notes:
         * It will take a few minutes after you submit for the link to appear on aka.cmd.ms.
         * Avoid submitting links that are not meant for public use.
         * Submit a pull request to make advanced edits such as updating the title, deleting an entry for [aka.ms config](https://github.com/merill/aka/tree/main/website/config)
@@ -22,8 +22,8 @@ body:
   - type: dropdown
     id: category
     attributes:
-      label: Category (Optional. Leave blank to auto-select)
-      description: The category will allow the link to be grouped with other products.
+      label: Category (Optional. Select None to auto-select)
+      description: The category will allow the link to be grouped with other products. To add a new category, edit [this file](https://github.com/merill/aka/edit/main/.github/ISSUE_TEMPLATE/add-link.yaml) and submit a pull request.
       options:
         - azure
         - azuread
