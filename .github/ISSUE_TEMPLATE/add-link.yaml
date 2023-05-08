@@ -1,0 +1,16 @@
+name: Add new aka.ms link
+description: Use this form to submit an aka.ms link to the aka.cmd.ms search database.
+title: "[aka.cmd.ms]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🙏 Thanks for taking the time to submit a new link to aka.cmd.ms!
+  - type: input
+    id: link
+    attributes:
+      label: Aka.ms link
+      description: Feel free to omit the aka.ms part of the url. Please avoid submitting links that are internal to Microsoft.
+      placeholder: ex. intune
+    validations:
+      required: true
