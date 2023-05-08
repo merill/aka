@@ -2,6 +2,7 @@ import React from "react";
 import Translate, { translate } from "@docusaurus/Translate";
 import { PageMetadata } from "@docusaurus/theme-common";
 import Layout from "@theme/Layout";
+import Head from '@docusaurus/Head';
 import { CommandsTable } from "@site/src/components/CommandsTable";
 import { commands } from "@site/src/tableHome/commands.table";
 import { columns } from "@site/src/tableHome/columns.table";
@@ -13,7 +14,7 @@ export default function Start() {
         title='Search aka.ms'
       />
       <Layout>
-        <Head>
+      <Head>
           <meta property="og:url" content="https://aka.cmd.ms" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Search aka.ms" />
@@ -30,7 +31,7 @@ export default function Start() {
           <meta name="twitter:image" content="https://aka.cmd.ms/OpenGraphImage.png" />
           <meta property="twitter:image:alt" content="Screenshot of aka.cmd.ms home page with the text 'Looking for aka.ms links? Find them at aka.cmd.ms'" />
         </Head>
-        
+
         <main className="container margin-vert--lg">
           <div className="row">
             <div className="col col--offset-0">
