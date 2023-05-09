@@ -1,0 +1,8 @@
+{
+  "link": "arcdata",
+  "title": "null",
+  "autoCrawledTitle": "Microsoft Azure",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://portal.azure.com/?feature.customportal=false&feature.showassettypes=Microsoft_Azure_HybridData_Platform_dataController%2CMicrosoft_Azure_HybridData_Platform_sqlInstance%2CMicrosoft_Azure_HybridData_Platform_postgresInstance&feature.canmodifyextensions=true&microsoft_azure_marketplace_ItemHideKey=ArcInstance&feature.canmodifystamps=truefeature.customportal=false&feature.showassettypes=Microsoft_Azure_HybridData_Platform_dataController%2CMicrosoft_Azure_HybridData_Platform_sqlInstance%2CMicrosoft_Azure_HybridData_Platform_postgresInstance&feature.canmodifyextensions=true&microsoft_azure_marketplace_ItemHideKey=ArcInstance&feature.canmodifystamps=truefeature.customportal=false&feature.showassettypes=Microsoft_Azure_HybridData_Platform_SqlInstance,Microsoft_Azure_HybridData_Platform_PostgresInstance&feature.canmodifyextensions=true&microsoft_azure_marketplace_ItemHideKey=ArcInstance&feature.canmodifystamps=true&SqlAzureExtension=hybrid"
+}

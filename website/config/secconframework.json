@@ -1,0 +1,8 @@
+{
+  "link": "secconframework",
+  "title": "null",
+  "autoCrawledTitle": "GitHub - microsoft/SecCon-Framework: Security configuration is complex. With thousands of group policies available in Windows, choosing the “best” setting is difficult. It’s not always obvious which permutations of policies are required to implement a complete scenario, and there are often unintended consequences of some security lockdowns.  The SECCON Baselines divide configuration into Productivity Devices and Privileged Access Workstations. This document will focus on Productivity Devices (SECCON 5, 4, and 3). Microsoft’s current guidance on Privileged Access Workstations can be found at http://aka.ms/cyberpaw and as part of the Securing Privileged Access roadmap found at http://aka.ms/privsec.",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://github.com/microsoft/SecCon-Framework"
+}

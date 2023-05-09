@@ -1,0 +1,8 @@
+{
+  "link": "ConsentAppleApp",
+  "title": "null",
+  "autoCrawledTitle": "Sign in to your account",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://login.microsoftonline.com/organizations/v2.0/adminconsent?client_id=f8d98a96-0999-43f5-8af3-69971c7bb423&redirect_uri=https%3A%2F%2Fadmin.microsoft.com%2FAdminportal%2FHome&scope=.default"
+}

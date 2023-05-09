@@ -1,0 +1,8 @@
+{
+  "link": "badpath",
+  "title": "null",
+  "autoCrawledTitle": "core/known-issues.md at main · dotnet/core · GitHub",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://github.com/dotnet/core/blob/main/release-notes/6.0/known-issues.md#2-upgrade-of-visual-studio-or-net-sdk-from-earlier-builds-can-result-in-a-bad-path-configuration-on-windows"
+}

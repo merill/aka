@@ -1,0 +1,8 @@
+{
+  "link": "AzureVMCentralBackupIncludeTag",
+  "title": "null",
+  "autoCrawledTitle": "Auto-Enable Backup on VM Creation using Azure Policy - Azure Backup | Microsoft Learn",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://learn.microsoft.com/azure/backup/backup-azure-auto-enable-backup#policy-4---preview-configure-backup-on-vms-with-a-given-tag-to-a-new-recovery-services-vault-with-a-default-policy"
+}

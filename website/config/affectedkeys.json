@@ -1,0 +1,8 @@
+{
+  "link": "affectedkeys",
+  "title": "null",
+  "autoCrawledTitle": "This script will allow you to find all applications and service principals in Azure AD affected by https://aka.ms/CVE-2021-42306-AAD that need their keys to be rotated. · GitHub",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://gist.github.com/merill/8306cc91030b0a3e12f47835db6af549"
+}

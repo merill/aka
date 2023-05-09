@@ -1,0 +1,8 @@
+{
+  "link": "phoneauthRenew",
+  "title": "null",
+  "autoCrawledTitle": "Browser SSO",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://msft.sts.microsoft.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fphoneregistration.microsoft.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fregrenew&wct=2019-01-07T21%3a44%3a25Z&wreply=https%3a%2f%2fphoneregistration.microsoft.com%2fphoneauthrenew%3fClaimAwareAAD5F09D25F-4423-4C2C-AE2A-2B92511B0671%3d9c254572-beb8-4f03-a58e-97c85beb5375&wauth=http%3a%2f%2fschemas.microsoft.com%2fclaims%2fmultipleauthn"
+}

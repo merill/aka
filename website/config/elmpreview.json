@@ -1,0 +1,8 @@
+{
+  "link": "elmpreview",
+  "title": "null",
+  "autoCrawledTitle": "Microsoft Azure",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://portal.azure.com/?Microsoft_Azure_ELMAdmin_EnableLicenseResource=true&EnablePreviewFeatureOptIn=true&EnableMultiIDPSupport=true&EnableCrossCloud=true&Microsoft_Azure_ELMAdmin_EnableDynamicsResource=true&ResetLogiAppConfiguration=true&UseIdpType=true&EnableRegexPattern=true&SoftDeletedUserGrants=true&Microsoft_Azure_ELMAdmin_EnableDirectoryRole=true&TenantRolesAndAdministrators=true&Microsoft_Azure_ELMAdmin_ShowServicePrincipals=true&EnablePolicyNotifications=true&Microsoft_Azure_ELMAdmin_EnableSync=true&EnableRegexPattern=true&EnableCatalogReports=true&PartnerSearchV2=true&EnableUserSponsors=true&EnableGracePeriodSupport=true&EnableApproverToModifyRequest=true#blade/Microsoft_AAD_ERM/DashboardBlade/elmEntitlement"
+}

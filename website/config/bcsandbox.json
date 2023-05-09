@@ -1,0 +1,8 @@
+{
+  "link": "bcsandbox",
+  "title": "null",
+  "autoCrawledTitle": "Microsoft Azure",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://freddyk.azurewebsites.net/api/deploy?templatename=getbc&AssignPremiumPlan=Yes&CreateTestUsers=Yes&artifacturl=bcartifacts%2fsandbox%2f%2fus%2flatest"
+}

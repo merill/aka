@@ -1,0 +1,8 @@
+{
+  "link": "bcsandboxext",
+  "title": "null",
+  "autoCrawledTitle": "Microsoft Azure",
+  "keywords": "null",
+  "category": "null",
+  "url": "https://freddyk.azurewebsites.net/api/deploy?templatename=getbcext&BCDockerImage=mcr.microsoft.com%2Fbusinesscentral%2Fsandbox&AssignPremiumPlan=Yes&CreateTestUsers=Yes"
+}
