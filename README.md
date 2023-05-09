@@ -42,4 +42,4 @@ Some conventions to follow when creating a pull request using this method.
 
 ### Reporting Issues
 
-Open a new bug to report issues.
+Open a [new bug](https://github.com/merill/aka/issues/new?assignees=&labels=&template=add-bug.yaml&title=%5BBug%5D) to report issues.
