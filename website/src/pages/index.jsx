@@ -13,7 +13,7 @@ export default function Start() {
         title='Search aka.ms'
       />
       <Layout>
-      <Head>
+        <Head>
           <meta property="og:url" content="https://akaSearch.net" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Search aka.ms" />
@@ -34,10 +34,10 @@ export default function Start() {
         <main className="container margin-vert--lg">
           <div className="row">
             <div className="col col--offset-0">
-              <h1 className="hero__title">
+              <h1 className="hero__title text-center">
                 🚀 <span className="topBannerTitleText_Ferb">→akaSearch = Search for aka.ms!</span>
               </h1>
-              <p>🗣️ Do you have trouble remembering Microsoft's <a href="https://akaSearch.net">aka.ms</a> links. This community contributed list of links is for you! Use the Add button to submit new links to this list.</p>
+                <p className="text-center">🗣️ Do you have trouble remembering Microsoft's <a href="https://akaSearch.net">aka.ms</a> links. This community contributed list of links is for you! Use the Add button to submit new links to this list.</p>
             </div>
             <div className="col col--offset-0">
               <CommandsTable columns={columns} data={commands} applyFilter="" />
