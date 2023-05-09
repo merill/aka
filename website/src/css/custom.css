@@ -21,6 +21,7 @@
 .searchbox:focus-visible {
   outline: #b4d0fd;
 }
+
 .addbutton {
   padding-top: .5rem;
   margin-top: .4rem;

@@ -1,0 +1,15 @@
+name: Bug
+description: Use this form to submit a bug or an issue with [akaSearch.net](https://akasearch.net)
+title: "[Bug]"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🙏 Thank you for taking the time to submit a new bug, issue or feature request.
+  - type: textarea
+    id: link
+    attributes:
+      label: Bug details
+      placeholder: Leave a comment
+    validations:
+      required: true

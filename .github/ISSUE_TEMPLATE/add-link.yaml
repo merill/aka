@@ -1,16 +1,16 @@
 name: Add new aka.ms link
-description: Use this form to submit an [aka.ms] link to the [aka.cmd.ms] search database.
-title: "New aka.ms link "
+description: Use this form to submit an [aka.ms] link to [akaSearch.net](https://akasearch.net).
+title: "New aka.ms link"
 body:
   - type: markdown
     attributes:
       value: |
-        🙏 Thank you for taking the time to submit a new aka.ms link to [aka.cmd.ms](https://aka.cmd.ms)!
+        🙏 Thank you for taking the time to submit a new aka.ms link to [akaSearch.net](https://akasearch.net)!
         
         A few notes:
-        * It will take a few minutes after you submit for the link to appear at [aka.cmd.ms](https://aka.cmd.ms).
+        * It will take a few minutes after you submit for the link to appear at [akaSearch.net](https://akasearch.net).
         * Avoid submitting links that are not meant for public use.
-        * Submit a pull request to make advanced edits such as updating the title or deleting an entry for [aka.cmd.ms config](https://github.com/merill/aka/tree/main/website/config)
+        * Submit a pull request to make advanced edits such as updating the title or deleting an entry. See [Contributing](https://github.com/merill/aka#contributing) for details.
   - type: input
     id: link
     attributes:

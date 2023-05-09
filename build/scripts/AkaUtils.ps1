@@ -178,7 +178,7 @@ function New-AkaLinkFromIssue {
 
         Write-AkaObjectToJsonFile $akaLink
 
-        $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link will soon be available on [aka.cmd.ms](https://aka.cmd.ms). 🙏✅"
+        $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link will soon be available [akaSearch.net](https://akasearch.net). 🙏✅"
         Write-Host $message
         New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
         Update-GitHubIssue -Issue $issueNumber -State Closed -Label $state -OwnerName merill -RepositoryName aka | Out-Null

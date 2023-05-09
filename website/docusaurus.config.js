@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '[aka.cmd.ms]',
-  tagline: 'aka.cmd.ms: Find all your aka.ms links in one place!',
-  url: 'https://aka.cmd.ms',
+  title: 'akaSearch',
+  tagline: 'Search for aka.ms links!',
+  url: 'https://akaSearch.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -52,9 +52,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '[aka.cmd.ms]',
+        title: 'akaSearch',
         logo: {
-          alt: 'aka.cmd.ms Logo',
+          alt: 'akaSearch Logo',
           src: 'img/logo.png',
         },
         items: [

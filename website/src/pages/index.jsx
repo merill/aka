@@ -14,30 +14,30 @@ export default function Start() {
       />
       <Layout>
       <Head>
-          <meta property="og:url" content="https://aka.cmd.ms" />
+          <meta property="og:url" content="https://akaSearch.net" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Search aka.ms" />
           <meta property="og:description" content="Use this page to search for aka.ms links that have been contributed to by the community." />
-          <meta property="og:image" content="https://aka.cmd.ms/OpenGraphImage.png" />
-          <meta property="og:image:alt" content="Screenshot of aka.cmd.ms home page with the text 'Looking for aka.ms links? Find them at aka.cmd.ms'" />
+          <meta property="og:image" content="https://akasearch.net/OpenGraphImage.png" />
+          <meta property="og:image:alt" content="Screenshot of akasearch.net home page with the text 'Crowd sourced database of aka.ms links!'" />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta property="twitter:domain" content="aka.cmd.ms" />
+          <meta property="twitter:domain" content="akasearch.net" />
           <meta property="twitter:site" content="@merill" />
-          <meta property="twitter:url" content="https://aka.cmd.ms" />
+          <meta property="twitter:url" content="https://akasearch.net" />
           <meta name="twitter:title" content="Search aka.ms" />
           <meta name="twitter:description" content="Use this page to search for aka.ms links that have been contributed to by the community." />
-          <meta name="twitter:image" content="https://aka.cmd.ms/OpenGraphImage.png" />
-          <meta property="twitter:image:alt" content="Screenshot of aka.cmd.ms home page with the text 'Looking for aka.ms links? Find them at aka.cmd.ms'" />
+          <meta name="twitter:image" content="https://akasearch.net/OpenGraphImage.png" />
+          <meta property="twitter:image:alt" content="Screenshot of akasearch.net home page with the text 'Crowd sourced database of aka.ms links!'" />
         </Head>
 
         <main className="container margin-vert--lg">
           <div className="row">
             <div className="col col--offset-0">
               <h1 className="hero__title">
-                🚀 <span className="topBannerTitleText_Ferb">→aka.cmd.ms = Search for aka.ms!</span>
+                🚀 <span className="topBannerTitleText_Ferb">→akaSearch = Search for aka.ms!</span>
               </h1>
-              <p>🗣️ Do you have trouble remembering Microsoft's <a href="https://aka.cmd.ms">aka.ms</a> links. This community contributed list of links is for you! Use the Add button to submit new links to this list.</p>
+              <p>🗣️ Do you have trouble remembering Microsoft's <a href="https://akaSearch.net">aka.ms</a> links. This community contributed list of links is for you! Use the Add button to submit new links to this list.</p>
             </div>
             <div className="col col--offset-0">
               <CommandsTable columns={columns} data={commands} applyFilter="" />

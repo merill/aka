@@ -1,9 +1,9 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
     xmlns:moz="http://www.mozilla.org/2006/browser/search/">
     <ShortName>aka</ShortName>
-    <Description>Enter link name. See https://aka.cmd.ms for list of links.</Description>
+    <Description>Enter link name. See https://akaSearch.net for list of links.</Description>
     <InputEncoding>UTF-8</InputEncoding>
     <OutputEncoding>UTF-8</OutputEncoding>
-    <Image width="16" height="16" type="image/x-icon">https://cmd.ms/favicon.ico</Image>
-    <Url type="text/html" method="get" template="https://aka.cmd.ms/{searchTerms}"/>
+    <Image width="16" height="16" type="image/x-icon">https://akasearch.net/favicon.ico</Image>
+    <Url type="text/html" method="get" template="https://akasearch.net/{searchTerms}"/>
 </OpenSearchDescription>
