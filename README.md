@@ -4,6 +4,8 @@
 
 This repository hosts the source code for [akaSearch.net](https://akasearch.net), a crowd sourced database of aka.ms links.
 
+![image](/website/static/OpenGraphImage.png)
+
 ## Contributing
 
 There are a few different ways to contribute to this project.
