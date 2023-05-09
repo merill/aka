@@ -67,6 +67,11 @@ const config = {
             label: 'merill.net',
           },
           {
+            href: '/about',
+            label: 'About',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/merill/aka',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
