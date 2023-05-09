@@ -1,8 +1,10 @@
 # akaSearch.net
 
-[akaSearch.net](https://akasearch.net) Search aka.ms links!
+🚀 → [akaSearch.net](https://akasearch.net) = Search aka.ms links!
 
 This repository hosts the source code for [akaSearch.net](https://akasearch.net), a crowd sourced database of aka.ms links.
+
+![image](/website/static/OpenGraphImage.png)
 
 ## Contributing
 
