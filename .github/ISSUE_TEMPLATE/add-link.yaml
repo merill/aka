@@ -28,11 +28,12 @@ body:
         - azure
         - azuread
         - defender
-        - graph
         - dynamics365
+        - graph
         - intune
         - microsoft365
         - powerplatform
+        - security
         - windows365
     validations:
       required: false
