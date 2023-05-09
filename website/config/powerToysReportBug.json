@@ -1,0 +1,8 @@
+{
+  "link": "powerToysReportBug",
+  "title": "Create new PowerToys bug report",
+  "autoCrawledTitle": "",
+  "keywords": null,
+  "category": "powertoys",
+  "url": "https://github.com/microsoft/PowerToys/issues/new?assignees=&labels=Issue-Bug%2CTriage-Needed&template=bug_report.yml&title="
+}
