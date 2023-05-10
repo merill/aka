@@ -26,4 +26,4 @@ jobs:
           Set-GitHubConfiguration -DisableTelemetry
           . ./build/scripts/AkaUtils.ps1
           Set-AkaGitHubAuth
-          New-AkaLinkFromIssue -issueNumber ${{ github.event.issue.number }}
+          Update-AllOpenGitHubIssues
