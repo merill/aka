@@ -66,7 +66,7 @@ function Update-AkaUrls {
 
         Write-Host "Update url: https://aka.ms/"$akaLink.link
         $longUrl = Get-AkaLongUrl $akaLink.link
-        if($longUrl) {
+        if ($longUrl) {
             $akaLink.url = $longUrl
 
             Write-AkaObjectToJsonFile $akaLink
@@ -80,7 +80,7 @@ function Get-AkaLongUrl($akaLinkName) {
     $result = $null
     if ($request.Headers.Location) {
         $uri = $request.Headers.Location[0]
-        if($uri -like "https://www.bing.com/?ref=aka*") {
+        if ($uri -like "https://www.bing.com/?ref=aka*") {
             Write-Host "Warning: aka.ms/$($akaLinkName) is not a valid aka.ms link."
         }
         else {
@@ -94,9 +94,9 @@ function Get-AkaTitle($akaLinkName) {
     Write-Host "Get title: https://aka.ms/"$akaLinkName
     $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -UseBasicParsing
     $result = ""
-    if($request.Content -match "<title>(?<title>.*)</title>") {
+    if ($request.Content -match "<title>(?<title>.*)</title>") {
         $result = $Matches.title
-        if($title -ne "Sign in to your account") {
+        if ($title -ne "Sign in to your account") {
             $result = $Matches.title
         }
     }
@@ -107,7 +107,7 @@ function Update-AkaTitle {
     foreach ($akaLink in $akaLinks) {
         Write-Host "Update title: https://aka.ms/"$akaLink.link
         $title = Get-AkaTitle $akaLink.link
-        if($title) {
+        if ($title) {
             $akaLink.autoCrawledTitle = $title
             Write-AkaObjectToJsonFile $akaLink
         }
@@ -119,9 +119,9 @@ function Update-AkaAll {
     Update-AkaTitle
 }
 
-function Set-AkaGitHubAuth(){
+function Set-AkaGitHubAuth() {
     $token = $env:GITHUB_TOKEN
-    if([string]::IsNullOrEmpty($token)) {
+    if ([string]::IsNullOrEmpty($token)) {
         Write-Error "GITHUB_TOKEN environment variable is not set. Please set it to a valid GitHub token."
     }
     else {
@@ -131,63 +131,105 @@ function Set-AkaGitHubAuth(){
     }
 }
 
+# $isUpdateGitHubIssue - If true updates GitHub (used during worklfow run). If false doesn't update GitHub (used during local batch runs)
+# $isGitPush - If true, does an update back to GitHub.
 function New-AkaLinkFromIssue {
     param(
-        [Parameter(Mandatory=$true)]
-        [string]$issueNumber
+        [Parameter(Mandatory = $true)]
+        [string]$issueNumber,
+        [Parameter(Mandatory = $false)]
+        [bool]$isUpdateGitHubIssue = $true,
+        [Parameter(Mandatory = $false)]
+        [bool]$isGitPush = $true
     )
+    Write-Host "Process Issue: $issueNumber"
     $issue = Get-GitHubIssue  -Issue $issueNumber -OwnerName merill -RepositoryName aka
 
     $lines = $issue.body.Split([Environment]::NewLine)
 
     $link = $lines[2]
     $category = $lines[6]
-    if($category -eq "None") {
+    if ($category -eq "None") {
         $category = $null
     }
 
     $link = $link -replace "https://aka.ms/", ""
     $link = $link -replace "http://aka.ms/", ""
+    $link = $link -replace "aka.ms/", ""
     $link = $link.Trim()
 
-    $longUrl = Get-AkaLongUrl $link
+    $exists = Test-Path (Join-Path $configPath "$($link).json")
 
-    if([string]::IsNullOrEmpty($link) -or !$longUrl){
-        $message = "Thank you for submitting an aka.ms link. Unfortunately the link [https://aka.ms/$link](https://aka.ms/$link) is not a valid aka.ms link. If you believe this is a mistake, it could be a problem with the automated script. Please reach out to me at https://twitter.com/merill and let me know. Thanks!"
-        Write-Host $message
+    if ($exists) {
+        Write-Host "Link already exists. Skipping $link"
+        $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link already exists at [akaSearch.net](https://akasearch.net). 🙏✅"
         New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
-        Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Invalid aka.ms link" -OwnerName merill -RepositoryName aka | Out-Null
+        Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Existing" -OwnerName merill -RepositoryName aka | Out-Null
     }
     else {
+        $longUrl = Get-AkaLongUrl $link
 
-        $autoCrawledTitle = Get-AkaTitle $link
-
-        ## Default to new object and update if it exists
-        $akaLink = Get-AkaCustomObject $newItem
-
-        $exists = Test-Path (Join-Path $configPath "$($link).json")
-        $state = "Added"
-        if($exists) {
-            $akaLink = Get-Content (Join-Path $configPath "$($link).json") | Out-String | ConvertFrom-Json
-            $state = "Updated"
+        if ([string]::IsNullOrEmpty($link) -or !$longUrl -or $link -eq "download") {
+            #Skip download it hangs the process
+            $message = "Thank you for submitting an aka.ms link. Unfortunately the link [https://aka.ms/$link](https://aka.ms/$link) is not a valid aka.ms link. If you believe this is a mistake, it could be a problem with the automated script. Please reach out to me at https://twitter.com/merill and let me know. Thanks!"
+            Write-Host $message
+            if ($isUpdateGitHubIssue) {
+                Write-Host "New-GitHubIssueComment"
+                New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
+                Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Invalid aka.ms link" -OwnerName merill -RepositoryName aka | Out-Null
+            }
         }
-        $akaLink.link = $link
-        $akaLink.autoCrawledTitle = $autoCrawledTitle
-        $akaLink.category = $category
-        $akaLink.url = $longUrl
+        else {
 
-        Write-AkaObjectToJsonFile $akaLink
+            $autoCrawledTitle = Get-AkaTitle $link
 
-        $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link will soon be available [akaSearch.net](https://akasearch.net). 🙏✅"
-        Write-Host $message
-        New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
-        Update-GitHubIssue -Issue $issueNumber -State Closed -Label $state -OwnerName merill -RepositoryName aka | Out-Null
+            ## Default to new object and update if it exists
+            $akaLink = Get-AkaCustomObject $newItem
 
-        Update-AkaGitPush
+        
+            $state = "Added"
+            if ($exists) {
+                $akaLink = Get-Content (Join-Path $configPath "$($link).json") | Out-String | ConvertFrom-Json
+                $state = "Updated"
+            }
+            $akaLink.link = $link
+            $akaLink.autoCrawledTitle = $autoCrawledTitle
+            $akaLink.category = $category
+            $akaLink.url = $longUrl
+
+            Write-AkaObjectToJsonFile $akaLink
+
+            if ($isGitPush) {
+                Write-Host "Update-AkaGitPush"
+                Update-AkaGitPush
+            }
+
+            $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link will soon be available [akaSearch.net](https://akasearch.net). 🙏✅"
+            Write-Host $message
+            if ($isUpdateGitHubIssue) {
+                Write-Host "New-GitHubIssueComment"
+                New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
+                Update-GitHubIssue -Issue $issueNumber -State Closed -Label $state -OwnerName merill -RepositoryName aka | Out-Null
+            }
+        }
     }
 }
 
-function Update-AkaGitPush(){
+# Get's all the open issues and processed them
+function Update-AllOpenGitHubIssues() {
+
+    $issues = Get-GitHubIssue -OwnerName merill -RepositoryName aka -State Open
+    Write-Host "Found $($issues.Count) open issues"
+    foreach ($issue in $issues) {
+        if($issue.body -and $issue.body.IndexOf("### Aka.ms link name") -eq 0){ #Only process new link template
+            New-AkaLinkFromIssue -issueNumber $issue.IssueNumber -isUpdateGitHubIssue $true -isGitPush $true
+        }
+        else {
+            Write-Host "Skipping issue $($issue.IssueNumber) because it doesn't match the new link template"
+        }
+    }
+}
+function Update-AkaGitPush() {
     git config --global user.name 'merill'
     git config --global user.email 'merill@users.noreply.github.com'
     git add --all
