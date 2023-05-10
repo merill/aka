@@ -3,6 +3,8 @@ on:
     types:
       - opened
 
+concurrency: add-link
+
 jobs:
   update_issue:
     runs-on: ubuntu-latest
