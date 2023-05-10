@@ -31,6 +31,7 @@ body:
         - dynamics365
         - graph
         - intune
+        - learn
         - microsoft365
         - powerplatform
         - security
