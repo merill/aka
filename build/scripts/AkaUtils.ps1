@@ -162,18 +162,21 @@ function New-AkaLinkFromIssue {
 
     if ($exists) {
         Write-Host "Link already exists. Skipping $link"
-        $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link already exists at [akaSearch.net](https://akasearch.net). 🙏✅"
-        New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
-        Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Existing" -OwnerName merill -RepositoryName aka | Out-Null
+        if($isUpdateGitHubIssue){
+            $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link already exists at [akaSearch.net](https://akasearch.net). 🙏✅"
+            New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
+            Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Existing" -OwnerName merill -RepositoryName aka | Out-Null
+        }
     }
     else {
         $longUrl = Get-AkaLongUrl $link
 
-        if ([string]::IsNullOrEmpty($link) -or !$longUrl -or $link -eq "download") {
+        if ([string]::IsNullOrEmpty($link) -or !$longUrl -or $link) {
             #Skip download it hangs the process
-            $message = "Thank you for submitting an aka.ms link. Unfortunately the link [https://aka.ms/$link](https://aka.ms/$link) is not a valid aka.ms link. If you believe this is a mistake, it could be a problem with the automated script. Please reach out to me at https://twitter.com/merill and let me know. Thanks!"
-            Write-Host $message
+            Write-Host "Invalid link: $link"
             if ($isUpdateGitHubIssue) {
+                $message = "Thank you for submitting an aka.ms link. Unfortunately the link [https://aka.ms/$link](https://aka.ms/$link) is not a valid aka.ms link. If you believe this is a mistake, it could be a problem with the automated script. Please reach out to me at https://twitter.com/merill and let me know. Thanks!"
+                Write-Host $message
                 Write-Host "New-GitHubIssueComment"
                 New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
                 Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Invalid aka.ms link" -OwnerName merill -RepositoryName aka | Out-Null
@@ -186,7 +189,6 @@ function New-AkaLinkFromIssue {
             ## Default to new object and update if it exists
             $akaLink = Get-AkaCustomObject $newItem
 
-        
             $state = "Added"
             if ($exists) {
                 $akaLink = Get-Content (Join-Path $configPath "$($link).json") | Out-String | ConvertFrom-Json
@@ -229,6 +231,23 @@ function Update-AllOpenGitHubIssues() {
         }
     }
 }
+
+# Get's all the closed issues and reprocess them for local testing (does not commit or update issues)
+# Useful to reprocess any entries that might not have been updated to GitHub.
+function Update-ReprocessAllGitHubIssuesLocal() {
+
+    $issues = Get-GitHubIssue -OwnerName merill -RepositoryName aka -State Closed
+    Write-Host "Found $($issues.Count) open issues"
+    foreach ($issue in $issues) {
+        if($issue.body -and $issue.body.IndexOf("### Aka.ms link name") -eq 0){ #Only process new link template
+            New-AkaLinkFromIssue -issueNumber $issue.IssueNumber -isUpdateGitHubIssue $false -isGitPush $false
+        }
+        else {
+            Write-Host "Skipping issue $($issue.IssueNumber) because it doesn't match the new link template"
+        }
+    }
+}
+
 function Update-AkaGitPush() {
     git config --global user.name 'merill'
     git config --global user.email 'merill@users.noreply.github.com'
