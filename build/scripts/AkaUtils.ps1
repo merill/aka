@@ -75,13 +75,13 @@ function Update-AkaUrls {
 }
 
 function Get-AkaLongUrl($akaLinkName) {
-    Write-Host "Get url: https://aka.ms/"$akaLinkName
-    $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
+    Write-Host "Get url: https://aka.ms/$akaLinkName"
+    $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
     $result = $null
     if ($request.Headers.Location) {
         $uri = $request.Headers.Location[0]
         if ($uri -like "https://www.bing.com/?ref=aka*") {
-            Write-Host "Warning: aka.ms/$($akaLinkName) is not a valid aka.ms link."
+            Write-Host "Warning: aka.ms/$akaLinkName is not a valid aka.ms link."
         }
         else {
             $result = $uri
@@ -91,8 +91,8 @@ function Get-AkaLongUrl($akaLinkName) {
 }
 
 function Get-AkaTitle($akaLinkName) {
-    Write-Host "Get title: https://aka.ms/"$akaLinkName
-    $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -UseBasicParsing
+    Write-Host "Get title: https://aka.ms/$akaLinkName"
+    $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -ErrorAction Ignore -SkipHttpErrorCheck -TimeoutSec 20
     $result = ""
     if ($request.Content -match "<title>(?<title>.*)</title>") {
         $result = $Matches.title
@@ -105,7 +105,7 @@ function Get-AkaTitle($akaLinkName) {
 function Update-AkaTitle {
     $akaLinks = Get-AkaJsonsFromFolder
     foreach ($akaLink in $akaLinks) {
-        Write-Host "Update title: https://aka.ms/"$akaLink.link
+        Write-Host "Update title: https://aka.ms/$($akaLink.link)"
         $title = Get-AkaTitle $akaLink.link
         if ($title) {
             $akaLink.autoCrawledTitle = $title
