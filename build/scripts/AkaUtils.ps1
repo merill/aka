@@ -76,7 +76,7 @@ function Update-AkaUrls {
 
 function Get-AkaLongUrl($akaLinkName) {
     Write-Host "Get url: https://aka.ms/$akaLinkName"
-    $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
+    $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck -HttpVersion 2.0
     $result = $null
     if ($request.Headers.Location) {
         $uri = $request.Headers.Location[0]
@@ -92,7 +92,7 @@ function Get-AkaLongUrl($akaLinkName) {
 
 function Get-AkaTitle($akaLinkName) {
     Write-Host "Get title: https://aka.ms/$akaLinkName"
-    $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -ErrorAction Ignore -SkipHttpErrorCheck -TimeoutSec 20
+    $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -ErrorAction Ignore -SkipHttpErrorCheck -TimeoutSec 20 -HttpVersion 2.0
     $result = ""
     if ($request.Content -match "<title>(?<title>.*)</title>") {
         $result = $Matches.title
@@ -135,15 +135,27 @@ function Set-AkaGitHubAuth() {
 # $isGitPush - If true, does an update back to GitHub.
 function New-AkaLinkFromIssue {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory = $false)]
+        $issue,
+        [Parameter(Mandatory = $false)]
         [string]$issueNumber,
         [Parameter(Mandatory = $false)]
         [bool]$isUpdateGitHubIssue = $true,
         [Parameter(Mandatory = $false)]
         [bool]$isGitPush = $true
     )
-    Write-Host "Process Issue: $issueNumber"
-    $issue = Get-GitHubIssue  -Issue $issueNumber -OwnerName merill -RepositoryName aka
+    if(!$issueNumber -and !$issue){
+        Write-Error "Either issue or issueNumber must be specified"
+    }
+
+    if($issueNumber){
+        Write-Host "Process Issue: $issueNumber"
+        $issue = Get-GitHubIssue  -Issue $issueNumber -OwnerName merill -RepositoryName aka
+    }
+
+    if([string]::IsNullOrEmpty($issue.body) -or $issue.body.IndexOf("### Aka.ms link name") -ne 0){ #Only process new link template
+        Write-Host "Skipping issue $($issue.IssueNumber) because it doesn't match the new link template"
+    }
 
     $lines = $issue.body.Split([Environment]::NewLine)
 
@@ -171,7 +183,7 @@ function New-AkaLinkFromIssue {
     else {
         $longUrl = Get-AkaLongUrl $link
 
-        if ([string]::IsNullOrEmpty($link) -or !$longUrl -or $link) {
+        if ([string]::IsNullOrEmpty($link) -or !$longUrl) {
             #Skip download it hangs the process
             Write-Host "Invalid link: $link"
             if ($isUpdateGitHubIssue) {
@@ -223,12 +235,7 @@ function Update-AllOpenGitHubIssues() {
     $issues = Get-GitHubIssue -OwnerName merill -RepositoryName aka -State Open
     Write-Host "Found $($issues.Count) open issues"
     foreach ($issue in $issues) {
-        if($issue.body -and $issue.body.IndexOf("### Aka.ms link name") -eq 0){ #Only process new link template
-            New-AkaLinkFromIssue -issueNumber $issue.IssueNumber -isUpdateGitHubIssue $true -isGitPush $true
-        }
-        else {
-            Write-Host "Skipping issue $($issue.IssueNumber) because it doesn't match the new link template"
-        }
+        New-AkaLinkFromIssue -issue $issue -isUpdateGitHubIssue $true -isGitPush $true
     }
 }
 
@@ -239,12 +246,7 @@ function Update-ReprocessAllGitHubIssuesLocal() {
     $issues = Get-GitHubIssue -OwnerName merill -RepositoryName aka -State Closed
     Write-Host "Found $($issues.Count) open issues"
     foreach ($issue in $issues) {
-        if($issue.body -and $issue.body.IndexOf("### Aka.ms link name") -eq 0){ #Only process new link template
-            New-AkaLinkFromIssue -issueNumber $issue.IssueNumber -isUpdateGitHubIssue $false -isGitPush $false
-        }
-        else {
-            Write-Host "Skipping issue $($issue.IssueNumber) because it doesn't match the new link template"
-        }
+        New-AkaLinkFromIssue -issue $issue -isUpdateGitHubIssue $false -isGitPush $false
     }
 }
 
