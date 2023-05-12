@@ -90,13 +90,23 @@ function Get-AkaLongUrl($akaLinkName) {
 }
 
 function Get-AkaTitle($akaLinkName) {
+
+    $titlesToIgnore = @("Sign in to your account", "Microsoft Forms")
     Write-Host "Get title: https://aka.ms/$akaLinkName"
     $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -ErrorAction Ignore -SkipHttpErrorCheck -TimeoutSec 20 -HttpVersion 2.0
     $result = ""
-    if ($request.Content -match "<title>(?<title>.*)</title>") {
-        $result = $Matches.title
-        if ($title -ne "Sign in to your account") {
-            $result = $Matches.title
+    $content = $request.Content.ToString()
+    $start = $content.IndexOf("<title>", 0, $content.Length, [System.StringComparison]::InvariantCultureIgnoreCase)
+    
+    if ($start -ge 0) {
+        $end = $content.IndexOf("</title>", 0, $content.Length, [System.StringComparison]::InvariantCultureIgnoreCase)
+        if($end -gt $start){
+            $title = $content.Substring($start + 7, $end - $start - 7) #Get content between <title> and </title>
+            $title = $title -replace [Environment]::NewLine
+            $title = $title.Trim()
+            if(!$titlesToIgnore.Contains($title)){
+                $result = $title
+            }
         }
     }
     return $result
