@@ -158,84 +158,83 @@ function New-AkaLinkFromIssue {
     if(!$issueNumber -and !$issue){
         Write-Error "Either issue or issueNumber must be specified"
     }
-
     if($issueNumber){
         Write-Host "Process Issue: $issueNumber"
         $issue = Get-GitHubIssue  -Issue $issueNumber -OwnerName merill -RepositoryName aka
     }
-
+    
     if([string]::IsNullOrEmpty($issue.body) -or $issue.body.IndexOf("### Aka.ms link name") -ne 0){ #Only process new link template
         Write-Host "Skipping issue $($issue.IssueNumber) because it doesn't match the new link template"
-        return
-    }
-
-    $lines = $issue.body.Split([Environment]::NewLine)
-
-    $link = $lines[2]
-    $category = $lines[6]
-    if ($category -eq "None") {
-        $category = $null
-    }
-
-    $link = $link -replace "https://aka.ms/", ""
-    $link = $link -replace "http://aka.ms/", ""
-    $link = $link -replace "aka.ms/", ""
-    $link = $link.Trim()
-
-    $exists = Test-Path (Join-Path $configPath "$($link).json")
-
-    if ($exists) {
-        Write-Host "Link already exists. Skipping $link"
-        if($isUpdateGitHubIssue){
-            $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link already exists at [akaSearch.net](https://akasearch.net). 🙏✅"
-            New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
-            Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Existing" -OwnerName merill -RepositoryName aka | Out-Null
-        }
     }
     else {
-        $longUrl = Get-AkaLongUrl $link
+        $lines = $issue.body.Split([Environment]::NewLine)
 
-        if ([string]::IsNullOrEmpty($link) -or !$longUrl) {
-            #Skip download it hangs the process
-            Write-Host "Invalid link: $link"
-            if ($isUpdateGitHubIssue) {
-                $message = "Thank you for submitting an aka.ms link. Unfortunately the link [https://aka.ms/$link](https://aka.ms/$link) is not a valid aka.ms link. If you believe this is a mistake, it could be a problem with the automated script. Please reach out to me at https://twitter.com/merill and let me know. Thanks!"
-                Write-Host $message
-                Write-Host "New-GitHubIssueComment"
+        $link = $lines[2]
+        $category = $lines[6]
+        if ($category -eq "None") {
+            $category = $null
+        }
+
+        $link = $link -replace "https://aka.ms/", ""
+        $link = $link -replace "http://aka.ms/", ""
+        $link = $link -replace "aka.ms/", ""
+        $link = $link.Trim()
+
+        $exists = Test-Path (Join-Path $configPath "$($link).json")
+
+        if ($exists) {
+            Write-Host "Link already exists. Skipping $link"
+            if($isUpdateGitHubIssue){
+                $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link already exists at [akaSearch.net](https://akasearch.net). 🙏✅"
                 New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
-                Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Invalid aka.ms link" -OwnerName merill -RepositoryName aka | Out-Null
+                Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Existing" -OwnerName merill -RepositoryName aka | Out-Null
             }
         }
         else {
+            $longUrl = Get-AkaLongUrl $link
 
-            $autoCrawledTitle = Get-AkaTitle $link
-
-            ## Default to new object and update if it exists
-            $akaLink = Get-AkaCustomObject $newItem
-
-            $state = "Added"
-            if ($exists) {
-                $akaLink = Get-Content (Join-Path $configPath "$($link).json") | Out-String | ConvertFrom-Json
-                $state = "Updated"
+            if ([string]::IsNullOrEmpty($link) -or !$longUrl) {
+                #Skip download it hangs the process
+                Write-Host "Invalid link: $link"
+                if ($isUpdateGitHubIssue) {
+                    $message = "Thank you for submitting an aka.ms link. Unfortunately the link [https://aka.ms/$link](https://aka.ms/$link) is not a valid aka.ms link. If you believe this is a mistake, it could be a problem with the automated script. Please reach out to me at https://twitter.com/merill and let me know. Thanks!"
+                    Write-Host $message
+                    Write-Host "New-GitHubIssueComment"
+                    New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
+                    Update-GitHubIssue -Issue $issueNumber -State Closed -Label "Invalid aka.ms link" -OwnerName merill -RepositoryName aka | Out-Null
+                }
             }
-            $akaLink.link = $link
-            $akaLink.autoCrawledTitle = $autoCrawledTitle
-            $akaLink.category = $category
-            $akaLink.url = $longUrl
+            else {
 
-            Write-AkaObjectToJsonFile $akaLink
+                $autoCrawledTitle = Get-AkaTitle $link
 
-            if ($isGitPush) {
-                Write-Host "Update-AkaGitPush"
-                Update-AkaGitPush
-            }
+                ## Default to new object and update if it exists
+                $akaLink = Get-AkaCustomObject $newItem
 
-            $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link will soon be available [akaSearch.net](https://akasearch.net). 🙏✅"
-            Write-Host $message
-            if ($isUpdateGitHubIssue) {
-                Write-Host "New-GitHubIssueComment"
-                New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
-                Update-GitHubIssue -Issue $issueNumber -State Closed -Label $state -OwnerName merill -RepositoryName aka | Out-Null
+                $state = "Added"
+                if ($exists) {
+                    $akaLink = Get-Content (Join-Path $configPath "$($link).json") | Out-String | ConvertFrom-Json
+                    $state = "Updated"
+                }
+                $akaLink.link = $link
+                $akaLink.autoCrawledTitle = $autoCrawledTitle
+                $akaLink.category = $category
+                $akaLink.url = $longUrl
+
+                Write-AkaObjectToJsonFile $akaLink
+
+                if ($isGitPush) {
+                    Write-Host "Update-AkaGitPush"
+                    Update-AkaGitPush
+                }
+
+                $message = "Thank you for submitting [aka.ms/$link](https://aka.ms/$link). Your link will soon be available [akaSearch.net](https://akasearch.net). 🙏✅"
+                Write-Host $message
+                if ($isUpdateGitHubIssue) {
+                    Write-Host "New-GitHubIssueComment"
+                    New-GitHubIssueComment -OwnerName merill -RepositoryName aka -Issue $issueNumber -Body $message | Out-Null
+                    Update-GitHubIssue -Issue $issueNumber -State Closed -Label $state -OwnerName merill -RepositoryName aka | Out-Null
+                }
             }
         }
     }
