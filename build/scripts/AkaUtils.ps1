@@ -175,7 +175,7 @@ function New-AkaLinkFromIssue {
         Write-Host "Process Issue: $issueNumber"
         $issue = Get-GitHubIssue  -Issue $issueNumber -OwnerName merill -RepositoryName aka
     }
-    
+    $issueNumber = $issue.IssueNumber
     if([string]::IsNullOrEmpty($issue.body) -or $issue.body.IndexOf("### Aka.ms link name") -ne 0){ #Only process new link template
         Write-Host "Skipping issue $($issue.IssueNumber) because it doesn't match the new link template"
     }
