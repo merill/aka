@@ -8,6 +8,8 @@ $folderPath = Split-Path $filePath -Parent
 $configPath = $folderPath -replace "aka/build/scripts", "aka/website/config"
 $csvFilePath = Join-Path $configPath "aka.csv"
 
+$isHttp2Supported = !($PSVersionTable.PSVersion.Major -eq 7 -and $PSVersionTable.PSVersion.Minor -eq 2) #7.2 doesn't support http2
+
 function Get-AkaCustomObject ($item) {
     $akaLink = [PSCustomObject]@{
         link             = $item.link
@@ -75,7 +77,13 @@ function Update-AkaUrls {
 
 function Get-AkaLongUrl($akaLinkName) {
     Write-Host "Get url: https://aka.ms/$akaLinkName"
-    $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck -HttpVersion 2.0
+    if($isHttp2Supported){
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck -HttpVersion 2.0
+    }
+    else{
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
+    }
+    
     $result = $null
     if ($request.Headers.Location) {
         $uri = $request.Headers.Location[0]
@@ -93,7 +101,12 @@ function Get-AkaTitle($akaLinkName) {
 
     $titlesToIgnore = @("Sign in to your account", "Microsoft Forms")
     Write-Host "Get title: https://aka.ms/$akaLinkName"
-    $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -ErrorAction Ignore -SkipHttpErrorCheck -TimeoutSec 20 -HttpVersion 2.0
+    if($isHttp2Supported){
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -ErrorAction Ignore -SkipHttpErrorCheck -TimeoutSec 20 -HttpVersion 2.0
+    }
+    else{
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$($akaLinkName)" -ErrorAction Ignore -SkipHttpErrorCheck -TimeoutSec 20
+    }
     $result = ""
     if($request -and $request.Content){
         $content = $request.Content.ToString()
