@@ -1,8 +1,8 @@
 {
   "link": "powerToysRequestFeature",
   "title": "New PowerToys feature request",
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Sign in to GitHub · GitHub",
   "keywords": null,
   "category": "powertoys",
-  "url": "https://github.com/microsoft/PowerToys/issues/new?assignees=&labels=&template=feature_request.md&title="
+  "url": "https://github.com/microsoft/PowerToys/issues/new?assignees=&labels=Triage-Needed&template=feature_request.yml"
 }

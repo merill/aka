@@ -1,7 +1,7 @@
 {
   "link": "my-groups",
   "title": "My Groups",
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Sign in to your account",
   "keywords": "",
   "category": "azuread",
   "url": "https://account.activedirectory.windowsazure.com/r#/groups"

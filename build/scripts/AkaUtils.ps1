@@ -64,11 +64,10 @@ function Update-AkaUrls {
     $akaLinks = Get-AkaJsonsFromFolder
     foreach ($akaLink in $akaLinks) {
 
-        Write-Host "Update url: https://aka.ms/"$akaLink.link
+        Write-Host "Update url: https://aka.ms/$($akaLink.link)"        
         $longUrl = Get-AkaLongUrl $akaLink.link
         if ($longUrl) {
             $akaLink.url = $longUrl
-
             Write-AkaObjectToJsonFile $akaLink
         }        
     }

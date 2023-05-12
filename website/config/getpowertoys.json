@@ -1,8 +1,8 @@
 {
   "link": "getpowertoys",
   "title": "Download PowerToys from the Microsoft Store",
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Microsoft Apps",
   "keywords": null,
   "category": "powertoys",
-  "url": "ms-windows-store://pdp/?productid=XP89DCGQ3K6VLD"
+  "url": "https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD"
 }

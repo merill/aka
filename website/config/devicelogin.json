@@ -1,7 +1,7 @@
 {
   "link": "devicelogin",
   "title": "Device Login - Work or School Account",
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Sign in to your account",
   "keywords": "",
   "category": "azuread",
   "url": "https://login.microsoftonline.com/common/oauth2/deviceauth"
