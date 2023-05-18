@@ -31,6 +31,7 @@ body:
         - dynamics365
         - graph
         - intune
+        - kql
         - learn
         - microsoft365
         - powerplatform
