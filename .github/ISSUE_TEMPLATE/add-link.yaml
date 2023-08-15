@@ -29,8 +29,7 @@ body:
         - azuread
         - defender
         - dynamics365
-        - ExchangeOnline
-        - ExchangeOnpremises
+        - exchange
         - graph
         - intune
         - kql
