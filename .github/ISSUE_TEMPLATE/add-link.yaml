@@ -37,6 +37,7 @@ body:
         - microsoft365
         - powerplatform
         - security
+        - sqlserver
         - windows365
     validations:
       required: false
