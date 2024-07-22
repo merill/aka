@@ -1,8 +1,8 @@
 {
   "link": "sqlserverbuilds",
-  "title": null,
+  "title": "Latest updates and version history for SQL Server",
   "autoCrawledTitle": "Latest updates and version history for SQL Server",
   "keywords": null,
-  "category": "null",
+  "category": "sqlserver",
   "url": "https://learn.microsoft.com/en-us/troubleshoot/sql/releases/download-and-install-latest-updates"
 }
