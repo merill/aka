@@ -78,10 +78,10 @@ function Update-AkaUrls {
 function Get-AkaLongUrl($akaLinkName) {
     Write-Host "Get url: https://aka.ms/$akaLinkName"
     if($isHttp2Supported){
-        $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck -HttpVersion 2.0
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck -HttpVersion 2.0 -AllowInsecureRedirect
     }
     else{
-        $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck
+        $request = Invoke-WebRequest -Uri "https://aka.ms/$akaLinkName" -Method Head -MaximumRedirection 0 -ErrorAction Ignore -SkipHttpErrorCheck -AllowInsecureRedirect
     }
     
     $result = $null
