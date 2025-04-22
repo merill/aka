@@ -27,8 +27,8 @@ Some conventions to follow when creating a pull request using this method.
 * The file name is short url of the aka.ms link.
   * e.g. aka.ms/intune → intune.json.
 * The file name should be lower case.
-* Links with / in the url should be replace with :
-  * e.g. aka.ms/ad/ca → ad:ca.json
+* Links with / in the url should be replace with ~
+  * e.g. aka.ms/ad/ca → ad~ca.json
 * Contents in the file
   * **link** - The short name part of the aka.ms link.
   * **title** - The title of the page. Use this field if the link is for a non-public page or if the default title on the target page is not meaningful.

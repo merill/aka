@@ -39,7 +39,7 @@ function Convert-AkaCsvToJson {
 }
 
 function Write-AkaObjectToJsonFile ($akaLink) {
-    $jsonFileName = $akaLink.link.ToLower() -replace "/", ":"
+    $jsonFileName = $akaLink.link.ToLower() -replace "/", "~"
     Write-Host "Writing to $jsonFileName.json"
     $akaLink | ConvertTo-Json | Out-File (Join-Path $configPath "$($jsonFileName).json") -Encoding utf8
 }
