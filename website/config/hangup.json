@@ -2,7 +2,7 @@
   "link": "hangup",
   "title": null,
   "autoCrawledTitle": "It's Time to Hang Up on Phone Transports for Authentication - Microsoft Community Hub",
-  "keywords": null,
-  "category": null,
+  "keywords": ["MFA", "Authentication", "SMS", "SS7"],
+  "category": "azuread",
   "url": "https://techcommunity.microsoft.com/t5/azure-active-directory-identity/it-s-time-to-hang-up-on-phone-transports-for-authentication/ba-p/1751752"
 }
