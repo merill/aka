@@ -4,141 +4,4189 @@ export const CATEGORIES = [
   {
     "value": "entra",
     "label": "Entra",
-    "iconUrl": "https://getyako.com/ms/logos/entra/microsoft-entra-bw-icon-(product-family).svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20ID%20color%20icon.svg",
+    "keywords": "aad azure ad active directory identity sso conditional access mfa"
   },
   {
     "value": "intune",
     "label": "Intune",
-    "iconUrl": "https://getyako.com/ms/icons/intune/10332-icon-service-devices.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/Microsoft-intune.svg",
+    "keywords": "mem endpoint manager mdm device management autopilot"
   },
   {
     "value": "defender",
     "label": "Defender",
-    "iconUrl": "https://getyako.com/ms/icons/fabric/fabric-icons/report.svg"
+    "common": true,
+    "iconUrl": "https://getyako.com/ms/logos/defender/defender-512.png",
+    "keywords": "atp mdatp security antivirus edr threat"
   },
   {
     "value": "xdr-sentinel",
     "label": "XDR Sentinel",
-    "iconUrl": "https://getyako.com/ms/logos/microsoft-sentinel/10248-icon-service-azure-sentinel.svg"
+    "common": true,
+    "iconUrl": "https://getyako.com/ms/logos/microsoft-sentinel/10248-icon-service-azure-sentinel.svg",
+    "keywords": "siem soar log analytics kql hunting"
   },
   {
     "value": "purview",
     "label": "Purview",
-    "iconUrl": "https://getyako.com/ms/icons/fabric/fabric-icons/purview.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/fabric/purview_color.svg",
+    "keywords": "compliance dlp information protection labels retention"
   },
   {
     "value": "microsoft-365",
     "label": "Microsoft 365",
-    "iconUrl": "https://getyako.com/ms/icons/azure/10824-icon-service-power.svg"
+    "common": true,
+    "iconUrl": "https://getyako.com/ms/logos/microsoft-365/microsoft-365-620x620-(white-background).png",
+    "keywords": "m365 office 365 sharepoint teams onedrive exchange outlook"
   },
   {
     "value": "azure",
     "label": "Azure",
-    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
+    "common": true,
+    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png",
+    "keywords": "arm subscription resource portal cloud"
   },
   {
     "value": "power-platform",
     "label": "Power Platform",
-    "iconUrl": "https://getyako.com/ms/logos/copilot-studio/copilotstudio-scalable.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/power-platform/03335-icon-service-Power-Platform.svg",
+    "keywords": "power apps automate bi pages virtual agents dataverse"
   },
   {
     "value": "dynamics-365",
-    "label": "Dynamics 365"
+    "label": "Dynamics 365",
+    "common": true,
+    "iconUrl": "https://getyako.com/ms/logos/dynamics-365/dynamics365-scalable.svg",
+    "keywords": "crm erp business central"
   },
   {
     "value": "exchange",
-    "label": "Exchange"
+    "label": "Exchange",
+    "common": true,
+    "iconUrl": "https://getyako.com/ms/logos/exchange/2019-current-full-color/exchange-256x256.png"
   },
   {
     "value": "windows-365",
-    "label": "Windows 365"
+    "label": "Windows 365",
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00327-icon-service-Azure-Virtual-Desktop.svg"
   },
   {
     "value": "sql-server",
-    "label": "SQL Server"
+    "label": "SQL Server",
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10132-icon-service-SQL-Server.svg"
   },
   {
     "value": "powertoys",
-    "label": "PowerToys"
+    "label": "PowerToys",
+    "common": true
   },
   {
     "value": "developer",
     "label": "Developer",
-    "iconUrl": "https://getyako.com/ms/icons/azure/10787-icon-service-code.svg"
+    "common": true,
+    "iconUrl": "https://getyako.com/ms/logos/azure-devops/10261-icon-service-azure-devops.svg",
+    "keywords": "api sdk graph rest github devops code"
   },
   {
     "value": "licensing",
     "label": "Licensing",
-    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10002-icon-service-Subscriptions.svg"
   },
   {
     "value": "partner",
     "label": "Partner",
-    "iconUrl": "https://getyako.com/ms/icons/azure/00321-icon-service-security.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/02265-icon-service-Partner-Registration.svg"
   },
   {
     "value": "trials",
     "label": "Trials",
-    "iconUrl": "https://getyako.com/ms/logos/defender/defender-512.png"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10016-icon-service-Free-Services.svg"
   },
   {
     "value": "health-status",
     "label": "Health & Status",
-    "iconUrl": "https://getyako.com/ms/icons/azure/10004-icon-service-service-health.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10004-icon-service-Service-Health.svg",
+    "keywords": "outage incident uptime service health"
   },
   {
     "value": "my-pages",
     "label": "My Pages",
-    "iconUrl": "https://getyako.com/ms/icons/azure/10002-icon-service-subscriptions.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00014-icon-service-My-Customers.svg"
   },
   {
     "value": "training",
     "label": "Training",
-    "iconUrl": "https://getyako.com/ms/icons/azure/10816-icon-service-learn.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10816-icon-service-Learn.svg",
+    "keywords": "learn docs tutorial course mslearn"
   },
   {
     "value": "certification",
     "label": "Certification",
-    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00026-icon-service-Education.svg"
   },
   {
     "value": "education",
     "label": "Education",
-    "iconUrl": "https://getyako.com/ms/icons/azure/00026-icon-service-education.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00026-icon-service-Education.svg"
   },
   {
     "value": "consumer",
     "label": "Consumer",
-    "iconUrl": "https://getyako.com/ms/icons/intune/10332-icon-service-devices.svg"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10332-icon-service-Devices.svg"
   },
   {
     "value": "us-government",
     "label": "US Government",
-    "iconUrl": "https://getyako.com/ms/icons/azure/00321-icon-service-security.svg"
+    "common": true
   },
   {
     "value": "regional",
     "label": "Regional",
-    "iconUrl": "https://getyako.com/ms/logos/microsoft-365/microsoft-365-620x620-(white-background).png"
+    "common": true,
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10116-icon-service-Region-Management.svg"
   },
   {
     "value": "accessibility",
     "label": "Accessibility",
-    "iconUrl": "https://getyako.com/ms/logos/access/access-512.png"
+    "common": true
   },
   {
     "value": "third-party",
     "label": "Third party",
-    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
+    "common": true
   },
   {
     "value": "other",
     "label": "Other",
-    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
+    "common": true
   },
   {
     "value": "general",
     "label": "General",
-    "iconUrl": "https://getyako.com/ms/icons/azure/02266-icon-service-partner-namespace.svg"
+    "common": true
+  },
+  {
+    "value": "abs-member",
+    "label": "ABS Member",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/blockchain/10374-icon-service-ABS-Member.svg",
+    "group": "blockchain"
+  },
+  {
+    "value": "active-directory-connect-health",
+    "label": "Active Directory Connect Health",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10224-icon-service-Active-Directory-Connect-Health.svg",
+    "group": "identity"
+  },
+  {
+    "value": "activity-log",
+    "label": "Activity Log",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00007-icon-service-Activity-Log.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "administrative-units",
+    "label": "Administrative Units",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/00919-icon-service-Administrative-Units.svg",
+    "group": "identity"
+  },
+  {
+    "value": "advisor",
+    "label": "Advisor",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00003-icon-service-Advisor.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "agent-allowed-agent-types",
+    "label": "Agent Allowed Agent Types",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/agent-365/Agent%20Allowed%20Agent%20Types.svg",
+    "group": "agent 365"
+  },
+  {
+    "value": "agent-management-rules",
+    "label": "Agent Management Rules",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/agent-365/Agent%20Management%20Rules.svg",
+    "group": "agent 365"
+  },
+  {
+    "value": "agent-policy-template",
+    "label": "Agent Policy Template",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/agent-365/Agent%20Policy%20Template.svg",
+    "group": "agent 365"
+  },
+  {
+    "value": "agent-sharing",
+    "label": "Agent Sharing",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/agent-365/Agent%20Sharing.svg",
+    "group": "agent 365"
+  },
+  {
+    "value": "agent-user-access",
+    "label": "Agent User Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/agent-365/Agent%20User%20Access.svg",
+    "group": "agent 365"
+  },
+  {
+    "value": "agent365",
+    "label": "Agent365",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/agent-365/Agent365_scalable.svg",
+    "group": "agent 365"
+  },
+  {
+    "value": "ai-builder",
+    "label": "AI Builder",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/power-platform/AIBuilder_scalable.svg",
+    "group": "power platform"
+  },
+  {
+    "value": "ai-studio",
+    "label": "AI Studio",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/03513-icon-service-AI-Studio.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "aks-automatic",
+    "label": "AKS Automatic",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/03543-icon-service-AKS-Automatic.svg",
+    "group": "compute"
+  },
+  {
+    "value": "aks-istio",
+    "label": "AKS Istio",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03399-icon-service-AKS-Istio.svg",
+    "group": "other"
+  },
+  {
+    "value": "alerts",
+    "label": "Alerts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00002-icon-service-Alerts.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "all-resources",
+    "label": "All Resources",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10001-icon-service-All-Resources.svg",
+    "group": "general"
+  },
+  {
+    "value": "analysis-services",
+    "label": "Analysis Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/10148-icon-service-Analysis-Services.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "anomaly-detector",
+    "label": "Anomaly Detector",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00814-icon-service-Anomaly-Detector.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "api-center",
+    "label": "API Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/web/03291-icon-service-API-Center.svg",
+    "group": "web"
+  },
+  {
+    "value": "api-connections",
+    "label": "API Connections",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/10048-icon-service-API-Connections.svg",
+    "group": "devops"
+  },
+  {
+    "value": "api-management-services",
+    "label": "API Management Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/10042-icon-service-API-Management-Services.svg",
+    "group": "devops"
+  },
+  {
+    "value": "api-proxy",
+    "label": "API Proxy",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/02386-icon-service-API-Proxy.svg",
+    "group": "identity"
+  },
+  {
+    "value": "app-compliance-automation",
+    "label": "App Compliance Automation",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03071-icon-service-App-Compliance-Automation.svg",
+    "group": "other"
+  },
+  {
+    "value": "app-configuration",
+    "label": "App Configuration",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10219-icon-service-App-Configuration.svg",
+    "group": "integration"
+  },
+  {
+    "value": "app-registrations",
+    "label": "App Registrations",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10232-icon-service-App-Registrations.svg",
+    "group": "identity"
+  },
+  {
+    "value": "app-service-certificates",
+    "label": "App Service Certificates",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/app-services/00049-icon-service-App-Service-Certificates.svg",
+    "group": "app services"
+  },
+  {
+    "value": "app-service-domains",
+    "label": "App Service Domains",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/app-services/00050-icon-service-App-Service-Domains.svg",
+    "group": "app services"
+  },
+  {
+    "value": "app-service-environments",
+    "label": "App Service Environments",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/app-services/10047-icon-service-App-Service-Environments.svg",
+    "group": "app services"
+  },
+  {
+    "value": "app-service-plans",
+    "label": "App Service Plans",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/app-services/00046-icon-service-App-Service-Plans.svg",
+    "group": "app services"
+  },
+  {
+    "value": "app-services",
+    "label": "App Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/app-services/10035-icon-service-App-Services.svg",
+    "group": "app services"
+  },
+  {
+    "value": "app-space",
+    "label": "App Space",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/web/03397-icon-service-App-Space.svg",
+    "group": "web"
+  },
+  {
+    "value": "app-space-component",
+    "label": "App Space Component",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/web/03595-icon-service-App-Space-Component.svg",
+    "group": "web"
+  },
+  {
+    "value": "applens",
+    "label": "Applens",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-ecosystem/02354-icon-service-Applens.svg",
+    "group": "azure ecosystem"
+  },
+  {
+    "value": "application-gateway-containers",
+    "label": "Application Gateway Containers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/03328-icon-service-Application-Gateway-Containers.svg",
+    "group": "networking"
+  },
+  {
+    "value": "application-gateways",
+    "label": "Application Gateways",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10076-icon-service-Application-Gateways.svg",
+    "group": "networking"
+  },
+  {
+    "value": "application-group",
+    "label": "Application Group",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/00329-icon-service-Application-Group.svg",
+    "group": "compute"
+  },
+  {
+    "value": "application-insights",
+    "label": "Application Insights",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/00012-icon-service-Application-Insights.svg",
+    "group": "devops"
+  },
+  {
+    "value": "application-security-groups",
+    "label": "Application Security Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/10244-icon-service-Application-Security-Groups.svg",
+    "group": "security"
+  },
+  {
+    "value": "aquila",
+    "label": "Aquila",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02625-icon-service-Aquila.svg",
+    "group": "other"
+  },
+  {
+    "value": "arc-data-services",
+    "label": "Arc Data services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02356-icon-service-Arc-Data-services.svg",
+    "group": "other"
+  },
+  {
+    "value": "arc-kubernetes",
+    "label": "Arc Kubernetes",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01088-icon-service-Arc-Kubernetes.svg",
+    "group": "other"
+  },
+  {
+    "value": "arc-machines",
+    "label": "Arc Machines",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/01710-icon-service-Arc-Machines.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "arc-postgresql",
+    "label": "Arc PostgreSQL",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01848-icon-service-Arc-PostgreSQL%20.svg",
+    "group": "other"
+  },
+  {
+    "value": "arc-sql-managed-instance",
+    "label": "Arc SQL Managed Instance",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01849-icon-service-Arc-SQL-Managed-Instance.svg",
+    "group": "other"
+  },
+  {
+    "value": "arc-sql-server",
+    "label": "Arc SQL Server",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01850-icon-service-Arc-SQL-Server.svg",
+    "group": "other"
+  },
+  {
+    "value": "atm-multistack",
+    "label": "ATM Multistack",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/03460-icon-service-ATM-Multistack.svg",
+    "group": "networking"
+  },
+  {
+    "value": "auto-scale",
+    "label": "Auto Scale",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/monitor/10832-icon-service-Auto-Scale.svg",
+    "group": "monitor"
+  },
+  {
+    "value": "automanaged-vm",
+    "label": "Automanaged VM",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/02112-icon-service-Automanaged-VM.svg",
+    "group": "compute"
+  },
+  {
+    "value": "automation-accounts",
+    "label": "Automation Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00022-icon-service-Automation-Accounts.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "availability-sets",
+    "label": "Availability Sets",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10025-icon-service-Availability-Sets.svg",
+    "group": "compute"
+  },
+  {
+    "value": "avs-vm",
+    "label": "AVS VM",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01846-icon-service-AVS-VM.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-a",
+    "label": "Azure A",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/10018-icon-service-Azure-A.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-ad-b2c",
+    "label": "Azure AD B2C",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10228-icon-service-Azure-AD-B2C.svg",
+    "group": "identity"
+  },
+  {
+    "value": "azure-api-for-fhir",
+    "label": "Azure API for FHIR",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10212-icon-service-Azure-API-for-FHIR.svg",
+    "group": "integration"
+  },
+  {
+    "value": "azure-applied-ai-services",
+    "label": "Azure Applied AI Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/02749-icon-service-Azure-Applied-AI-Services.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "azure-arc",
+    "label": "Azure Arc",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00756-icon-service-Azure-Arc.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "azure-backup-center",
+    "label": "Azure Backup Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02360-icon-service-Azure-Backup-Center.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-blockchain-service",
+    "label": "Azure Blockchain Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/blockchain/10366-icon-service-Azure-Blockchain-Service.svg",
+    "group": "blockchain"
+  },
+  {
+    "value": "azure-center-for-sap",
+    "label": "Azure Center for SAP",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03090-icon-service-Azure-Center-for-SAP.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-chaos-studio",
+    "label": "Azure Chaos Studio",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02223-icon-service-Azure-Chaos-Studio.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-cloud-shell",
+    "label": "Azure Cloud Shell",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00559-icon-service-Azure-Cloud-Shell.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-communication-services",
+    "label": "Azure Communication Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00968-icon-service-Azure-Communication-Services.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-communications-gateway",
+    "label": "Azure Communications Gateway",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/03311-icon-service-Azure-Communications-Gateway.svg",
+    "group": "networking"
+  },
+  {
+    "value": "azure-compute-galleries",
+    "label": "Azure Compute Galleries",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/02864-icon-service-Azure-Compute-Galleries.svg",
+    "group": "compute"
+  },
+  {
+    "value": "azure-cosmos-db",
+    "label": "Azure Cosmos DB",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10121-icon-service-Azure-Cosmos-DB.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-data-catalog",
+    "label": "Azure Data Catalog",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10216-icon-service-Azure-Data-Catalog.svg",
+    "group": "integration"
+  },
+  {
+    "value": "azure-data-explorer-clusters",
+    "label": "Azure Data Explorer Clusters",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/10145-icon-service-Azure-Data-Explorer-Clusters.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "azure-database-mariadb-server",
+    "label": "Azure Database MariaDB Server",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10123-icon-service-Azure-Database-MariaDB-Server.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-database-migration-services",
+    "label": "Azure Database Migration Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10133-icon-service-Azure-Database-Migration-Services.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-database-mysql-server",
+    "label": "Azure Database MySQL Server",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10122-icon-service-Azure-Database-MySQL-Server.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-database-postgresql-server",
+    "label": "Azure Database PostgreSQL Server",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10131-icon-service-Azure-Database-PostgreSQL-Server.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-database-postgresql-server-group",
+    "label": "Azure Database PostgreSQL Server Group",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/02827-icon-service-Azure-Database-PostgreSQL-Server-Group.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-databox-gateway",
+    "label": "Azure Databox Gateway",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/00691-icon-service-Azure-Databox-Gateway.svg",
+    "group": "integration"
+  },
+  {
+    "value": "azure-databricks",
+    "label": "Azure Databricks",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/10787-icon-service-Azure-Databricks.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "azure-deployment-environments",
+    "label": "Azure Deployment Environments",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03251-icon-service-Azure-Deployment-Environments.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-dev-tunnels",
+    "label": "Azure Dev Tunnels",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03308-icon-service-Azure-Dev-Tunnels.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-devops",
+    "label": "Azure DevOps",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/10261-icon-service-Azure-DevOps.svg",
+    "group": "devops"
+  },
+  {
+    "value": "azure-edge-hardware-center",
+    "label": "Azure Edge Hardware Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02810-icon-service-Azure-Edge-Hardware-Center.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-experimentation-studio",
+    "label": "Azure Experimentation Studio",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/01239-icon-service-Azure-Experimentation-Studio.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "azure-fileshares",
+    "label": "Azure Fileshares",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10400-icon-service-Azure-Fileshares.svg",
+    "group": "storage"
+  },
+  {
+    "value": "azure-firewall-manager",
+    "label": "Azure Firewall Manager",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/00271-icon-service-Azure-Firewall-Manager.svg",
+    "group": "networking"
+  },
+  {
+    "value": "azure-firewall-policy",
+    "label": "Azure Firewall Policy",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/00272-icon-service-Azure-Firewall-Policy.svg",
+    "group": "networking"
+  },
+  {
+    "value": "azure-hcp-cache",
+    "label": "Azure HCP Cache",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/00776-icon-service-Azure-HCP-Cache.svg",
+    "group": "storage"
+  },
+  {
+    "value": "azure-hpc-workbenches",
+    "label": "Azure HPC Workbenches",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02518-icon-service-Azure-HPC-Workbenches.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-hybrid-center",
+    "label": "Azure Hybrid Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-ecosystem/02573-icon-service-Azure-Hybrid-Center.svg",
+    "group": "azure ecosystem"
+  },
+  {
+    "value": "azure-information-protection",
+    "label": "Azure Information Protection",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10229-icon-service-Azure-Information-Protection.svg",
+    "group": "identity"
+  },
+  {
+    "value": "azure-iot-operations",
+    "label": "Azure IoT Operations",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/03485-icon-service-Azure-IoT-Operations.svg",
+    "group": "iot"
+  },
+  {
+    "value": "azure-lighthouse",
+    "label": "Azure Lighthouse",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00471-icon-service-Azure-Lighthouse.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "azure-load-testing",
+    "label": "Azure Load Testing",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02944-icon-service-Azure-Load-Testing.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-managed-grafana",
+    "label": "Azure Managed Grafana",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02905-icon-service-Azure-Managed-Grafana.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-maps-accounts",
+    "label": "Azure Maps Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10185-icon-service-Azure-Maps-Accounts.svg",
+    "group": "iot"
+  },
+  {
+    "value": "azure-media-service",
+    "label": "Azure Media Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/web/10309-icon-service-Azure-Media-Service.svg",
+    "group": "web"
+  },
+  {
+    "value": "azure-migrate",
+    "label": "Azure Migrate",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/migrate/10281-icon-service-Azure-Migrate.svg",
+    "group": "migrate"
+  },
+  {
+    "value": "azure-monitor-dashboard",
+    "label": "Azure Monitor Dashboard",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02488-icon-service-Azure-Monitor-Dashboard.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-monitor-pipeline",
+    "label": "Azure Monitor Pipeline",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/hybrid-multicloud/03585-icon-service-Azure-Monitor-Pipeline.svg",
+    "group": "hybrid multicloud"
+  },
+  {
+    "value": "azure-monitors-for-sap-solutions",
+    "label": "Azure Monitors for SAP Solutions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/monitor/00438-icon-service-Azure-Monitors-for-SAP-Solutions.svg",
+    "group": "monitor"
+  },
+  {
+    "value": "azure-netapp-files",
+    "label": "Azure NetApp Files",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10096-icon-service-Azure-NetApp-Files.svg",
+    "group": "storage"
+  },
+  {
+    "value": "azure-network-function-manager",
+    "label": "Azure Network Function Manager",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02740-icon-service-Azure-Network-Function-Manager.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-network-function-manager-functions",
+    "label": "Azure Network Function Manager Functions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01001-icon-service-Azure-Network-Function-Manager-Functions.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-object-understanding",
+    "label": "Azure Object Understanding",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/01688-icon-service-Azure-Object-Understanding.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "azure-openai",
+    "label": "Azure OpenAI",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/03438-icon-service-Azure-OpenAI.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "azure-operator-5g-core",
+    "label": "Azure Operator 5G Core",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/hybrid-multicloud/03248-icon-service-Azure-Operator-5G-Core.svg",
+    "group": "hybrid multicloud"
+  },
+  {
+    "value": "azure-operator-insights",
+    "label": "Azure Operator Insights",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/hybrid-multicloud/03333-icon-service-Azure-Operator-Insights.svg",
+    "group": "hybrid multicloud"
+  },
+  {
+    "value": "azure-operator-nexus",
+    "label": "Azure Operator Nexus",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/hybrid-multicloud/03324-icon-service-Azure-Operator-Nexus.svg",
+    "group": "hybrid multicloud"
+  },
+  {
+    "value": "azure-operator-service-manager",
+    "label": "Azure Operator Service Manager",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/hybrid-multicloud/03334-icon-service-Azure-Operator-Service-Manager.svg",
+    "group": "hybrid multicloud"
+  },
+  {
+    "value": "azure-orbital",
+    "label": "Azure Orbital",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02697-icon-service-Azure-Orbital.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-programmable-connectivity",
+    "label": "Azure Programmable Connectivity",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/hybrid-multicloud/03347-icon-service-Azure-Programmable-Connectivity.svg",
+    "group": "hybrid multicloud"
+  },
+  {
+    "value": "azure-quotas",
+    "label": "Azure Quotas",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02951-icon-service-Azure-Quotas.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-red-hat-openshift",
+    "label": "Azure Red Hat OpenShift",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/containers/03331-icon-service-Azure-Red-Hat-OpenShift.svg",
+    "group": "containers"
+  },
+  {
+    "value": "azure-sentinel",
+    "label": "Azure Sentinel",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/10248-icon-service-Azure-Sentinel.svg",
+    "group": "security"
+  },
+  {
+    "value": "azure-service-bus",
+    "label": "Azure Service Bus",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10836-icon-service-Azure-Service-Bus.svg",
+    "group": "integration"
+  },
+  {
+    "value": "azure-sphere",
+    "label": "Azure Sphere",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/10190-icon-service-Azure-Sphere.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-spring-apps",
+    "label": "Azure Spring Apps",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10370-icon-service-Azure-Spring-Apps.svg",
+    "group": "compute"
+  },
+  {
+    "value": "azure-sql",
+    "label": "Azure SQL",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/02390-icon-service-Azure-SQL.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-sql-edge",
+    "label": "Azure SQL Edge",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/02750-icon-service-Azure-SQL-Edge.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-sql-server-stretch-databases",
+    "label": "Azure SQL Server Stretch Databases",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10137-icon-service-Azure-SQL-Server-Stretch-Databases.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-sql-vm",
+    "label": "Azure SQL VM",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10124-icon-service-Azure-SQL-VM.svg",
+    "group": "databases"
+  },
+  {
+    "value": "azure-stack",
+    "label": "Azure Stack",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10114-icon-service-Azure-Stack.svg",
+    "group": "iot"
+  },
+  {
+    "value": "azure-stack-edge",
+    "label": "Azure Stack Edge",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10095-icon-service-Azure-Stack-Edge.svg",
+    "group": "integration"
+  },
+  {
+    "value": "azure-stack-hci-sizer",
+    "label": "Azure Stack HCI Sizer",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/03293-icon-service-Azure-Stack-HCI-Sizer.svg",
+    "group": "iot"
+  },
+  {
+    "value": "azure-storage-mover",
+    "label": "Azure Storage Mover",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03091-icon-service-Azure-Storage-Mover.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-support-center-blue",
+    "label": "Azure Support Center Blue",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02507-icon-service-Azure-Support-Center-Blue.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-sustainability",
+    "label": "Azure Sustainability",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03314-icon-service-Azure-Sustainability.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-synapse-analytics",
+    "label": "Azure Synapse Analytics",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/00606-icon-service-Azure-Synapse-Analytics.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "azure-token-service",
+    "label": "Azure Token Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/blockchain/10367-icon-service-Azure-Token-Service.svg",
+    "group": "blockchain"
+  },
+  {
+    "value": "azure-video-indexer",
+    "label": "Azure Video Indexer",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01800-icon-service-Azure-Video-Indexer.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-virtual-desktop",
+    "label": "Azure Virtual Desktop",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00327-icon-service-Azure-Virtual-Desktop.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-vmware-solution",
+    "label": "Azure VMware Solution",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01219-icon-service-Azure-VMware-Solution.svg",
+    "group": "other"
+  },
+  {
+    "value": "azure-workbooks",
+    "label": "Azure Workbooks",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/02189-icon-service-Azure-Workbooks.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "azureattestation",
+    "label": "AzureAttestation",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/10422-icon-service-AzureAttestation.svg",
+    "group": "other"
+  },
+  {
+    "value": "azurite",
+    "label": "Azurite",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02842-icon-service-Azurite.svg",
+    "group": "other"
+  },
+  {
+    "value": "backlog",
+    "label": "Backlog",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10853-icon-service-Backlog.svg",
+    "group": "general"
+  },
+  {
+    "value": "backup-vault",
+    "label": "Backup Vault",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02361-icon-service-Backup-Vault.svg",
+    "group": "other"
+  },
+  {
+    "value": "bare-metal-infrastructure",
+    "label": "Bare Metal Infrastructure",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02561-icon-service-Bare-Metal-Infrastructure.svg",
+    "group": "other"
+  },
+  {
+    "value": "bastions",
+    "label": "Bastions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02422-icon-service-Bastions.svg",
+    "group": "networking"
+  },
+  {
+    "value": "batch-accounts",
+    "label": "Batch Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10031-icon-service-Batch-Accounts.svg",
+    "group": "compute"
+  },
+  {
+    "value": "batch-ai",
+    "label": "Batch AI",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00028-icon-service-Batch-AI.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "biz-talk",
+    "label": "Biz Talk",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10779-icon-service-Biz-Talk.svg",
+    "group": "general"
+  },
+  {
+    "value": "blob-block",
+    "label": "Blob Block",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10780-icon-service-Blob-Block.svg",
+    "group": "general"
+  },
+  {
+    "value": "blob-page",
+    "label": "Blob Page",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10781-icon-service-Blob-Page.svg",
+    "group": "general"
+  },
+  {
+    "value": "blockchain-applications",
+    "label": "Blockchain Applications",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/blockchain/10210-icon-service-Blockchain-Applications.svg",
+    "group": "blockchain"
+  },
+  {
+    "value": "blueprints",
+    "label": "Blueprints",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00006-icon-service-Blueprints.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "bonsai",
+    "label": "Bonsai",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/03337-icon-service-Bonsai.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "bot-services",
+    "label": "Bot Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/10165-icon-service-Bot-Services.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "branch",
+    "label": "Branch",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10782-icon-service-Branch.svg",
+    "group": "general"
+  },
+  {
+    "value": "browser",
+    "label": "Browser",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10783-icon-service-Browser.svg",
+    "group": "general"
+  },
+  {
+    "value": "bug",
+    "label": "Bug",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10784-icon-service-Bug.svg",
+    "group": "general"
+  },
+  {
+    "value": "builds",
+    "label": "Builds",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10785-icon-service-Builds.svg",
+    "group": "general"
+  },
+  {
+    "value": "business-central",
+    "label": "Business Central",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/BusinessCentral_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "business-process-tracking",
+    "label": "Business Process Tracking",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/03637-icon-service-Business-Process-Tracking.svg",
+    "group": "integration"
+  },
+  {
+    "value": "cache",
+    "label": "Cache",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10786-icon-service-Cache.svg",
+    "group": "general"
+  },
+  {
+    "value": "cache-redis",
+    "label": "Cache Redis",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10137-icon-service-Cache-Redis.svg",
+    "group": "databases"
+  },
+  {
+    "value": "capacity",
+    "label": "Capacity",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-stack/10109-icon-service-Capacity.svg",
+    "group": "azure stack"
+  },
+  {
+    "value": "capacity-reservation-groups",
+    "label": "Capacity Reservation Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02732-icon-service-Capacity-Reservation-Groups.svg",
+    "group": "other"
+  },
+  {
+    "value": "cdn-profiles",
+    "label": "CDN Profiles",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/app-services/00056-icon-service-CDN-Profiles.svg",
+    "group": "app services"
+  },
+  {
+    "value": "central-service-instance-for-sap",
+    "label": "Central Service Instance For SAP",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03092-icon-service-Central-Service-Instance-For-SAP.svg",
+    "group": "other"
+  },
+  {
+    "value": "ceres",
+    "label": "Ceres",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02828-icon-service-Ceres.svg",
+    "group": "other"
+  },
+  {
+    "value": "change-analysis",
+    "label": "Change Analysis",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/00563-icon-service-Change-Analysis.svg",
+    "group": "devops"
+  },
+  {
+    "value": "client-apps",
+    "label": "Client Apps",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10331-icon-service-Client-Apps.svg",
+    "group": "intune"
+  },
+  {
+    "value": "cloud-services-classic",
+    "label": "Cloud Services (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10030-icon-service-Cloud-Services-(Classic).svg",
+    "group": "compute"
+  },
+  {
+    "value": "cloud-services-extended-support",
+    "label": "Cloud Services (extended support)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02505-icon-service-Cloud-Services-(extended-support).svg",
+    "group": "other"
+  },
+  {
+    "value": "cloudtest",
+    "label": "CloudTest",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/02373-icon-service-CloudTest.svg",
+    "group": "devops"
+  },
+  {
+    "value": "code",
+    "label": "Code",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10787-icon-service-Code.svg",
+    "group": "general"
+  },
+  {
+    "value": "code-optimization",
+    "label": "Code Optimization",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/03455-icon-service-Code-Optimization.svg",
+    "group": "devops"
+  },
+  {
+    "value": "cognitive-search",
+    "label": "Cognitive Search",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/10044-icon-service-Cognitive-Search.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "cognitive-services",
+    "label": "Cognitive Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/10162-icon-service-Cognitive-Services.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "cognitive-services-decisions",
+    "label": "Cognitive Services Decisions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/03173-icon-service-Cognitive-Services-Decisions.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "collaborative-service",
+    "label": "Collaborative Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-ecosystem/01038-icon-service-Collaborative-Service.svg",
+    "group": "azure ecosystem"
+  },
+  {
+    "value": "commerce",
+    "label": "Commerce",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/Commerce_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "commit",
+    "label": "Commit",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10788-icon-service-Commit.svg",
+    "group": "general"
+  },
+  {
+    "value": "community-images",
+    "label": "Community Images",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02865-icon-service-Community-Images.svg",
+    "group": "other"
+  },
+  {
+    "value": "compliance",
+    "label": "Compliance",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00011-icon-service-Compliance.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "compliance-center",
+    "label": "Compliance Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02931-icon-service-Compliance-Center.svg",
+    "group": "other"
+  },
+  {
+    "value": "compute-fleet",
+    "label": "Compute Fleet",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/03487-icon-service-Compute-Fleet.svg",
+    "group": "compute"
+  },
+  {
+    "value": "computer-vision",
+    "label": "Computer Vision",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00792-icon-service-Computer-Vision.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "conditional-access",
+    "label": "Conditional Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/10233-icon-service-Conditional-Access.svg",
+    "group": "security"
+  },
+  {
+    "value": "confidential-ledgers",
+    "label": "Confidential Ledgers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02668-icon-service-Confidential-Ledgers.svg",
+    "group": "other"
+  },
+  {
+    "value": "connected-cache",
+    "label": "Connected Cache",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02509-icon-service-Connected-Cache.svg",
+    "group": "networking"
+  },
+  {
+    "value": "connected-vehicle-platform",
+    "label": "Connected Vehicle Platform",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02573-icon-service-Connected-Vehicle-Platform.svg",
+    "group": "other"
+  },
+  {
+    "value": "connections",
+    "label": "Connections",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10081-icon-service-Connections.svg",
+    "group": "networking"
+  },
+  {
+    "value": "consortium",
+    "label": "Consortium",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/blockchain/10375-icon-service-Consortium.svg",
+    "group": "blockchain"
+  },
+  {
+    "value": "contact-center",
+    "label": "Contact Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/ContactCenter_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "container-apps-environments",
+    "label": "Container Apps Environments",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02989-icon-service-Container-Apps-Environments.svg",
+    "group": "other"
+  },
+  {
+    "value": "container-instances",
+    "label": "Container Instances",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10104-icon-service-Container-Instances.svg",
+    "group": "compute"
+  },
+  {
+    "value": "container-registries",
+    "label": "Container Registries",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/containers/10105-icon-service-Container-Registries.svg",
+    "group": "containers"
+  },
+  {
+    "value": "container-services-deprecated",
+    "label": "Container Services (Deprecated)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10049-icon-service-Container-Services-(Deprecated).svg",
+    "group": "compute"
+  },
+  {
+    "value": "content-moderators",
+    "label": "Content Moderators",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00795-icon-service-Content-Moderators.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "content-safety",
+    "label": "Content Safety",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/03390-icon-service-Content-Safety.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "controls",
+    "label": "Controls",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10789-icon-service-Controls.svg",
+    "group": "general"
+  },
+  {
+    "value": "controls-horizontal",
+    "label": "Controls Horizontal",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10790-icon-service-Controls-Horizontal.svg",
+    "group": "general"
+  },
+  {
+    "value": "copilot-studio",
+    "label": "Copilot Studio",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/Copilot-studio/CopilotStudio_scalable.svg",
+    "group": "copilot studio"
+  },
+  {
+    "value": "cost-alerts",
+    "label": "Cost Alerts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10791-icon-service-Cost-Alerts.svg",
+    "group": "general"
+  },
+  {
+    "value": "cost-analysis",
+    "label": "Cost Analysis",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10792-icon-service-Cost-Analysis.svg",
+    "group": "general"
+  },
+  {
+    "value": "cost-budgets",
+    "label": "Cost Budgets",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10793-icon-service-Cost-Budgets.svg",
+    "group": "general"
+  },
+  {
+    "value": "cost-export",
+    "label": "Cost Export",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00913-icon-service-Cost-Export.svg",
+    "group": "other"
+  },
+  {
+    "value": "cost-management",
+    "label": "Cost Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10019-icon-service-Cost-Management.svg",
+    "group": "general"
+  },
+  {
+    "value": "cost-management-and-billing",
+    "label": "Cost Management and Billing",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/00004-icon-service-Cost-Management-and-Billing.svg",
+    "group": "general"
+  },
+  {
+    "value": "counter",
+    "label": "Counter",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10794-icon-service-Counter.svg",
+    "group": "general"
+  },
+  {
+    "value": "cubes",
+    "label": "Cubes",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10795-icon-service-Cubes.svg",
+    "group": "general"
+  },
+  {
+    "value": "custom-ip-prefix",
+    "label": "Custom IP Prefix",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02654-icon-service-Custom-IP-Prefix.svg",
+    "group": "other"
+  },
+  {
+    "value": "custom-vision",
+    "label": "Custom Vision",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00793-icon-service-Custom-Vision.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "customer-insights",
+    "label": "Customer Insights",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/CustomerInsights_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "customer-lockbox-for-microsoft-azure",
+    "label": "Customer Lockbox for Microsoft Azure",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/10314-icon-service-Customer-Lockbox-for-Microsoft-Azure.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "customer-services",
+    "label": "Customer Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/CustomerServices_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "customer-voice",
+    "label": "Customer Voice",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/CustomerVoice_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "dashboard",
+    "label": "Dashboard",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10015-icon-service-Dashboard.svg",
+    "group": "general"
+  },
+  {
+    "value": "dashboard-hub",
+    "label": "Dashboard Hub",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01757-icon-service-Dashboard-Hub.svg",
+    "group": "other"
+  },
+  {
+    "value": "data-api-builder",
+    "label": "Data API Builder",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/Data%20API%20Builder.svg",
+    "group": "databases"
+  },
+  {
+    "value": "data-box",
+    "label": "Data Box",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/migrate/10094-icon-service-Data-Box.svg",
+    "group": "migrate"
+  },
+  {
+    "value": "data-collection-rules",
+    "label": "Data Collection Rules",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01857-icon-service-Data-Collection-Rules.svg",
+    "group": "other"
+  },
+  {
+    "value": "data-factories",
+    "label": "Data Factories",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/10126-icon-service-Data-Factories.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "data-lake-analytics",
+    "label": "Data Lake Analytics",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/10143-icon-service-Data-Lake-Analytics.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "data-lake-storage-gen1",
+    "label": "Data Lake Storage Gen1",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10090-icon-service-Data-Lake-Storage-Gen1.svg",
+    "group": "storage"
+  },
+  {
+    "value": "data-lake-store-gen1",
+    "label": "Data Lake Store Gen1",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/10150-icon-service-Data-Lake-Store-Gen1.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "data-share-invitations",
+    "label": "Data Share Invitations",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10097-icon-service-Data-Share-Invitations.svg",
+    "group": "storage"
+  },
+  {
+    "value": "data-shares",
+    "label": "Data Shares",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10098-icon-service-Data-Shares.svg",
+    "group": "storage"
+  },
+  {
+    "value": "database-instance-for-sap",
+    "label": "Database Instance For SAP",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03175-icon-service-Database-Instance-For-SAP.svg",
+    "group": "other"
+  },
+  {
+    "value": "dataverse",
+    "label": "Dataverse",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/power-platform/Dataverse_scalable.svg",
+    "group": "power platform"
+  },
+  {
+    "value": "ddos-protection-plans",
+    "label": "DDoS Protection Plans",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10072-icon-service-DDoS-Protection-Plans.svg",
+    "group": "networking"
+  },
+  {
+    "value": "dedicated-hsm",
+    "label": "Dedicated HSM",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02322-icon-service-Dedicated-HSM.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-cm-local-manager",
+    "label": "Defender CM Local Manager",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03402-icon-service-Defender-CM-Local-Manager.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-dcs-controller",
+    "label": "Defender DCS Controller",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03412-icon-service-Defender-DCS-Controller.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-distributer-control-system",
+    "label": "Defender Distributer Control System",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03413-icon-service-Defender-Distributer-Control-System.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-engineering-station",
+    "label": "Defender Engineering Station",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03414-icon-service-Defender-Engineering-Station.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-external-management",
+    "label": "Defender External Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03403-icon-service-Defender-External-Management.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-freezer-monitor",
+    "label": "Defender Freezer Monitor",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03404-icon-service-Defender-Freezer-Monitor.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-historian",
+    "label": "Defender Historian",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03405-icon-service-Defender-Historian.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-hmi",
+    "label": "Defender HMI",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03406-icon-service-Defender-HMI.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-industrial-packaging-system",
+    "label": "Defender Industrial Packaging System",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03415-icon-service-Defender-Industrial-Packaging-System.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-industrial-printer",
+    "label": "Defender Industrial Printer",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03416-icon-service-Defender-Industrial-Printer.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-industrial-robot",
+    "label": "Defender Industrial Robot",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03418-icon-service-Defender-Industrial-Robot.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-industrial-scale-system",
+    "label": "Defender Industrial Scale System",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03417-icon-service-Defender-Industrial-Scale-System.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-marquee",
+    "label": "Defender Marquee",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03407-icon-service-Defender-Marquee.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-meter",
+    "label": "Defender Meter",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03419-icon-service-Defender-Meter.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-plc",
+    "label": "Defender PLC",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03420-icon-service-Defender-PLC.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-pneumatic-device",
+    "label": "Defender Pneumatic Device",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03421-icon-service-Defender-Pneumatic-Device.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-programable-board",
+    "label": "Defender Programable Board",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03422-icon-service-Defender-Programable-Board.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-relay",
+    "label": "Defender Relay",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03423-icon-service-Defender-Relay.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-robot-controller",
+    "label": "Defender Robot Controller",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03408-icon-service-Defender-Robot-Controller.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-rtu",
+    "label": "Defender RTU",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03424-icon-service-Defender-RTU.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-sensor",
+    "label": "Defender Sensor",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03409-icon-service-Defender-Sensor.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-slot",
+    "label": "Defender Slot",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03410-icon-service-Defender-Slot.svg",
+    "group": "other"
+  },
+  {
+    "value": "defender-web-guiding-system",
+    "label": "Defender Web Guiding System",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03411-icon-service-Defender-Web-Guiding-System.svg",
+    "group": "other"
+  },
+  {
+    "value": "detonation",
+    "label": "Detonation",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/00378-icon-service-Detonation.svg",
+    "group": "security"
+  },
+  {
+    "value": "dev-console",
+    "label": "Dev Console",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10796-icon-service-Dev-Console.svg",
+    "group": "general"
+  },
+  {
+    "value": "device-compliance",
+    "label": "Device Compliance",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10333-icon-service-Device-Compliance.svg",
+    "group": "intune"
+  },
+  {
+    "value": "device-configuration",
+    "label": "Device Configuration",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10338-icon-service-Device-Configuration.svg",
+    "group": "intune"
+  },
+  {
+    "value": "device-enrollment",
+    "label": "Device Enrollment",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10337-icon-service-Device-Enrollment.svg",
+    "group": "intune"
+  },
+  {
+    "value": "device-provisioning-services",
+    "label": "Device Provisioning Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10369-icon-service-Device-Provisioning-Services.svg",
+    "group": "iot"
+  },
+  {
+    "value": "device-security-apple",
+    "label": "Device Security Apple",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/00399-icon-service-Device-Security-Apple.svg",
+    "group": "intune"
+  },
+  {
+    "value": "device-security-google",
+    "label": "Device Security Google",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/00399-icon-service-Device-Security-Google.svg",
+    "group": "intune"
+  },
+  {
+    "value": "device-security-windows",
+    "label": "Device Security Windows",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/00399-icon-service-Device-Security-Windows.svg",
+    "group": "intune"
+  },
+  {
+    "value": "device-update-iot-hub",
+    "label": "Device Update IoT Hub",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02475-icon-service-Device-Update-IoT-Hub.svg",
+    "group": "other"
+  },
+  {
+    "value": "devices",
+    "label": "Devices",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10332-icon-service-Devices.svg",
+    "group": "intune"
+  },
+  {
+    "value": "devops-starter",
+    "label": "DevOps Starter",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/03339-icon-service-DevOps-Starter.svg",
+    "group": "devops"
+  },
+  {
+    "value": "devtest-labs",
+    "label": "DevTest Labs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/10264-icon-service-DevTest-Labs.svg",
+    "group": "devops"
+  },
+  {
+    "value": "diagnose-and-solve-problems",
+    "label": "Diagnose and solve problems",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/Diagnose%20and%20solve%20problems.svg",
+    "group": "identity"
+  },
+  {
+    "value": "diagnostics-settings",
+    "label": "Diagnostics Settings",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00008-icon-service-Diagnostics-Settings.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "digital-twins",
+    "label": "Digital Twins",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/01030-icon-service-Digital-Twins.svg",
+    "group": "iot"
+  },
+  {
+    "value": "disk-encryption-sets",
+    "label": "Disk Encryption Sets",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/00398-icon-service-Disk-Encryption-Sets.svg",
+    "group": "compute"
+  },
+  {
+    "value": "disk-pool",
+    "label": "Disk Pool",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02560-icon-service-Disk-Pool.svg",
+    "group": "other"
+  },
+  {
+    "value": "disks",
+    "label": "Disks",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10032-icon-service-Disks.svg",
+    "group": "compute"
+  },
+  {
+    "value": "disks-classic",
+    "label": "Disks (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10041-icon-service-Disks-(Classic).svg",
+    "group": "compute"
+  },
+  {
+    "value": "disks-snapshots",
+    "label": "Disks Snapshots",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10026-icon-service-Disks-Snapshots.svg",
+    "group": "compute"
+  },
+  {
+    "value": "dns-multistack",
+    "label": "DNS Multistack",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/03459-icon-service-DNS-Multistack.svg",
+    "group": "networking"
+  },
+  {
+    "value": "dns-private-resolver",
+    "label": "DNS Private Resolver",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02882-icon-service-DNS-Private-Resolver.svg",
+    "group": "networking"
+  },
+  {
+    "value": "dns-security-policy",
+    "label": "DNS Security Policy",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/03368-icon-service-DNS-Security-Policy.svg",
+    "group": "networking"
+  },
+  {
+    "value": "dns-zones",
+    "label": "DNS Zones",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10064-icon-service-DNS-Zones.svg",
+    "group": "networking"
+  },
+  {
+    "value": "document-dark",
+    "label": "Document Dark",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Document_Dark.svg",
+    "group": "project"
+  },
+  {
+    "value": "document-gray",
+    "label": "Document Gray",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Document_Gray.svg",
+    "group": "project"
+  },
+  {
+    "value": "document-light",
+    "label": "Document Light",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Document_Light.svg",
+    "group": "project"
+  },
+  {
+    "value": "download",
+    "label": "Download",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10797-icon-service-Download.svg",
+    "group": "general"
+  },
+  {
+    "value": "dynamics365",
+    "label": "Dynamics365",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/Dynamics365_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "ebooks",
+    "label": "eBooks",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10330-icon-service-eBooks.svg",
+    "group": "intune"
+  },
+  {
+    "value": "edge-management",
+    "label": "Edge Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/10117-icon-service-Edge-Management.svg",
+    "group": "other"
+  },
+  {
+    "value": "elastic-job-agents",
+    "label": "Elastic Job Agents",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10128-icon-service-Elastic-Job-Agents.svg",
+    "group": "databases"
+  },
+  {
+    "value": "elastic-san",
+    "label": "Elastic SAN",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03190-icon-service-Elastic-SAN.svg",
+    "group": "other"
+  },
+  {
+    "value": "endpoint-analytics",
+    "label": "Endpoint Analytics",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/00562-icon-service-Endpoint-Analytics.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "enterprise-applications",
+    "label": "Enterprise Applications",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10225-icon-service-Enterprise-Applications.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-connect",
+    "label": "Entra Connect",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/02854-icon-service-Entra-Connect.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-connect-health",
+    "label": "Entra Connect Health",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10224-icon-service-Entra-Connect-Health.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-connect-sync",
+    "label": "Entra Connect Sync",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/03533-icon-service-Entra-Connect-Sync.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-domain-services",
+    "label": "Entra Domain Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10222-icon-service-Entra-Domain-Services.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-global-secure-access",
+    "label": "Entra Global Secure Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/03309-icon-service-Entra-Global-Secure-Access.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-id-protection",
+    "label": "Entra ID Protection",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10231-icon-service-Entra-ID-Protection.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-identity-custom-roles",
+    "label": "Entra Identity Custom Roles",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/02680-icon-service-Entra-Identity-Custom-Roles.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-identity-licenses",
+    "label": "Entra Identity Licenses",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/02681-icon-service-Entra-Identity-Licenses.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-identity-risky-agents",
+    "label": "Entra Identity Risky Agents",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/Entra%20Identity%20Risky%20Agents.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-identity-risky-signins",
+    "label": "Entra Identity Risky Signins",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/03341-icon-service-Entra-Identity-Risky-Signins.svg",
+    "group": "security"
+  },
+  {
+    "value": "entra-identity-risky-users",
+    "label": "Entra Identity Risky Users",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/03342-icon-service-Entra-Identity-Risky-Users.svg",
+    "group": "security"
+  },
+  {
+    "value": "entra-identity-risky-workload-identities",
+    "label": "Entra Identity Risky Workload Identities",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/Entra%20Identity%20Risky%20Workload%20Identities.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-identity-roles-and-administrators",
+    "label": "Entra Identity Roles and Administrators",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10340-icon-service-Entra-Identity-Roles-and-Administrators.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-internet-access",
+    "label": "Entra Internet Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/03383-icon-service-Entra-Internet-Access.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-managed-identities",
+    "label": "Entra Managed Identities",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10227-icon-service-Entra-Managed-Identities.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-private-access",
+    "label": "Entra Private Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/03382-icon-service-Entra-Private-Access.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-privileged-identity-management",
+    "label": "Entra Privileged Identity Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/02251-icon-service-Entra-Privileged-Identity-Management.svg",
+    "group": "identity"
+  },
+  {
+    "value": "entra-verified-id",
+    "label": "Entra Verified ID",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/03143-icon-service-Entra-Verified-ID.svg",
+    "group": "identity"
+  },
+  {
+    "value": "error",
+    "label": "Error",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10798-icon-service-Error.svg",
+    "group": "general"
+  },
+  {
+    "value": "event-grid-domains",
+    "label": "Event Grid Domains",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10215-icon-service-Event-Grid-Domains.svg",
+    "group": "integration"
+  },
+  {
+    "value": "event-grid-subscriptions",
+    "label": "Event Grid Subscriptions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10221-icon-service-Event-Grid-Subscriptions.svg",
+    "group": "integration"
+  },
+  {
+    "value": "event-grid-topics",
+    "label": "Event Grid Topics",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10206-icon-service-Event-Grid-Topics.svg",
+    "group": "integration"
+  },
+  {
+    "value": "event-hub-clusters",
+    "label": "Event Hub Clusters",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/10149-icon-service-Event-Hub-Clusters.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "event-hubs",
+    "label": "Event Hubs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/00039-icon-service-Event-Hubs.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "exchange-access",
+    "label": "Exchange Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10339-icon-service-Exchange-Access.svg",
+    "group": "intune"
+  },
+  {
+    "value": "exchange-on-premises-access",
+    "label": "Exchange On Premises Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/10334-icon-service-Exchange-On-Premises-Access.svg",
+    "group": "other"
+  },
+  {
+    "value": "express-route-traffic-collector",
+    "label": "Express Route Traffic Collector",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03137-icon-service-Express-Route-Traffic-Collector.svg",
+    "group": "other"
+  },
+  {
+    "value": "expressroute-circuits",
+    "label": "ExpressRoute Circuits",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10079-icon-service-ExpressRoute-Circuits.svg",
+    "group": "networking"
+  },
+  {
+    "value": "expressroute-direct",
+    "label": "ExpressRoute Direct",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00903-icon-service-ExpressRoute-Direct.svg",
+    "group": "other"
+  },
+  {
+    "value": "extendedsecurityupdates",
+    "label": "ExtendedSecurityUpdates",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/10572-icon-service-ExtendedSecurityUpdates.svg",
+    "group": "security"
+  },
+  {
+    "value": "extensions",
+    "label": "Extensions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10799-icon-service-Extensions.svg",
+    "group": "general"
+  },
+  {
+    "value": "external-identities",
+    "label": "External Identities",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/03338-icon-service-External-Identities.svg",
+    "group": "identity"
+  },
+  {
+    "value": "face-apis",
+    "label": "Face APIs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00794-icon-service-Face-APIs.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "feature-previews",
+    "label": "Feature Previews",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10827-icon-service-Feature-Previews.svg",
+    "group": "general"
+  },
+  {
+    "value": "fhir-service",
+    "label": "FHIR Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02658-icon-service-FHIR-Service.svg",
+    "group": "other"
+  },
+  {
+    "value": "field-service",
+    "label": "Field Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/FieldService_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "fiji",
+    "label": "Fiji",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02486-icon-service-Fiji.svg",
+    "group": "other"
+  },
+  {
+    "value": "file",
+    "label": "File",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10800-icon-service-File.svg",
+    "group": "general"
+  },
+  {
+    "value": "files",
+    "label": "Files",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10801-icon-service-Files.svg",
+    "group": "general"
+  },
+  {
+    "value": "finance",
+    "label": "Finance",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/Finance_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "finance-operations",
+    "label": "Finance Operations",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/FinanceOperations_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "firewalls",
+    "label": "Firewalls",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10084-icon-service-Firewalls.svg",
+    "group": "networking"
+  },
+  {
+    "value": "folder-blank",
+    "label": "Folder Blank",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10802-icon-service-Folder-Blank.svg",
+    "group": "general"
+  },
+  {
+    "value": "folder-website",
+    "label": "Folder Website",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10803-icon-service-Folder-Website.svg",
+    "group": "general"
+  },
+  {
+    "value": "form-recognizers",
+    "label": "Form Recognizers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00819-icon-service-Form-Recognizers.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "free-services",
+    "label": "Free Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10016-icon-service-Free-Services.svg",
+    "group": "general"
+  },
+  {
+    "value": "front-door-and-cdn-profiles",
+    "label": "Front Door and CDN Profiles",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10073-icon-service-Front-Door-and-CDN-Profiles.svg",
+    "group": "networking"
+  },
+  {
+    "value": "ftp",
+    "label": "FTP",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10804-icon-service-FTP.svg",
+    "group": "general"
+  },
+  {
+    "value": "function-apps",
+    "label": "Function Apps",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10029-icon-service-Function-Apps.svg",
+    "group": "compute"
+  },
+  {
+    "value": "gear",
+    "label": "Gear",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10805-icon-service-Gear.svg",
+    "group": "general"
+  },
+  {
+    "value": "genomics",
+    "label": "Genomics",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00031-icon-service-Genomics.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "genomics-accounts",
+    "label": "Genomics Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/10164-icon-service-Genomics-Accounts.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "globe-error",
+    "label": "Globe Error",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10807-icon-service-Globe-Error.svg",
+    "group": "general"
+  },
+  {
+    "value": "globe-success",
+    "label": "Globe Success",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10808-icon-service-Globe-Success.svg",
+    "group": "general"
+  },
+  {
+    "value": "globe-warning",
+    "label": "Globe Warning",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10809-icon-service-Globe-Warning.svg",
+    "group": "general"
+  },
+  {
+    "value": "groups",
+    "label": "Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10223-icon-service-Groups.svg",
+    "group": "identity"
+  },
+  {
+    "value": "guide",
+    "label": "Guide",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10810-icon-service-Guide.svg",
+    "group": "general"
+  },
+  {
+    "value": "hd-insight-clusters",
+    "label": "HD Insight Clusters",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/10142-icon-service-HD-Insight-Clusters.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "hdi-aks-cluster",
+    "label": "HDI AKS Cluster",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03468-icon-service-HDI-AKS-Cluster.svg",
+    "group": "other"
+  },
+  {
+    "value": "heart",
+    "label": "Heart",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10811-icon-service-Heart.svg",
+    "group": "general"
+  },
+  {
+    "value": "help-and-support",
+    "label": "Help and Support",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10013-icon-service-Help-and-Support.svg",
+    "group": "general"
+  },
+  {
+    "value": "host-groups",
+    "label": "Host Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10346-icon-service-Host-Groups.svg",
+    "group": "compute"
+  },
+  {
+    "value": "host-pools",
+    "label": "Host Pools",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/00328-icon-service-Host-Pools.svg",
+    "group": "compute"
+  },
+  {
+    "value": "hosts",
+    "label": "Hosts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10347-icon-service-Hosts.svg",
+    "group": "compute"
+  },
+  {
+    "value": "human-resources",
+    "label": "Human Resources",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/HumanResources_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "icm-troubleshooting",
+    "label": "IcM Troubleshooting",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03361-icon-service-IcM-Troubleshooting.svg",
+    "group": "other"
+  },
+  {
+    "value": "identity-governance",
+    "label": "Identity Governance",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10235-icon-service-Identity-Governance.svg",
+    "group": "identity"
+  },
+  {
+    "value": "identity-secure-score",
+    "label": "Identity Secure Score",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/03340-icon-service-Identity-Secure-Score.svg",
+    "group": "security"
+  },
+  {
+    "value": "image",
+    "label": "Image",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10812-icon-service-Image.svg",
+    "group": "general"
+  },
+  {
+    "value": "image-definitions",
+    "label": "Image Definitions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10037-icon-service-Image-Definitions.svg",
+    "group": "compute"
+  },
+  {
+    "value": "image-templates",
+    "label": "Image Templates",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/02634-icon-service-Image-Templates.svg",
+    "group": "compute"
+  },
+  {
+    "value": "image-versions",
+    "label": "Image Versions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10038-icon-service-Image-Versions.svg",
+    "group": "compute"
+  },
+  {
+    "value": "images",
+    "label": "Images",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10033-icon-service-Images.svg",
+    "group": "compute"
+  },
+  {
+    "value": "immersive-readers",
+    "label": "Immersive Readers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00812-icon-service-Immersive-Readers.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "import-export-jobs",
+    "label": "Import Export Jobs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10100-icon-service-Import-Export-Jobs.svg",
+    "group": "storage"
+  },
+  {
+    "value": "industrial-iot",
+    "label": "Industrial IoT",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/02359-icon-service-Industrial-IoT.svg",
+    "group": "iot"
+  },
+  {
+    "value": "information",
+    "label": "Information",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10005-icon-service-Information.svg",
+    "group": "general"
+  },
+  {
+    "value": "infrastructure-backup",
+    "label": "Infrastructure Backup",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-stack/10108-icon-service-Infrastructure-Backup.svg",
+    "group": "azure stack"
+  },
+  {
+    "value": "input-output",
+    "label": "Input Output",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10813-icon-service-Input-Output.svg",
+    "group": "general"
+  },
+  {
+    "value": "instance-pools",
+    "label": "Instance Pools",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10139-icon-service-Instance-Pools.svg",
+    "group": "databases"
+  },
+  {
+    "value": "integration-accounts",
+    "label": "Integration Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10218-icon-service-Integration-Accounts.svg",
+    "group": "integration"
+  },
+  {
+    "value": "integration-environments",
+    "label": "Integration Environments",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/03345-icon-service-Integration-Environments.svg",
+    "group": "integration"
+  },
+  {
+    "value": "integration-service-environments",
+    "label": "Integration Service Environments",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/00555-icon-service-Integration-Service-Environments.svg",
+    "group": "integration"
+  },
+  {
+    "value": "intelligent-order-management",
+    "label": "Intelligent Order Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/IntelligentOrderManagement_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "internet-analyzer-profiles",
+    "label": "Internet Analyzer Profiles",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00469-icon-service-Internet-Analyzer-Profiles.svg",
+    "group": "other"
+  },
+  {
+    "value": "intune-app-protection",
+    "label": "Intune App Protection",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10344-icon-service-Intune-App-Protection.svg",
+    "group": "intune"
+  },
+  {
+    "value": "intune-for-education",
+    "label": "Intune For Education",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10343-icon-service-Intune-For-Education.svg",
+    "group": "intune"
+  },
+  {
+    "value": "intune-old",
+    "label": "Intune old",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10329-icon-service-Intune-old.svg",
+    "group": "intune"
+  },
+  {
+    "value": "intune-trends",
+    "label": "Intune Trends",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00408-icon-service-Intune-Trends.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "iot-central-applications",
+    "label": "IoT Central Applications",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10184-icon-service-IoT-Central-Applications.svg",
+    "group": "iot"
+  },
+  {
+    "value": "iot-edge",
+    "label": "IoT Edge",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10186-icon-service-IoT-Edge.svg",
+    "group": "iot"
+  },
+  {
+    "value": "iot-hub",
+    "label": "IoT Hub",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10182-icon-service-IoT-Hub.svg",
+    "group": "iot"
+  },
+  {
+    "value": "ip-address-manager",
+    "label": "IP Address manager",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/03461-icon-service-IP-Address-manager.svg",
+    "group": "networking"
+  },
+  {
+    "value": "ip-groups",
+    "label": "IP Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/00701-icon-service-IP-Groups.svg",
+    "group": "networking"
+  },
+  {
+    "value": "journey-hub",
+    "label": "Journey Hub",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10814-icon-service-Journey-Hub.svg",
+    "group": "general"
+  },
+  {
+    "value": "key-vaults",
+    "label": "Key Vaults",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/10245-icon-service-Key-Vaults.svg",
+    "group": "security"
+  },
+  {
+    "value": "keys",
+    "label": "Keys",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/menu/00787-icon-service-Keys.svg",
+    "group": "menu"
+  },
+  {
+    "value": "kubernetes-fleet-manager",
+    "label": "Kubernetes Fleet Manager",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03134-icon-service-Kubernetes-Fleet-Manager.svg",
+    "group": "other"
+  },
+  {
+    "value": "kubernetes-services",
+    "label": "Kubernetes Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10023-icon-service-Kubernetes-Services.svg",
+    "group": "compute"
+  },
+  {
+    "value": "lab-accounts",
+    "label": "Lab Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/02761-icon-service-Lab-Accounts.svg",
+    "group": "devops"
+  },
+  {
+    "value": "lab-services",
+    "label": "Lab Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/10265-icon-service-Lab-Services.svg",
+    "group": "devops"
+  },
+  {
+    "value": "language",
+    "label": "Language",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/02876-icon-service-Language.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "language-understanding",
+    "label": "Language Understanding",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00801-icon-service-Language-Understanding.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "launch-portal",
+    "label": "Launch Portal",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10815-icon-service-Launch-Portal.svg",
+    "group": "general"
+  },
+  {
+    "value": "learn",
+    "label": "Learn",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10816-icon-service-Learn.svg",
+    "group": "general"
+  },
+  {
+    "value": "load-balancer-hub",
+    "label": "Load Balancer Hub",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02302-icon-service-Load-Balancer-Hub.svg",
+    "group": "networking"
+  },
+  {
+    "value": "load-balancers",
+    "label": "Load Balancers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10062-icon-service-Load-Balancers.svg",
+    "group": "networking"
+  },
+  {
+    "value": "load-test",
+    "label": "Load Test",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10817-icon-service-Load-Test.svg",
+    "group": "general"
+  },
+  {
+    "value": "load-testing",
+    "label": "Load Testing",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/02423-icon-service-Load-Testing.svg",
+    "group": "devops"
+  },
+  {
+    "value": "local-network-gateways",
+    "label": "Local Network Gateways",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10077-icon-service-Local-Network-Gateways.svg",
+    "group": "networking"
+  },
+  {
+    "value": "location",
+    "label": "Location",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10818-icon-service-Location.svg",
+    "group": "general"
+  },
+  {
+    "value": "log-analytics-query-pack",
+    "label": "Log Analytics Query Pack",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01085-icon-service-Log-Analytics-Query-Pack.svg",
+    "group": "other"
+  },
+  {
+    "value": "log-analytics-workspaces",
+    "label": "Log Analytics Workspaces",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/00009-icon-service-Log-Analytics-Workspaces.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "log-streaming",
+    "label": "Log Streaming",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10819-icon-service-Log-Streaming.svg",
+    "group": "general"
+  },
+  {
+    "value": "logic-apps",
+    "label": "Logic Apps",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/02631-icon-service-Logic-Apps.svg",
+    "group": "integration"
+  },
+  {
+    "value": "logic-apps-custom-connector",
+    "label": "Logic Apps Custom Connector",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10363-icon-service-Logic-Apps-Custom-Connector.svg",
+    "group": "integration"
+  },
+  {
+    "value": "machine-learning",
+    "label": "Machine Learning",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/10166-icon-service-Machine-Learning.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "machine-learning-studio-classic-web-services",
+    "label": "Machine Learning Studio (Classic) Web Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00030-icon-service-Machine-Learning-Studio-(Classic)-Web-Services.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "machine-learning-studio-web-service-plans",
+    "label": "Machine Learning Studio Web Service Plans",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/10168-icon-service-Machine-Learning-Studio-Web-Service-Plans.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "machine-learning-studio-workspaces",
+    "label": "Machine Learning Studio Workspaces",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/10167-icon-service-Machine-Learning-Studio-Workspaces.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "machinesazurearc",
+    "label": "MachinesAzureArc",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/10450-icon-service-MachinesAzureArc.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "maintenance-configuration",
+    "label": "Maintenance Configuration",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/00195-icon-service-Maintenance-Configuration.svg",
+    "group": "compute"
+  },
+  {
+    "value": "managed-applications-center",
+    "label": "Managed Applications Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/10313-icon-service-Managed-Applications-Center.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "managed-database",
+    "label": "Managed Database",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10135-icon-service-Managed-Database.svg",
+    "group": "databases"
+  },
+  {
+    "value": "managed-desktop",
+    "label": "Managed Desktop",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/10311-icon-service-Managed-Desktop.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "managed-devops-pools",
+    "label": "Managed DevOps Pools",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/03393-icon-service-Managed-DevOps-Pools.svg",
+    "group": "devops"
+  },
+  {
+    "value": "managed-file-shares",
+    "label": "Managed File Shares",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/03549-icon-service-Managed-File-Shares.svg",
+    "group": "storage"
+  },
+  {
+    "value": "managed-identities",
+    "label": "Managed Identities",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10227-icon-service-Managed-Identities.svg",
+    "group": "identity"
+  },
+  {
+    "value": "managed-instance-apache-cassandra",
+    "label": "Managed Instance Apache Cassandra",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02663-icon-service-Managed-Instance-Apache-Cassandra.svg",
+    "group": "other"
+  },
+  {
+    "value": "managed-service-fabric",
+    "label": "Managed Service Fabric",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/02370-icon-service-Managed-Service-Fabric.svg",
+    "group": "compute"
+  },
+  {
+    "value": "management-groups",
+    "label": "Management Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10011-icon-service-Management-Groups.svg",
+    "group": "general"
+  },
+  {
+    "value": "management-portal",
+    "label": "Management Portal",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10820-icon-service-Management-Portal.svg",
+    "group": "general"
+  },
+  {
+    "value": "marketplace",
+    "label": "Marketplace",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10008-icon-service-Marketplace.svg",
+    "group": "general"
+  },
+  {
+    "value": "marketplace-management",
+    "label": "Marketplace Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10112-icon-service-Marketplace-Management.svg",
+    "group": "general"
+  },
+  {
+    "value": "media",
+    "label": "Media",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10854-icon-service-Media.svg",
+    "group": "general"
+  },
+  {
+    "value": "media-file",
+    "label": "Media File",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10821-icon-service-Media-File.svg",
+    "group": "general"
+  },
+  {
+    "value": "medtech-service",
+    "label": "MedTech Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02660-icon-service-MedTech-Service.svg",
+    "group": "other"
+  },
+  {
+    "value": "megaphone-loud-dark",
+    "label": "Megaphone Loud Dark",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Megaphone_Loud_Dark.svg",
+    "group": "project"
+  },
+  {
+    "value": "megaphone-loud-gray",
+    "label": "Megaphone Loud Gray",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Megaphone_Loud_Gray.svg",
+    "group": "project"
+  },
+  {
+    "value": "megaphone-loud-light",
+    "label": "Megaphone Loud Light",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Megaphone_Loud_Light.svg",
+    "group": "project"
+  },
+  {
+    "value": "mesh-applications",
+    "label": "Mesh Applications",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10024-icon-service-Mesh-Applications.svg",
+    "group": "compute"
+  },
+  {
+    "value": "metrics",
+    "label": "Metrics",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00020-icon-service-Metrics.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "metrics-advisor",
+    "label": "Metrics Advisor",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/02409-icon-service-Metrics-Advisor.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "microsoft-clipchamp",
+    "label": "Microsoft Clipchamp",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/apps/Microsoft%20Clipchamp.svg",
+    "group": "apps"
+  },
+  {
+    "value": "microsoft-defender-easm",
+    "label": "Microsoft Defender EASM",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/03336-icon-service-Microsoft-Defender-EASM.svg",
+    "group": "security"
+  },
+  {
+    "value": "microsoft-defender-for-cloud",
+    "label": "Microsoft Defender for Cloud",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/10241-icon-service-Microsoft-Defender-for-Cloud.svg",
+    "group": "security"
+  },
+  {
+    "value": "microsoft-defender-for-iot",
+    "label": "Microsoft Defender for IoT",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/02247-icon-service-Microsoft-Defender-for-IoT.svg",
+    "group": "security"
+  },
+  {
+    "value": "microsoft-dev-box",
+    "label": "Microsoft Dev Box",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03250-icon-service-Microsoft-Dev-Box.svg",
+    "group": "other"
+  },
+  {
+    "value": "microsoft-entra",
+    "label": "Microsoft Entra",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20BW%20icon%20(product%20family).svg",
+    "group": "entra"
+  },
+  {
+    "value": "microsoft-entra-id",
+    "label": "Microsoft Entra ID",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20ID%20color%20icon.svg",
+    "group": "entra"
+  },
+  {
+    "value": "microsoft-entra-id-governance",
+    "label": "Microsoft Entra ID Governance",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20ID%20Governance%20color%20icon.svg",
+    "group": "entra"
+  },
+  {
+    "value": "microsoft-entra-internet-access",
+    "label": "Microsoft Entra Internet Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20Internet%20Access%20color%20icon.svg",
+    "group": "entra"
+  },
+  {
+    "value": "microsoft-entra-private-access",
+    "label": "Microsoft Entra Private Access",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20Private%20Access%20color%20icon.svg",
+    "group": "entra"
+  },
+  {
+    "value": "microsoft-entra-product-family",
+    "label": "Microsoft Entra Product Family",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20Product%20Family.svg",
+    "group": "entra"
+  },
+  {
+    "value": "microsoft-entra-verified-id",
+    "label": "Microsoft Entra Verified ID",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20Verified%20ID%20color%20icon.svg",
+    "group": "entra"
+  },
+  {
+    "value": "microsoft-entra-workload-id",
+    "label": "Microsoft Entra Workload ID",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/entra/Microsoft%20Entra%20Workload%20ID%20color%20icon.svg",
+    "group": "entra"
+  },
+  {
+    "value": "microsoft-excel",
+    "label": "Microsoft Excel",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/apps/Microsoft%20Excel.svg",
+    "group": "apps"
+  },
+  {
+    "value": "microsoft-office-sharepoint-2025",
+    "label": "Microsoft Office Sharepoint 2025",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/sharepoint/microsoft-office-sharepoint-2025.svg",
+    "group": "sharepoint"
+  },
+  {
+    "value": "microsoft-outlook",
+    "label": "Microsoft Outlook",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/apps/Microsoft%20Outlook.svg",
+    "group": "apps"
+  },
+  {
+    "value": "microsoft-sql-server-2025",
+    "label": "Microsoft Sql Server 2025",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/server/microsoft-sql-server-2025.svg",
+    "group": "server"
+  },
+  {
+    "value": "microsoft-sql-server-2025-icon",
+    "label": "Microsoft SQL Server 2025 icon",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/Microsoft_SQL_Server_2025_icon.svg",
+    "group": "databases"
+  },
+  {
+    "value": "microsoft-teams",
+    "label": "Microsoft Teams",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/apps/Microsoft%20Teams.svg",
+    "group": "apps"
+  },
+  {
+    "value": "microsoft-word",
+    "label": "Microsoft Word",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/apps/Microsoft%20Word.svg",
+    "group": "apps"
+  },
+  {
+    "value": "microsoft-foundry",
+    "label": "Microsoft-Foundry",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/Microsoft-Foundry.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "microsoft-intune",
+    "label": "Microsoft-intune",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/Microsoft-intune.svg",
+    "group": "intune"
+  },
+  {
+    "value": "mindaro",
+    "label": "Mindaro",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10350-icon-service-Mindaro.svg",
+    "group": "intune"
+  },
+  {
+    "value": "mission-landing-zone",
+    "label": "Mission Landing Zone",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02793-icon-service-Mission-Landing-Zone.svg",
+    "group": "other"
+  },
+  {
+    "value": "mobile",
+    "label": "Mobile",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10822-icon-service-Mobile.svg",
+    "group": "general"
+  },
+  {
+    "value": "mobile-engagement",
+    "label": "Mobile Engagement",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10823-icon-service-Mobile-Engagement.svg",
+    "group": "general"
+  },
+  {
+    "value": "mobile-networks",
+    "label": "Mobile Networks",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02794-icon-service-Mobile-Networks.svg",
+    "group": "other"
+  },
+  {
+    "value": "modular-data-center",
+    "label": "Modular Data Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02323-icon-service-Modular-Data-Center.svg",
+    "group": "other"
+  },
+  {
+    "value": "module",
+    "label": "Module",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10855-icon-service-Module.svg",
+    "group": "general"
+  },
+  {
+    "value": "monitor",
+    "label": "Monitor",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00001-icon-service-Monitor.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "monitor-health-models",
+    "label": "Monitor Health Models",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03528-icon-service-Monitor-Health-Models.svg",
+    "group": "other"
+  },
+  {
+    "value": "multi-factor-authentication",
+    "label": "Multi Factor Authentication",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/03256-icon-service-Multi-Factor-Authentication.svg",
+    "group": "identity"
+  },
+  {
+    "value": "multi-tenancy",
+    "label": "Multi Tenancy",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-stack/00965-icon-service-Multi-Tenancy.svg",
+    "group": "azure stack"
+  },
+  {
+    "value": "multifactor-authentication",
+    "label": "Multifactor Authentication",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/security/03344-icon-service-Multifactor-Authentication.svg",
+    "group": "security"
+  },
+  {
+    "value": "my-customers",
+    "label": "My Customers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00014-icon-service-My-Customers.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "nat",
+    "label": "NAT",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10310-icon-service-NAT.svg",
+    "group": "networking"
+  },
+  {
+    "value": "network-interfaces",
+    "label": "Network Interfaces",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10080-icon-service-Network-Interfaces.svg",
+    "group": "networking"
+  },
+  {
+    "value": "network-managers",
+    "label": "Network Managers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02237-icon-service-Network-Managers.svg",
+    "group": "other"
+  },
+  {
+    "value": "network-security-groups",
+    "label": "Network Security Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10067-icon-service-Network-Security-Groups.svg",
+    "group": "networking"
+  },
+  {
+    "value": "network-security-perimeters",
+    "label": "Network Security Perimeters",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02939-icon-service-Network-Security-Perimeters.svg",
+    "group": "other"
+  },
+  {
+    "value": "network-watcher",
+    "label": "Network Watcher",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/monitor/10066-icon-service-Network-Watcher.svg",
+    "group": "monitor"
+  },
+  {
+    "value": "notification-hub-namespaces",
+    "label": "Notification Hub Namespaces",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10053-icon-service-Notification-Hub-Namespaces.svg",
+    "group": "iot"
+  },
+  {
+    "value": "notification-hubs",
+    "label": "Notification Hubs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/app-services/10045-icon-service-Notification-Hubs.svg",
+    "group": "app services"
+  },
+  {
+    "value": "offers",
+    "label": "Offers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-stack/10110-icon-service-Offers.svg",
+    "group": "azure stack"
+  },
+  {
+    "value": "on-premises-data-gateways",
+    "label": "On Premises Data Gateways",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10070-icon-service-On-Premises-Data-Gateways.svg",
+    "group": "networking"
+  },
+  {
+    "value": "one-drive",
+    "label": "One Drive",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/apps/OneDrive.svg",
+    "group": "apps"
+  },
+  {
+    "value": "one-note",
+    "label": "One Note",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/apps/OneNote.svg",
+    "group": "apps"
+  },
+  {
+    "value": "open-supply-chain-platform",
+    "label": "Open Supply Chain Platform",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02602-icon-service-Open-Supply-Chain-Platform.svg",
+    "group": "other"
+  },
+  {
+    "value": "operation-log-classic",
+    "label": "Operation Log (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00024-icon-service-Operation-Log-(Classic).svg",
+    "group": "management governance"
+  },
+  {
+    "value": "oracle-database",
+    "label": "Oracle Database",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/03490-icon-service-Oracle-Database.svg",
+    "group": "databases"
+  },
+  {
+    "value": "organization-dark",
+    "label": "Organization Dark",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/sharepoint/Organization_Dark.svg",
+    "group": "sharepoint"
+  },
+  {
+    "value": "organization-gray",
+    "label": "Organization Gray",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/sharepoint/Organization_Gray.svg",
+    "group": "sharepoint"
+  },
+  {
+    "value": "organization-light",
+    "label": "Organization Light",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/sharepoint/Organization_Light.svg",
+    "group": "sharepoint"
+  },
+  {
+    "value": "os-images-classic",
+    "label": "OS Images (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10027-icon-service-OS-Images-(Classic).svg",
+    "group": "compute"
+  },
+  {
+    "value": "osconfig",
+    "label": "OSConfig",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03365-icon-service-OSConfig.svg",
+    "group": "other"
+  },
+  {
+    "value": "outbound-connection",
+    "label": "Outbound Connection",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/blockchain/10364-icon-service-Outbound-Connection.svg",
+    "group": "blockchain"
+  },
+  {
+    "value": "partner-namespace",
+    "label": "Partner Namespace",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/02266-icon-service-Partner-Namespace.svg",
+    "group": "integration"
+  },
+  {
+    "value": "partner-registration",
+    "label": "Partner Registration",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/02265-icon-service-Partner-Registration.svg",
+    "group": "integration"
+  },
+  {
+    "value": "partner-topic",
+    "label": "Partner Topic",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/02072-icon-service-Partner-Topic.svg",
+    "group": "integration"
+  },
+  {
+    "value": "peering-service",
+    "label": "Peering Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00970-icon-service-Peering-Service.svg",
+    "group": "other"
+  },
+  {
+    "value": "peerings",
+    "label": "Peerings",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/01285-icon-service-Peerings.svg",
+    "group": "other"
+  },
+  {
+    "value": "personalizers",
+    "label": "Personalizers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00796-icon-service-Personalizers.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "plans",
+    "label": "Plans",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-stack/10113-icon-service-Plans.svg",
+    "group": "azure stack"
+  },
+  {
+    "value": "policy",
+    "label": "Policy",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/10316-icon-service-Policy.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "power",
+    "label": "Power",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10824-icon-service-Power.svg",
+    "group": "general"
+  },
+  {
+    "value": "power-apps",
+    "label": "Power Apps",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/power-platform/PowerApps_scalable.svg",
+    "group": "power platform"
+  },
+  {
+    "value": "power-automate",
+    "label": "Power Automate",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/power-platform/PowerAutomate_scalable.svg",
+    "group": "power platform"
+  },
+  {
+    "value": "power-bi-embedded",
+    "label": "Power BI Embedded",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/03332-icon-service-Power-BI-Embedded.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "power-pages",
+    "label": "Power Pages",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/power-platform/PowerPages_scalable.svg",
+    "group": "power platform"
+  },
+  {
+    "value": "power-point",
+    "label": "Power Point",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/apps/PowerPoint.svg",
+    "group": "apps"
+  },
+  {
+    "value": "power-up",
+    "label": "Power Up",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10826-icon-service-Power-Up.svg",
+    "group": "general"
+  },
+  {
+    "value": "powershell",
+    "label": "Powershell",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10825-icon-service-Powershell.svg",
+    "group": "general"
+  },
+  {
+    "value": "preview-features",
+    "label": "Preview Features",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/00456-icon-service-Preview-Features.svg",
+    "group": "general"
+  },
+  {
+    "value": "private-endpoints",
+    "label": "Private Endpoints",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02579-icon-service-Private-Endpoints.svg",
+    "group": "other"
+  },
+  {
+    "value": "private-link",
+    "label": "Private Link",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/00427-icon-service-Private-Link.svg",
+    "group": "networking"
+  },
+  {
+    "value": "private-link-service",
+    "label": "Private Link Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/01105-icon-service-Private-Link-Service.svg",
+    "group": "networking"
+  },
+  {
+    "value": "private-link-services",
+    "label": "Private Link Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/02209-icon-service-Private-Link-Services.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "process-explorer",
+    "label": "Process Explorer",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10828-icon-service-Process-Explorer.svg",
+    "group": "general"
+  },
+  {
+    "value": "production-ready-database",
+    "label": "Production Ready Database",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10829-icon-service-Production-Ready-Database.svg",
+    "group": "general"
+  },
+  {
+    "value": "project-operations",
+    "label": "Project Operations",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/ProjectOperations_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "proximity-placement-groups",
+    "label": "Proximity Placement Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10365-icon-service-Proximity-Placement-Groups.svg",
+    "group": "networking"
+  },
+  {
+    "value": "public-ip-addresses",
+    "label": "Public IP Addresses",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10069-icon-service-Public-IP-Addresses.svg",
+    "group": "networking"
+  },
+  {
+    "value": "public-ip-addresses-classic",
+    "label": "Public IP Addresses (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10068-icon-service-Public-IP-Addresses-(Classic).svg",
+    "group": "networking"
+  },
+  {
+    "value": "public-ip-prefixes",
+    "label": "Public IP Prefixes",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10372-icon-service-Public-IP-Prefixes.svg",
+    "group": "networking"
+  },
+  {
+    "value": "qna-makers",
+    "label": "QnA Makers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00799-icon-service-QnA-Makers.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "quickstart-center",
+    "label": "Quickstart Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10010-icon-service-Quickstart-Center.svg",
+    "group": "general"
+  },
+  {
+    "value": "recent",
+    "label": "Recent",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10006-icon-service-Recent.svg",
+    "group": "general"
+  },
+  {
+    "value": "recovery-services-vaults",
+    "label": "Recovery Services Vaults",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00017-icon-service-Recovery-Services-Vaults.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "region-management",
+    "label": "Region Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10116-icon-service-Region-Management.svg",
+    "group": "general"
+  },
+  {
+    "value": "relays",
+    "label": "Relays",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10209-icon-service-Relays.svg",
+    "group": "integration"
+  },
+  {
+    "value": "remote-rendering",
+    "label": "Remote Rendering",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/mixed-reality/00698-icon-service-Remote-Rendering.svg",
+    "group": "mixed reality"
+  },
+  {
+    "value": "reservations",
+    "label": "Reservations",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10003-icon-service-Reservations.svg",
+    "group": "general"
+  },
+  {
+    "value": "reserved-capacity",
+    "label": "Reserved Capacity",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02638-icon-service-Reserved-Capacity.svg",
+    "group": "other"
+  },
+  {
+    "value": "reserved-ip-addresses-classic",
+    "label": "Reserved IP Addresses (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10371-icon-service-Reserved-IP-Addresses-(Classic).svg",
+    "group": "networking"
+  },
+  {
+    "value": "resource-explorer",
+    "label": "Resource Explorer",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10349-icon-service-Resource-Explorer.svg",
+    "group": "general"
+  },
+  {
+    "value": "resource-graph-explorer",
+    "label": "Resource Graph Explorer",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/10318-icon-service-Resource-Graph-Explorer.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "resource-group-list",
+    "label": "Resource Group List",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10830-icon-service-Resource-Group-List.svg",
+    "group": "general"
+  },
+  {
+    "value": "resource-groups",
+    "label": "Resource Groups",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10007-icon-service-Resource-Groups.svg",
+    "group": "general"
+  },
+  {
+    "value": "resource-guard",
+    "label": "Resource Guard",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02819-icon-service-Resource-Guard.svg",
+    "group": "other"
+  },
+  {
+    "value": "resource-linked",
+    "label": "Resource Linked",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10831-icon-service-Resource-Linked.svg",
+    "group": "general"
+  },
+  {
+    "value": "resource-management-private-link",
+    "label": "Resource Management Private Link",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02145-icon-service-Resource-Management-Private-Link.svg",
+    "group": "networking"
+  },
+  {
+    "value": "resource-mover",
+    "label": "Resource Mover",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02200-icon-service-Resource-Mover.svg",
+    "group": "other"
+  },
+  {
+    "value": "resources-provider",
+    "label": "Resources Provider",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/03366-icon-service-Resources-Provider.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "restore-points",
+    "label": "Restore Points",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/02817-icon-service-Restore-Points.svg",
+    "group": "compute"
+  },
+  {
+    "value": "restore-points-collections",
+    "label": "Restore Points Collections",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/02818-icon-service-Restore-Points-Collections.svg",
+    "group": "compute"
+  },
+  {
+    "value": "risk-policy-impact-analysis",
+    "label": "Risk Policy Impact Analysis",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/Risk%20Policy%20Impact%20Analysis.svg",
+    "group": "identity"
+  },
+  {
+    "value": "route-filters",
+    "label": "Route Filters",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10071-icon-service-Route-Filters.svg",
+    "group": "networking"
+  },
+  {
+    "value": "route-tables",
+    "label": "Route Tables",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10082-icon-service-Route-Tables.svg",
+    "group": "networking"
+  },
+  {
+    "value": "rtos",
+    "label": "RTOS",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/10778-icon-service-RTOS.svg",
+    "group": "other"
+  },
+  {
+    "value": "sales",
+    "label": "Sales",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/Sales_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "sales-insights",
+    "label": "Sales Insights",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/SalesInsights_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "savings-plans",
+    "label": "Savings Plans",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02880-icon-service-Savings-Plans.svg",
+    "group": "other"
+  },
+  {
+    "value": "scheduler",
+    "label": "Scheduler",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10833-icon-service-Scheduler.svg",
+    "group": "general"
+  },
+  {
+    "value": "scheduler-job-collections",
+    "label": "Scheduler Job Collections",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00010-icon-service-Scheduler-Job-Collections.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "scvmm-management-servers",
+    "label": "SCVMM Management Servers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02503-icon-service-SCVMM-Management-Servers.svg",
+    "group": "other"
+  },
+  {
+    "value": "search",
+    "label": "Search",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10834-icon-service-Search.svg",
+    "group": "general"
+  },
+  {
+    "value": "search-grid",
+    "label": "Search Grid",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10856-icon-service-Search-Grid.svg",
+    "group": "general"
+  },
+  {
+    "value": "security",
+    "label": "Security",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/00321-icon-service-Security.svg",
+    "group": "identity"
+  },
+  {
+    "value": "security-baselines",
+    "label": "Security Baselines",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10336-icon-service-Security-Baselines.svg",
+    "group": "intune"
+  },
+  {
+    "value": "sendgrid-accounts",
+    "label": "SendGrid Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10220-icon-service-SendGrid-Accounts.svg",
+    "group": "integration"
+  },
+  {
+    "value": "server-farm",
+    "label": "Server Farm",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10835-icon-service-Server-Farm.svg",
+    "group": "general"
+  },
+  {
+    "value": "serverless-search",
+    "label": "Serverless Search",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/03321-icon-service-Serverless-Search.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "service-catalog-mad",
+    "label": "Service Catalog MAD",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00027-icon-service-Service-Catalog-MAD.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "service-endpoint-policies",
+    "label": "Service Endpoint Policies",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10085-icon-service-Service-Endpoint-Policies.svg",
+    "group": "networking"
+  },
+  {
+    "value": "service-fabric-clusters",
+    "label": "Service Fabric Clusters",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10036-icon-service-Service-Fabric-Clusters.svg",
+    "group": "compute"
+  },
+  {
+    "value": "service-health",
+    "label": "Service Health",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10004-icon-service-Service-Health.svg",
+    "group": "general"
+  },
+  {
+    "value": "service-providers",
+    "label": "Service Providers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00025-icon-service-Service-Providers.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "shared-image-galleries",
+    "label": "Shared Image Galleries",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10039-icon-service-Shared-Image-Galleries.svg",
+    "group": "compute"
+  },
+  {
+    "value": "signalr",
+    "label": "SignalR",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/web/10052-icon-service-SignalR.svg",
+    "group": "web"
+  },
+  {
+    "value": "software-as-a-service",
+    "label": "Software as a Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10213-icon-service-Software-as-a-Service.svg",
+    "group": "integration"
+  },
+  {
+    "value": "software-updates",
+    "label": "Software Updates",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10335-icon-service-Software-Updates.svg",
+    "group": "intune"
+  },
+  {
+    "value": "solutions",
+    "label": "Solutions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00021-icon-service-Solutions.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "sonic-dash",
+    "label": "Sonic Dash",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02922-icon-service-Sonic-Dash.svg",
+    "group": "other"
+  },
+  {
+    "value": "spatial-anchor-accounts",
+    "label": "Spatial Anchor Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/mixed-reality/10352-icon-service-Spatial-Anchor-Accounts.svg",
+    "group": "mixed reality"
+  },
+  {
+    "value": "speech-services",
+    "label": "Speech Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00797-icon-service-Speech-Services.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "spot-vm",
+    "label": "Spot VM",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02695-icon-service-Spot-VM.svg",
+    "group": "networking"
+  },
+  {
+    "value": "spot-vmss",
+    "label": "Spot VMSS",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02692-icon-service-Spot-VMSS.svg",
+    "group": "networking"
+  },
+  {
+    "value": "sql-data-warehouses",
+    "label": "SQL Data Warehouses",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/00036-icon-service-SQL-Data-Warehouses.svg",
+    "group": "databases"
+  },
+  {
+    "value": "sql-database",
+    "label": "SQL Database",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10130-icon-service-SQL-Database.svg",
+    "group": "databases"
+  },
+  {
+    "value": "sql-elastic-pools",
+    "label": "SQL Elastic Pools",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10134-icon-service-SQL-Elastic-Pools.svg",
+    "group": "databases"
+  },
+  {
+    "value": "sql-managed-instance",
+    "label": "SQL Managed Instance",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10136-icon-service-SQL-Managed-Instance.svg",
+    "group": "databases"
+  },
+  {
+    "value": "sql-server-management-studio",
+    "label": "SQL Server Management Studio",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/SQL%20Server%20Management%20Studio.svg",
+    "group": "databases"
+  },
+  {
+    "value": "sql-server-registries",
+    "label": "SQL Server Registries",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10351-icon-service-SQL-Server-Registries.svg",
+    "group": "databases"
+  },
+  {
+    "value": "ssd",
+    "label": "SSD",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10837-icon-service-SSD.svg",
+    "group": "general"
+  },
+  {
+    "value": "ssh-keys",
+    "label": "SSH Keys",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00412-icon-service-SSH-Keys.svg",
+    "group": "other"
+  },
+  {
+    "value": "ssis-lift-and-shift-ir",
+    "label": "SSIS Lift And Shift IR",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/02392-icon-service-SSIS-Lift-And-Shift-IR.svg",
+    "group": "databases"
+  },
+  {
+    "value": "stack-hci-premium",
+    "label": "Stack HCI Premium",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/03466-icon-service-Stack-HCI-Premium.svg",
+    "group": "iot"
+  },
+  {
+    "value": "static-apps",
+    "label": "Static Apps",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/web/01007-icon-service-Static-Apps.svg",
+    "group": "web"
+  },
+  {
+    "value": "storage-accounts",
+    "label": "Storage Accounts",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10086-icon-service-Storage-Accounts.svg",
+    "group": "storage"
+  },
+  {
+    "value": "storage-accounts-classic",
+    "label": "Storage Accounts (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10087-icon-service-Storage-Accounts-(Classic).svg",
+    "group": "storage"
+  },
+  {
+    "value": "storage-actions",
+    "label": "Storage Actions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/03502-icon-service-Storage-Actions.svg",
+    "group": "storage"
+  },
+  {
+    "value": "storage-azure-files",
+    "label": "Storage Azure Files",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10838-icon-service-Storage-Azure-Files.svg",
+    "group": "general"
+  },
+  {
+    "value": "storage-container",
+    "label": "Storage Container",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10839-icon-service-Storage-Container.svg",
+    "group": "general"
+  },
+  {
+    "value": "storage-explorer",
+    "label": "Storage Explorer",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10091-icon-service-Storage-Explorer.svg",
+    "group": "storage"
+  },
+  {
+    "value": "storage-functions",
+    "label": "Storage Functions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02909-icon-service-Storage-Functions.svg",
+    "group": "other"
+  },
+  {
+    "value": "storage-queue",
+    "label": "Storage Queue",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10840-icon-service-Storage-Queue.svg",
+    "group": "general"
+  },
+  {
+    "value": "storage-sync-services",
+    "label": "Storage Sync Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10093-icon-service-Storage-Sync-Services.svg",
+    "group": "storage"
+  },
+  {
+    "value": "storsimple-data-managers",
+    "label": "StorSimple Data Managers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/storage/10092-icon-service-StorSimple-Data-Managers.svg",
+    "group": "storage"
+  },
+  {
+    "value": "storsimple-device-managers",
+    "label": "StorSimple Device Managers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/10089-icon-service-StorSimple-Device-Managers.svg",
+    "group": "integration"
+  },
+  {
+    "value": "stream-analytics-jobs",
+    "label": "Stream Analytics Jobs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/analytics/00042-icon-service-Stream-Analytics-Jobs.svg",
+    "group": "analytics"
+  },
+  {
+    "value": "subnet",
+    "label": "Subnet",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02742-icon-service-Subnet.svg",
+    "group": "networking"
+  },
+  {
+    "value": "subscriptions",
+    "label": "Subscriptions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10002-icon-service-Subscriptions.svg",
+    "group": "general"
+  },
+  {
+    "value": "supply-chain-management",
+    "label": "Supply Chain Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/dynamics-365/SupplyChainManagement_scalable.svg",
+    "group": "dynamics 365"
+  },
+  {
+    "value": "system-topic",
+    "label": "System Topic",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/integration/02073-icon-service-System-Topic.svg",
+    "group": "integration"
+  },
+  {
+    "value": "table",
+    "label": "Table",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10841-icon-service-Table.svg",
+    "group": "general"
+  },
+  {
+    "value": "tag",
+    "label": "Tag",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10014-icon-service-Tag.svg",
+    "group": "general"
+  },
+  {
+    "value": "tags",
+    "label": "Tags",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10842-icon-service-Tags.svg",
+    "group": "general"
+  },
+  {
+    "value": "targets-management",
+    "label": "Targets Management",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02908-icon-service-Targets-Management.svg",
+    "group": "other"
+  },
+  {
+    "value": "template-specs",
+    "label": "Template Specs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02340-icon-service-Template-Specs.svg",
+    "group": "other"
+  },
+  {
+    "value": "templates",
+    "label": "Templates",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10009-icon-service-Templates.svg",
+    "group": "general"
+  },
+  {
+    "value": "tenant-properties",
+    "label": "Tenant Properties",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/02679-icon-service-Tenant-Properties.svg",
+    "group": "identity"
+  },
+  {
+    "value": "tenant-status",
+    "label": "Tenant Status",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/intune/10342-icon-service-Tenant-Status.svg",
+    "group": "intune"
+  },
+  {
+    "value": "test-base",
+    "label": "Test Base",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02691-icon-service-Test-Base.svg",
+    "group": "other"
+  },
+  {
+    "value": "text-bullet-list-dark",
+    "label": "Text Bullet List Dark",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Text_Bullet_List_Dark.svg",
+    "group": "project"
+  },
+  {
+    "value": "text-bullet-list-gray",
+    "label": "Text Bullet List Gray",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Text_Bullet_List_Gray.svg",
+    "group": "project"
+  },
+  {
+    "value": "text-bullet-list-light",
+    "label": "Text Bullet List Light",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Text_Bullet_List_Light.svg",
+    "group": "project"
+  },
+  {
+    "value": "text-bullet-list-square-dark",
+    "label": "Text Bullet List Square Dark",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Text_Bullet_List_Square_Dark.svg",
+    "group": "project"
+  },
+  {
+    "value": "text-bullet-list-square-gray",
+    "label": "Text Bullet List Square Gray",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Text_Bullet_List_Square_Gray.svg",
+    "group": "project"
+  },
+  {
+    "value": "text-bullet-list-square-light",
+    "label": "Text Bullet List Square Light",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/project/Text_Bullet_List_Square_Light.svg",
+    "group": "project"
+  },
+  {
+    "value": "tfs-vc-repository",
+    "label": "TFS VC Repository",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10843-icon-service-TFS-VC-Repository.svg",
+    "group": "general"
+  },
+  {
+    "value": "time-series-data-sets",
+    "label": "Time Series Data Sets",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10198-icon-service-Time-Series-Data-Sets.svg",
+    "group": "iot"
+  },
+  {
+    "value": "time-series-insights-access-policies",
+    "label": "Time Series Insights Access Policies",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10192-icon-service-Time-Series-Insights-Access-Policies.svg",
+    "group": "iot"
+  },
+  {
+    "value": "time-series-insights-environments",
+    "label": "Time Series Insights Environments",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10181-icon-service-Time-Series-Insights-Environments.svg",
+    "group": "iot"
+  },
+  {
+    "value": "time-series-insights-event-sources",
+    "label": "Time Series Insights Event Sources",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10188-icon-service-Time-Series-Insights-Event-Sources.svg",
+    "group": "iot"
+  },
+  {
+    "value": "toolbox",
+    "label": "Toolbox",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10844-icon-service-Toolbox.svg",
+    "group": "general"
+  },
+  {
+    "value": "traffic-manager-profiles",
+    "label": "Traffic Manager Profiles",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10065-icon-service-Traffic-Manager-Profiles.svg",
+    "group": "networking"
+  },
+  {
+    "value": "translator-text",
+    "label": "Translator Text",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/ai-machine-learning/00800-icon-service-Translator-Text.svg",
+    "group": "ai machine learning"
+  },
+  {
+    "value": "troubleshoot",
+    "label": "Troubleshoot",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10341-icon-service-Troubleshoot.svg",
+    "group": "general"
+  },
+  {
+    "value": "tutorials",
+    "label": "Tutorials",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/Tutorials.svg",
+    "group": "identity"
+  },
+  {
+    "value": "universal-print",
+    "label": "Universal Print",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/00571-icon-service-Universal-Print.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "update-management-center",
+    "label": "Update Management Center",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02846-icon-service-Update-Management-Center.svg",
+    "group": "other"
+  },
+  {
+    "value": "updates",
+    "label": "Updates",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-stack/10115-icon-service-Updates.svg",
+    "group": "azure stack"
+  },
+  {
+    "value": "user-privacy",
+    "label": "User Privacy",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/management-governance/10303-icon-service-User-Privacy.svg",
+    "group": "management governance"
+  },
+  {
+    "value": "user-settings",
+    "label": "User Settings",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10433-icon-service-User-Settings.svg",
+    "group": "identity"
+  },
+  {
+    "value": "user-subscriptions",
+    "label": "User Subscriptions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/azure-stack/10111-icon-service-User-Subscriptions.svg",
+    "group": "azure stack"
+  },
+  {
+    "value": "users",
+    "label": "Users",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/10230-icon-service-Users.svg",
+    "group": "identity"
+  },
+  {
+    "value": "verifiable-credentials",
+    "label": "Verifiable Credentials",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/01084-icon-service-Verifiable-Credentials.svg",
+    "group": "identity"
+  },
+  {
+    "value": "verification-as-a-service",
+    "label": "Verification As A Service",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/identity/03225-icon-service-Verification-As-A-Service.svg",
+    "group": "identity"
+  },
+  {
+    "value": "versions",
+    "label": "Versions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10845-icon-service-Versions.svg",
+    "group": "general"
+  },
+  {
+    "value": "video-analyzers",
+    "label": "Video Analyzers",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/00712-icon-service-Video-Analyzers.svg",
+    "group": "other"
+  },
+  {
+    "value": "virtual-clusters",
+    "label": "Virtual Clusters",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/databases/10127-icon-service-Virtual-Clusters.svg",
+    "group": "databases"
+  },
+  {
+    "value": "virtual-enclaves",
+    "label": "Virtual Enclaves",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03394-icon-service-Virtual-Enclaves.svg",
+    "group": "other"
+  },
+  {
+    "value": "virtual-instance-for-sap",
+    "label": "Virtual Instance for SAP",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03089-icon-service-Virtual-Instance-for-SAP.svg",
+    "group": "other"
+  },
+  {
+    "value": "virtual-machine",
+    "label": "Virtual Machine",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10021-icon-service-Virtual-Machine.svg",
+    "group": "compute"
+  },
+  {
+    "value": "virtual-machines-classic",
+    "label": "Virtual Machines (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10028-icon-service-Virtual-Machines-(Classic).svg",
+    "group": "compute"
+  },
+  {
+    "value": "virtual-network-gateways",
+    "label": "Virtual Network Gateways",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10063-icon-service-Virtual-Network-Gateways.svg",
+    "group": "networking"
+  },
+  {
+    "value": "virtual-networks",
+    "label": "Virtual Networks",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10061-icon-service-Virtual-Networks.svg",
+    "group": "networking"
+  },
+  {
+    "value": "virtual-networks-classic",
+    "label": "Virtual Networks (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10075-icon-service-Virtual-Networks-(Classic).svg",
+    "group": "networking"
+  },
+  {
+    "value": "virtual-router",
+    "label": "Virtual Router",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/02496-icon-service-Virtual-Router.svg",
+    "group": "networking"
+  },
+  {
+    "value": "virtual-visits-builder",
+    "label": "Virtual Visits Builder",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02949-icon-service-Virtual-Visits-Builder.svg",
+    "group": "other"
+  },
+  {
+    "value": "virtual-wan-hub",
+    "label": "Virtual WAN Hub",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/00860-icon-service-Virtual-WAN-Hub.svg",
+    "group": "networking"
+  },
+  {
+    "value": "virtual-wans",
+    "label": "Virtual WANs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10353-icon-service-Virtual-WANs.svg",
+    "group": "networking"
+  },
+  {
+    "value": "viva-amplify",
+    "label": "Viva Amplify",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-amplify.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-connections",
+    "label": "Viva Connections",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-connections.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-engage",
+    "label": "Viva Engage",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-engage.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-glint",
+    "label": "Viva Glint",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-glint.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-goals",
+    "label": "Viva Goals",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-goals.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-insights",
+    "label": "Viva Insights",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-insights.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-learning",
+    "label": "Viva Learning",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-learning.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-pulse",
+    "label": "Viva Pulse",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-pulse.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-sales",
+    "label": "Viva Sales",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-sales.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-suite",
+    "label": "Viva Suite",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-suite.svg",
+    "group": "viva"
+  },
+  {
+    "value": "viva-topics",
+    "label": "Viva Topics",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/viva/viva-topics.svg",
+    "group": "viva"
+  },
+  {
+    "value": "vm-app-definitions",
+    "label": "VM App Definitions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02805-icon-service-VM-App-Definitions.svg",
+    "group": "other"
+  },
+  {
+    "value": "vm-app-versions",
+    "label": "VM App Versions",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02806-icon-service-VM-App-Versions.svg",
+    "group": "other"
+  },
+  {
+    "value": "vm-image-version",
+    "label": "VM Image Version",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02866-icon-service-VM-Image-Version.svg",
+    "group": "other"
+  },
+  {
+    "value": "vm-images-classic",
+    "label": "VM Images (Classic)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10040-icon-service-VM-Images-(Classic).svg",
+    "group": "compute"
+  },
+  {
+    "value": "vm-scale-sets",
+    "label": "VM Scale Sets",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/10034-icon-service-VM-Scale-Sets.svg",
+    "group": "compute"
+  },
+  {
+    "value": "wac",
+    "label": "WAC",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/10355-icon-service-WAC.svg",
+    "group": "other"
+  },
+  {
+    "value": "wac-installer",
+    "label": "WAC Installer",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/03563-icon-service-WAC-Installer.svg",
+    "group": "other"
+  },
+  {
+    "value": "web-app-database",
+    "label": "Web App + Database",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02515-icon-service-Web-App-%2B-Database.svg",
+    "group": "other"
+  },
+  {
+    "value": "web-application-firewall-policies-waf",
+    "label": "Web Application Firewall Policies(WAF)",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/networking/10362-icon-service-Web-Application-Firewall-Policies(WAF).svg",
+    "group": "networking"
+  },
+  {
+    "value": "web-jobs",
+    "label": "Web Jobs",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/10846-icon-service-Web-Jobs.svg",
+    "group": "other"
+  },
+  {
+    "value": "web-slots",
+    "label": "Web Slots",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10849-icon-service-Web-Slots.svg",
+    "group": "general"
+  },
+  {
+    "value": "web-test",
+    "label": "Web Test",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10850-icon-service-Web-Test.svg",
+    "group": "general"
+  },
+  {
+    "value": "website-power",
+    "label": "Website Power",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10847-icon-service-Website-Power.svg",
+    "group": "general"
+  },
+  {
+    "value": "website-staging",
+    "label": "Website Staging",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10848-icon-service-Website-Staging.svg",
+    "group": "general"
+  },
+  {
+    "value": "windows-notification-services",
+    "label": "Windows Notification Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02733-icon-service-Windows-Notification-Services.svg",
+    "group": "other"
+  },
+  {
+    "value": "windows10-core-services",
+    "label": "Windows10 Core Services",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/iot/10203-icon-service-Windows10-Core-Services.svg",
+    "group": "iot"
+  },
+  {
+    "value": "windows365-logo",
+    "label": "Windows365-logo",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/Windows-365/Windows365-logo.svg",
+    "group": "windows 365"
+  },
+  {
+    "value": "workbooks",
+    "label": "Workbooks",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10851-icon-service-Workbooks.svg",
+    "group": "general"
+  },
+  {
+    "value": "worker-container-app",
+    "label": "Worker Container App",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/other/02884-icon-service-Worker-Container-App.svg",
+    "group": "other"
+  },
+  {
+    "value": "workflow",
+    "label": "Workflow",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/general/10852-icon-service-Workflow.svg",
+    "group": "general"
+  },
+  {
+    "value": "workspace-gateway",
+    "label": "Workspace Gateway",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/devops/03623-icon-service-Workspace-Gateway.svg",
+    "group": "devops"
+  },
+  {
+    "value": "workspaces",
+    "label": "Workspaces",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/DanielBradley1/msicons@main/msicons/public/icons/compute/00330-icon-service-Workspaces.svg",
+    "group": "compute"
   }
 ];

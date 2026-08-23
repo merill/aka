@@ -15,6 +15,10 @@ export interface Option {
   label: string;
   iconUrl?: string;
   count?: number;
+  /** Extra search terms, e.g. "aad" finding Entra. */
+  keywords?: string;
+  /** Curated groups sort above the long tail of products. */
+  common?: boolean;
 }
 
 export interface Props {
@@ -41,6 +45,7 @@ const {
   minWidth = '11rem',
 } = Astro.props;
 
+const ICON_BASE = 'https://getyako.com/ms/';
 const selected = options.find((o) => o.value === value);
 ---
 
@@ -86,60 +91,38 @@ const selected = options.find((o) => o.value === value);
       />
     </div>
 
+    {/* Options are rendered by the client from the payload below rather than
+        as markup. The taxonomy has ~700 entries, and emitting them all
+        server-side pushed this page from 9 KB to 514 KB of HTML. Only matches
+        are materialised, capped, so the DOM stays small however long the list
+        gets. */}
     <ul
       id={`${id}-list`}
       role="listbox"
       aria-labelledby={`${id}-button`}
       class="m-0 max-h-72 list-none overflow-y-auto p-1"
-    >
-      <li>
-        <button
-          type="button"
-          role="option"
-          aria-selected={value === '' ? 'true' : 'false'}
-          data-value=""
-          data-label={emptyLabel}
-          data-icon=""
-          class="aka-cat-option flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm"
-          style="background: transparent; color: var(--aka-fg); border: 0; cursor: pointer;"
-        >
-          <span class={`aka-cat-check${value === '' ? '' : ' invisible'}`} aria-hidden="true" style="width:1rem;">✓</span>
-          <span class="truncate">{emptyLabel}</span>
-          {emptyCount !== undefined && (
-            <span class="ml-auto text-xs" style="color: var(--aka-muted);">{emptyCount}</span>
-          )}
-        </button>
-      </li>
+    ></ul>
 
-      {options.map((o) => (
-        <li>
-          <button
-            type="button"
-            role="option"
-            aria-selected={o.value === value ? 'true' : 'false'}
-            data-value={o.value}
-            data-label={o.label}
-            data-icon={o.iconUrl ?? ''}
-            class="aka-cat-option flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm"
-            style="background: transparent; color: var(--aka-fg); border: 0; cursor: pointer;"
-          >
-            <span class={`aka-cat-check${o.value === value ? '' : ' invisible'}`} aria-hidden="true" style="width:1rem;">✓</span>
-            {o.iconUrl ? (
-              <span
-                class="aka-icon"
-                style={`width:16px;height:16px;background-image:url('${o.iconUrl}')`}
-                aria-hidden="true"></span>
-            ) : (
-              <span style="width:16px;" aria-hidden="true"></span>
-            )}
-            <span class="truncate">{o.label}</span>
-            {o.count !== undefined && (
-              <span class="ml-auto text-xs" style="color: var(--aka-muted);">{o.count}</span>
-            )}
-          </button>
-        </li>
-      ))}
-    </ul>
+    <script
+      type="application/json"
+      id={`${id}-data`}
+      set:html={JSON.stringify({
+        emptyLabel,
+        emptyCount,
+        // Icon URLs share one long prefix; storing it once saves ~16 KB across
+        // ~700 options. The client puts it back.
+        iconBase: ICON_BASE,
+        options: options.map((o) => {
+          const entry: Record<string, unknown> = { v: o.value, l: o.label };
+          const icon = o.iconUrl ?? '';
+          if (icon) entry.i = icon.startsWith(ICON_BASE) ? icon.slice(ICON_BASE.length) : icon;
+          if (o.count !== undefined) entry.c = o.count;
+          if (o.keywords) entry.k = o.keywords;
+          if (o.common) entry.g = 1;
+          return entry;
+        }),
+      })}
+    />
 
     <p
       id={`${id}-empty`}
