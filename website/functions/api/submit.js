@@ -19,6 +19,7 @@ import {
   normalizeLinkName,
   validateLinkName,
   validateCategory,
+  normalizeCategory,
   isNotFoundRedirect,
   extractTitle,
 } from '../../src/lib/akaLink.mjs';
@@ -63,7 +64,8 @@ export async function onRequestPost({ request, env }) {
   }
 
   const name = normalizeLinkName(body.link || '');
-  const category = (body.category || '').trim();
+  // Stored canonical, so a label or a legacy slug lands as the right value.
+  const category = normalizeCategory(body.category);
   const titleOverride = clamp(body.title, 200);
   const keywords = clamp(body.keywords, 300);
   const submittedBy = clamp(body.submittedBy, 100);
@@ -102,7 +104,7 @@ export async function onRequestPost({ request, env }) {
   const openCount = await gh.countTodaysSubmissions();
   if (openCount >= GLOBAL_DAILY_MAX) {
     return json(
-      { ok: false, message: 'akaSearch is at its submission limit for today. Please try again tomorrow.' },
+      { ok: false, message: 'akams.fyi is at its submission limit for today. Please try again tomorrow.' },
       429
     );
   }
@@ -113,7 +115,7 @@ export async function onRequestPost({ request, env }) {
   const existing = await isExistingLink(new URL(request.url).origin, name);
   if (existing) {
     return json(
-      { ok: false, message: `aka.ms/${name} is already listed on akaSearch.`, existing: name },
+      { ok: false, message: `aka.ms/${name} is already listed on akams.fyi.`, existing: name },
       409
     );
   }
@@ -174,7 +176,7 @@ async function resolveAka(name) {
       fetch(`https://aka.ms/${encodeURI(name)}`, {
         method: 'HEAD',
         redirect: 'manual',
-        headers: { 'user-agent': 'akaSearch (+https://akasearch.net)' },
+        headers: { 'user-agent': 'akams.fyi-bot (+https://akams.fyi)' },
       })
     );
   } catch {
@@ -199,7 +201,7 @@ async function crawlTitle(url) {
       fetch(url, {
         redirect: 'follow',
         headers: {
-          'user-agent': 'akaSearch (+https://akasearch.net)',
+          'user-agent': 'akams.fyi-bot (+https://akams.fyi)',
           accept: 'text/html',
         },
       })
@@ -286,7 +288,7 @@ function githubClient(token, repo) {
     authorization: `Bearer ${token}`,
     accept: 'application/vnd.github+json',
     'x-github-api-version': '2022-11-28',
-    'user-agent': 'akaSearch-submit',
+    'user-agent': 'akams.fyi-submit (+https://akams.fyi)',
     'content-type': 'application/json',
   };
 
@@ -327,7 +329,7 @@ function githubClient(token, repo) {
  */
 function issueBody(record, submittedBy) {
   return [
-    `Submitted from [akasearch.net/add](https://akasearch.net/add)${
+    `Submitted from [akams.fyi/add](https://akams.fyi/add)${
       submittedBy ? ` by ${submittedBy.replace(/[<>@]/g, '')}` : ''
     }.`,
     '',

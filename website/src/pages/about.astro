@@ -3,18 +3,18 @@ import Base from '../layouts/Base.astro';
 import { getLinks } from '../lib/links.mjs';
 
 const count = getLinks().length;
-const title = 'About akaSearch';
+const title = 'About akams.fyi';
 const description =
-  'akaSearch is a community-maintained, open source directory of Microsoft aka.ms short links. It is not a Microsoft product or service.';
+  'akams.fyi is a community-maintained, open source directory of Microsoft aka.ms short links. It is not a Microsoft product or service.';
 ---
 
 <Base title={title} description={description} canonical="/about">
-  <h1 class="mt-0 text-3xl font-bold">☀️ About akaSearch</h1>
+  <h1 class="mt-0 text-3xl font-bold">☀️ About akams.fyi</h1>
 
   <div class="max-w-3xl space-y-6">
     <p>
-      akaSearch is a crowd-sourced directory of Microsoft's aka.ms links —
-      currently {count} of them. akaSearch is not an official Microsoft product
+      akams.fyi is a crowd-sourced directory of Microsoft's aka.ms links —
+      currently {count} of them. akams.fyi is not an official Microsoft product
       or service. If you like shortcuts, also check out
       <a href="https://cmd.ms" rel="noopener">cmd.ms</a>, the Microsoft Cloud
       command line.
@@ -31,12 +31,12 @@ const description =
     </section>
 
     <section>
-      <h2 class="text-xl font-semibold">💡 Why akaSearch?</h2>
+      <h2 class="text-xl font-semibold">💡 Why akams.fyi?</h2>
       <p>
         There are curated lists of aka.ms links, like the
         <a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/readiness/readiness-bcall" rel="noopener">
           Dynamics 365 collection</a>, but no central place to look one up. That
-        is what akaSearch is for.
+        is what akams.fyi is for.
       </p>
     </section>
 

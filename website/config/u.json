@@ -3,7 +3,7 @@
   "title": "Microsoft Login Page",
   "autoCrawledTitle": "Sign in to your account",
   "keywords": "",
-  "category": "azuread",
+  "category": "entra",
   "url": "https://login.microsoftonline.com/",
   "dateAdded": "2023-05-07T15:54:01+10:00"
 }

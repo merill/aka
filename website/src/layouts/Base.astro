@@ -28,7 +28,7 @@ const {
   noindex = false,
 } = Astro.props;
 
-const site = Astro.site ?? new URL('https://akasearch.net');
+const site = Astro.site ?? new URL('https://akams.fyi');
 
 // Trailing slash, to match both what Cloudflare Pages actually serves (the
 // build emits <name>/index.html, and /name 308s to /name/) and what
@@ -69,11 +69,17 @@ const navLinks = [
     {noindex && <meta name="robots" content="noindex, follow" />}
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="akaSearch" />
+    <meta property="og:site_name" content="akams.fyi" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="akams.fyi — search Microsoft aka.ms links"
+    />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@merill" />
@@ -88,12 +94,12 @@ const navLinks = [
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#012eb7" />
 
-    {/* Served from every page so browsers can register akaSearch as a search
+    {/* Served from every page so browsers can register akams.fyi as a search
         engine. It previously lived only on /home, which no page linked to. */}
     <link
       rel="search"
       type="application/opensearchdescription+xml"
-      title="akaSearch"
+      title="akams.fyi"
       href="/opensearch.xml"
     />
 
@@ -152,7 +158,7 @@ const navLinks = [
       <nav class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3">
         <a href="/" class="flex items-center gap-2 font-semibold no-underline" style="color: var(--aka-fg);">
           <img src="/img/logo.png" alt="" width="28" height="28" />
-          <span>akaSearch</span>
+          <span>akams.fyi</span>
         </a>
 
         <div class="ml-auto flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
@@ -194,7 +200,7 @@ const navLinks = [
     <footer class="mt-16 border-t py-8 text-sm" style="border-color: var(--aka-border); color: var(--aka-muted);">
       <div class="mx-auto flex max-w-6xl flex-wrap gap-8 px-4">
         <div>
-          <div class="mb-2 font-semibold" style="color: var(--aka-fg);">akaSearch</div>
+          <div class="mb-2 font-semibold" style="color: var(--aka-fg);">akams.fyi</div>
           <ul class="space-y-1 list-none p-0 m-0">
             <li><a href="/about">About</a></li>
             <li><a href="/add">Add a link</a></li>
@@ -219,8 +225,8 @@ const navLinks = [
       </div>
       <div class="mx-auto mt-8 max-w-6xl px-4">
         <p class="m-0">
-          Copyright © {new Date().getFullYear()} Merill Fernando. akaSearch is not
-          a Microsoft product or service.
+          Copyright © {new Date().getFullYear()} Merill Fernando. akams.fyi is not
+          affiliated with or endorsed by Microsoft.
         </p>
       </div>
     </footer>

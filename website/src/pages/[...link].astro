@@ -70,16 +70,16 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': `https://akasearch.net/${link.link}`,
-      url: `https://akasearch.net/${link.link}`,
+      '@id': `https://akams.fyi/${link.link}`,
+      url: `https://akams.fyi/${link.link}`,
       name: pageTitle,
       description,
-      isPartOf: { '@type': 'WebSite', name: 'akaSearch', url: 'https://akasearch.net/' },
+      isPartOf: { '@type': 'WebSite', name: 'akams.fyi', url: 'https://akams.fyi/' },
     },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'akaSearch', item: 'https://akasearch.net/' },
+        { '@type': 'ListItem', position: 1, name: 'akams.fyi', item: 'https://akams.fyi/' },
         { '@type': 'ListItem', position: 2, name: `aka.ms/${link.link}` },
       ],
     },
@@ -95,11 +95,15 @@ const jsonLd = {
   noindex={link.isDead}
 >
   <nav aria-label="Breadcrumb" class="mb-4 text-sm" style="color: var(--aka-muted);">
-    <a href="/">akaSearch</a> <span aria-hidden="true">/</span> aka.ms/{link.link}
+    <a href="/">akams.fyi</a> <span aria-hidden="true">/</span> aka.ms/{link.link}
   </nav>
 
   <div class="flex items-start gap-3">
-    <span class={`aka-icon aka-icon-${link.icon}`} aria-hidden="true" style="width:32px;height:32px;"></span>
+    <span
+      class={link.iconUrl ? 'aka-icon' : `aka-icon aka-icon-${link.icon}`}
+      style={`width:32px;height:32px;${link.iconUrl ? `background-image:url('${link.iconUrl}')` : ''}`}
+      aria-hidden="true"
+    ></span>
     <div class="min-w-0">
       <h1 class="mt-0 mb-1 text-2xl font-bold sm:text-3xl" style="overflow-wrap: anywhere;">
         aka.ms/{link.link}

@@ -22,13 +22,14 @@ const URL_ = 4;
 const ICON = 5;
 const DATE = 6;
 const DEAD = 7;
+const ICON_URL = 8;
 
 const root = document.getElementById('aka-search');
 if (root) init(root);
 
 function init(root) {
   const queryEl = document.getElementById('aka-query');
-  const categoryEl = document.getElementById('aka-category');
+  const categoryEl = document.getElementById('aka-category'); // hidden input
   const sortEl = document.getElementById('aka-sort');
   const rowsEl = document.getElementById('aka-rows');
   const statusEl = document.getElementById('aka-status');
@@ -46,7 +47,9 @@ function init(root) {
   };
 
   queryEl.addEventListener('input', debounce(rerender, DEBOUNCE_MS));
+  // The hidden input is written by the combobox, which dispatches 'change'.
   categoryEl.addEventListener('change', rerender);
+  setupCategoryCombobox(rerender);
   sortEl.addEventListener('change', rerender);
 
   moreEl.addEventListener('click', (e) => {
@@ -119,7 +122,7 @@ function init(root) {
         ? `No links match "${queryEl.value.trim()}".`
         : 'No links match those filters.';
       moreEl.innerHTML = q
-        ? `<a href="/add?link=${encodeURIComponent(queryEl.value.trim())}">Add aka.ms/${escapeHtml(queryEl.value.trim())} to akaSearch →</a>`
+        ? `<a href="/add?link=${encodeURIComponent(queryEl.value.trim())}">Add aka.ms/${escapeHtml(queryEl.value.trim())} to akams.fyi →</a>`
         : '';
       return;
     }
@@ -170,12 +173,16 @@ function init(root) {
     const icon = escapeHtml(r[ICON]);
     const date = escapeHtml(r[DATE] || '');
     const dead = r[DEAD] === 1;
+    const iconUrl = r[ICON_URL] || '';
+    const iconCell = iconUrl
+      ? `<span class="aka-icon" style="background-image:url('${escapeHtml(iconUrl)}')" aria-hidden="true"></span>`
+      : `<span class="aka-icon aka-icon-${icon}" aria-hidden="true"></span>`;
     const badge = dead
       ? '<span class="ml-1 rounded px-1.5 py-0.5 align-middle text-[10px] font-medium uppercase tracking-wide" style="border:1px solid var(--aka-border);color:var(--aka-muted);" title="This aka.ms link no longer resolves">retired</span>'
       : '';
     return (
       '<tr class="border-t align-top" style="border-color: var(--aka-border);">' +
-      `<td class="px-2 py-2"><span class="aka-icon aka-icon-${icon}" aria-hidden="true"></span></td>` +
+      `<td class="px-2 py-2">${iconCell}</td>` +
       '<td class="px-2 py-2"><span class="whitespace-nowrap">' +
       `<a href="/${link}"${dead ? ' style="color:var(--aka-muted);"' : ''}>aka.ms/<b>${link}</b></a>` + badge +
       `<button type="button" class="aka-copy ml-1 cursor-pointer border-0 bg-transparent p-0 align-middle" data-link="${link}" aria-label="Copy aka.ms/${link}">` +
@@ -190,6 +197,138 @@ function init(root) {
     );
   }
 
+}
+
+/**
+ * Searchable category combobox.
+ *
+ * A plain <select> was adequate for 14 categories; the shared taxonomy has 29,
+ * so it needs filtering. Behaviour mirrors yako's catalog browser: type to
+ * filter, arrow keys to move, Enter to choose, Escape to dismiss, click-away
+ * to close. Selection is written to a hidden input so the rest of the table
+ * reads it exactly as it read the old select.
+ */
+function setupCategoryCombobox(onChange) {
+  const combo = document.getElementById('aka-category-combo');
+  const button = document.getElementById('aka-category-button');
+  const menu = document.getElementById('aka-category-menu');
+  const label = document.getElementById('aka-category-label');
+  const search = document.getElementById('aka-category-search');
+  const list = document.getElementById('aka-category-list');
+  const empty = document.getElementById('aka-category-empty');
+  const hidden = document.getElementById('aka-category');
+  if (!combo || !button || !menu || !list || !hidden) return;
+
+  const options = () => [...list.querySelectorAll('.aka-cat-option')];
+  const visible = () =>
+    options().filter((o) => !o.parentElement.classList.contains('hidden'));
+
+  let active = -1;
+
+  const isOpen = () => !menu.classList.contains('hidden');
+
+  function open() {
+    menu.classList.remove('hidden');
+    button.setAttribute('aria-expanded', 'true');
+    search.value = '';
+    filter('');
+    active = visible().findIndex((o) => o.dataset.value === hidden.value);
+    highlight();
+    search.focus();
+  }
+
+  function close() {
+    menu.classList.add('hidden');
+    button.setAttribute('aria-expanded', 'false');
+    active = -1;
+  }
+
+  function filter(q) {
+    const term = q.trim().toLowerCase();
+    let shown = 0;
+    for (const opt of options()) {
+      const match = !term || opt.dataset.label.toLowerCase().includes(term);
+      opt.parentElement.classList.toggle('hidden', !match);
+      if (match) shown++;
+    }
+    empty.classList.toggle('hidden', shown > 0);
+    active = shown ? 0 : -1;
+    highlight();
+  }
+
+  function highlight() {
+    const vis = visible();
+    vis.forEach((o, i) => {
+      const on = i === active;
+      o.style.background = on ? 'var(--aka-row-hover)' : 'transparent';
+      if (on) o.scrollIntoView({ block: 'nearest' });
+    });
+  }
+
+  function choose(opt) {
+    hidden.value = opt.dataset.value;
+    label.textContent = opt.dataset.label;
+    for (const o of options()) {
+      const on = o === opt;
+      o.setAttribute('aria-selected', String(on));
+      o.querySelector('.aka-cat-check').classList.toggle('invisible', !on);
+    }
+    close();
+    button.focus();
+    onChange();
+  }
+
+  button.addEventListener('click', () => (isOpen() ? close() : open()));
+
+  search.addEventListener('input', () => filter(search.value));
+
+  list.addEventListener('click', (e) => {
+    const opt = e.target.closest('.aka-cat-option');
+    if (opt) choose(opt);
+  });
+
+  list.addEventListener('mousemove', (e) => {
+    const opt = e.target.closest('.aka-cat-option');
+    if (!opt) return;
+    const i = visible().indexOf(opt);
+    if (i > -1 && i !== active) {
+      active = i;
+      highlight();
+    }
+  });
+
+  menu.addEventListener('keydown', (e) => {
+    const vis = visible();
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      active = Math.min(active + 1, vis.length - 1);
+      highlight();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      active = Math.max(active - 1, 0);
+      highlight();
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (vis[active]) choose(vis[active]);
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      close();
+      button.focus();
+    } else if (e.key === 'Tab') {
+      close();
+    }
+  });
+
+  button.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      open();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (isOpen() && !combo.contains(e.target)) close();
+  });
 }
 
 function debounce(fn, ms) {

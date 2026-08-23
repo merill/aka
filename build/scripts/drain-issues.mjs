@@ -27,6 +27,7 @@ import {
   normalizeLinkName,
   validateLinkName,
   validateCategory,
+  normalizeCategory,
   configFileName,
   isNotFoundRedirect,
   extractTitle,
@@ -91,7 +92,7 @@ export function parseIssue(issue) {
   if (!link) {
     return {
       error:
-        "Couldn't find a link name in this issue. Please use the form at https://akasearch.net/add.",
+        "Couldn't find a link name in this issue. Please use the form at https://akams.fyi/add.",
     };
   }
 
@@ -140,7 +141,7 @@ async function resolveAka(name) {
       fetch(`https://aka.ms/${encodeURI(name)}`, {
         method: 'HEAD',
         redirect: 'manual',
-        headers: { 'user-agent': 'akaSearch (+https://akasearch.net)' },
+        headers: { 'user-agent': 'akams.fyi-bot (+https://akams.fyi)' },
       })
     );
   } catch {
@@ -158,7 +159,7 @@ async function resolveAka(name) {
       fetch(location, {
         redirect: 'follow',
         headers: {
-          'user-agent': 'akaSearch (+https://akasearch.net)',
+          'user-agent': 'akams.fyi-bot (+https://akams.fyi)',
           accept: 'text/html',
         },
       })
@@ -183,7 +184,7 @@ async function gh(pathname, options = {}) {
         authorization: `Bearer ${TOKEN}`,
         accept: 'application/vnd.github+json',
         'x-github-api-version': '2022-11-28',
-        'user-agent': 'akaSearch-drain',
+        'user-agent': 'akams.fyi-drain (+https://akams.fyi)',
         'content-type': 'application/json',
         ...(options.headers || {}),
       },
@@ -223,7 +224,7 @@ async function processIssue(issue, existing, claimed) {
     return {
       state: 'exists',
       link: name,
-      message: `aka.ms/${name} is already on akaSearch.`,
+      message: `aka.ms/${name} is already on akams.fyi.`,
     };
   }
   if (claimed.has(name)) {
@@ -250,7 +251,7 @@ async function processIssue(issue, existing, claimed) {
       title: parsed.record.title || '',
       autoCrawledTitle: resolved.title || '',
       keywords: parsed.record.keywords || '',
-      category: parsed.record.category || '',
+      category: normalizeCategory(parsed.record.category),
       url: resolved.url,
       dateAdded: new Date().toISOString(),
     },
@@ -352,7 +353,7 @@ function commentBody(r) {
       '',
       `\`aka.ms/${r.link}\` → ${r.record.url}`,
       '',
-      `It'll be live at https://akasearch.net/${r.link} once this build finishes — usually a couple of minutes.`,
+      `It'll be live at https://akams.fyi/${r.link} once this build finishes — usually a couple of minutes.`,
       '',
       'Thanks for contributing!',
     ].join('\n');
@@ -361,7 +362,7 @@ function commentBody(r) {
     return [
       `### ℹ️ Already listed`,
       '',
-      `${r.message} You can see it at https://akasearch.net/${r.link}.`,
+      `${r.message} You can see it at https://akams.fyi/${r.link}.`,
       '',
       'Thanks all the same!',
     ].join('\n');
@@ -371,7 +372,7 @@ function commentBody(r) {
     '',
     r.message,
     '',
-    'If you think this is wrong, reopen the issue with more detail, or submit again at https://akasearch.net/add.',
+    'If you think this is wrong, reopen the issue with more detail, or submit again at https://akams.fyi/add.',
   ].join('\n');
 }
 

@@ -1,8 +1,8 @@
-# akaSearch.net
+# akams.fyi
 
-🚀 → [akaSearch.net](https://akasearch.net) = Search aka.ms links!
+🚀 → [akams.fyi](https://akams.fyi) = Search aka.ms links!
 
-This repository hosts the source for [akaSearch.net](https://akasearch.net), a crowd-sourced directory of Microsoft's aka.ms links.
+This repository hosts the source for [akams.fyi](https://akams.fyi), a crowd-sourced directory of Microsoft's aka.ms links.
 
 ![image](/website/public/OpenGraphImage.png)
 
@@ -12,7 +12,7 @@ This repository hosts the source for [akaSearch.net](https://akasearch.net), a c
 
 #### From the site (recommended)
 
-Use **[akasearch.net/add](https://akasearch.net/add)** — no GitHub account required. The form checks the link resolves and shows you where it goes before you submit.
+Use **[akams.fyi/add](https://akams.fyi/add)** — no GitHub account required. The form checks the link resolves and shows you where it goes before you submit.
 
 Submissions are published in an hourly batch, so allow a little time for a new link to appear.
 

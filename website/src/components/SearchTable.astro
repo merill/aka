@@ -8,11 +8,8 @@
  * the HTML on three separate routes, which is where the 118 KB gzipped homepage
  * came from.
  */
-import {
-  getLinks,
-  getUsedCategories,
-  getIndexVersion,
-} from '../lib/links.mjs';
+import { getLinks, getIndexVersion } from '../lib/links.mjs';
+import { CATEGORIES } from '../lib/akaLink.mjs';
 
 export interface Props {
   /** Prefills the search box — used by the 404 page. */
@@ -25,7 +22,16 @@ const { initialQuery = '', ssrRows = 50 } = Astro.props;
 
 const all = getLinks();
 const indexVersion = getIndexVersion();
-const categories = getUsedCategories();
+// Only offer categories that actually have links behind them, with counts, so
+// the list isn't padded with 20 empty options from the shared taxonomy.
+const used = new Map();
+for (const l of all) {
+  if (l.category) used.set(l.category, (used.get(l.category) || 0) + 1);
+}
+const categories = CATEGORIES.filter((c) => used.has(c.value)).map((c) => ({
+  ...c,
+  count: used.get(c.value),
+}));
 
 // Newest-first, matching the island's default sort so the handover doesn't
 // visibly reshuffle the table.
@@ -59,15 +65,90 @@ const fmt = (iso: string) =>
       style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
     />
 
-    <label class="sr-only" for="aka-category">Filter by category</label>
-    <select
-      id="aka-category"
-      class="flex-1 rounded border px-2 py-2 text-sm sm:flex-none"
-      style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
-    >
-      <option value="">All categories</option>
-      {categories.map((c) => <option value={c}>{c}</option>)}
-    </select>
+    {/* Searchable category combobox, mirroring the shadcn-style one in yako's
+        catalog browser. A plain <select> was fine for 14 categories; with 29
+        shared ones it needs filtering. Renders as a real button + listbox so
+        keyboard and screen-reader behaviour is explicit, and the hidden input
+        keeps the value readable the same way the old select was. */}
+    <div class="relative" id="aka-category-combo">
+      <button
+        type="button"
+        id="aka-category-button"
+        class="flex min-w-44 items-center justify-between gap-2 rounded border px-3 py-2 text-sm"
+        style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        aria-controls="aka-category-menu"
+      >
+        <span id="aka-category-label">All categories</span>
+        <span aria-hidden="true" style="color: var(--aka-muted);">▾</span>
+      </button>
+      <input type="hidden" id="aka-category" value="" />
+
+      <div
+        id="aka-category-menu"
+        class="absolute left-0 z-50 mt-1 hidden w-64 rounded border shadow-lg"
+        style="border-color: var(--aka-border); background: var(--aka-bg);"
+      >
+        <div class="border-b p-2" style="border-color: var(--aka-border);">
+          <label class="sr-only" for="aka-category-search">Search categories</label>
+          <input
+            id="aka-category-search"
+            type="text"
+            autocomplete="off"
+            placeholder="Search categories…"
+            class="w-full rounded border px-2 py-1.5 text-sm"
+            style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+          />
+        </div>
+        <ul
+          id="aka-category-list"
+          role="listbox"
+          aria-labelledby="aka-category-button"
+          class="m-0 max-h-72 list-none overflow-y-auto p-1"
+        >
+          <li>
+            <button
+              type="button"
+              role="option"
+              aria-selected="true"
+              data-value=""
+              data-label="All categories"
+              class="aka-cat-option flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm"
+              style="background: transparent; color: var(--aka-fg); border: 0; cursor: pointer;"
+            >
+              <span class="aka-cat-check" aria-hidden="true" style="width:1rem;">✓</span>
+              <span>All categories</span>
+              <span class="ml-auto text-xs" style="color: var(--aka-muted);">{all.length}</span>
+            </button>
+          </li>
+          {categories.map((c) => (
+            <li>
+              <button
+                type="button"
+                role="option"
+                aria-selected="false"
+                data-value={c.value}
+                data-label={c.label}
+                class="aka-cat-option flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm"
+                style="background: transparent; color: var(--aka-fg); border: 0; cursor: pointer;"
+              >
+                <span class="aka-cat-check invisible" aria-hidden="true" style="width:1rem;">✓</span>
+                <span>{c.label}</span>
+                <span class="ml-auto text-xs" style="color: var(--aka-muted);">{c.count}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+        <p
+          id="aka-category-empty"
+          class="m-0 hidden px-3 py-4 text-center text-sm"
+          style="color: var(--aka-muted);"
+        >
+          No categories found.
+        </p>
+      </div>
+    </div>
 
     <label class="sr-only" for="aka-sort">Sort</label>
     <select
@@ -110,7 +191,11 @@ const fmt = (iso: string) =>
         {initialRows.map((l) => (
           <tr class="border-t align-top" style="border-color: var(--aka-border);">
             <td class="px-2 py-2">
-              <span class={`aka-icon aka-icon-${l.icon}`} aria-hidden="true"></span>
+              <span
+                class={l.iconUrl ? 'aka-icon' : `aka-icon aka-icon-${l.icon}`}
+                style={l.iconUrl ? `background-image:url('${l.iconUrl}')` : undefined}
+                aria-hidden="true"
+              ></span>
             </td>
             <td class="px-2 py-2">
               <span class="whitespace-nowrap">

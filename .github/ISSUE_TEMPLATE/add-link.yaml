@@ -1,14 +1,14 @@
 name: Add a new aka.ms link
-description: Submit an aka.ms link to akaSearch.net
+description: Submit an aka.ms link to akams.fyi
 title: "Add: "
 labels: ["add-link"]
 body:
   - type: markdown
     attributes:
       value: |
-        🙏 Thanks for adding a link to [akaSearch](https://akasearch.net)!
+        🙏 Thanks for adding a link to [akams.fyi](https://akams.fyi)!
 
-        **You don't need to use this form.** [akasearch.net/add](https://akasearch.net/add)
+        **You don't need to use this form.** [akams.fyi/add](https://akams.fyi/add)
         does the same thing without a GitHub account, and checks the link
         resolves while you type.
 
@@ -33,20 +33,35 @@ body:
       description: Optional. Groups the link with its product family.
       options:
         - None
-        - azure
-        - azuread
-        - defender
-        - dynamics365
-        - exchange
-        - graph
-        - intune
-        - learn
-        - microsoft365
-        - powerplatform
-        - powertoys
-        - security
-        - sqlserver
-        - windows365
+        - Entra
+        - Intune
+        - Defender
+        - XDR Sentinel
+        - Purview
+        - Microsoft 365
+        - Azure
+        - Power Platform
+        - Dynamics 365
+        - Exchange
+        - Windows 365
+        - SQL Server
+        - PowerToys
+        - Developer
+        - Licensing
+        - Partner
+        - Trials
+        - Health & Status
+        - My Pages
+        - Training
+        - Certification
+        - Education
+        - Consumer
+        - US Government
+        - Regional
+        - Accessibility
+        - Third party
+        - Other
+        - General
     validations:
       required: false
   - type: input

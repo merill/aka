@@ -37,7 +37,7 @@ function retiredPaths() {
 const RETIRED = retiredPaths();
 
 export default defineConfig({
-  site: 'https://akasearch.net',
+  site: 'https://akams.fyi',
 
   // Matches the URL shape the Docusaurus site served (/about/), so existing
   // inbound links and search-engine records keep resolving.
@@ -49,7 +49,7 @@ export default defineConfig({
       filter: (url) => !RETIRED.has(new URL(url).pathname),
       serialize(item) {
         // Link pages are the long tail; the homepage is the entry point.
-        if (item.url === 'https://akasearch.net/') {
+        if (item.url === 'https://akams.fyi/') {
           item.changefreq = 'daily';
           item.priority = 1.0;
         } else if (/\/(about)\/?$/.test(item.url)) {

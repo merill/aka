@@ -8,21 +8,21 @@ const recent = getRecentLinks(8);
 const count = links.length;
 const rounded = Math.floor(count / 50) * 50;
 
-const title = `akaSearch — search ${rounded}+ Microsoft aka.ms links`;
+const title = `akams.fyi — search ${rounded}+ Microsoft aka.ms links`;
 const description = `A community-maintained, searchable directory of ${count} Microsoft aka.ms short links. Find the aka.ms link you half-remember, and see where it actually goes.`;
 
 // Lets Google offer a search box for the site directly in results.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'akaSearch',
-  url: 'https://akasearch.net/',
+  name: 'akams.fyi',
+  url: 'https://akams.fyi/',
   description,
   potentialAction: {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://akasearch.net/{search_term_string}',
+      urlTemplate: 'https://akams.fyi/{search_term_string}',
     },
     'query-input': 'required name=search_term_string',
   },
@@ -52,7 +52,11 @@ const jsonLd = {
             style="border-color: var(--aka-border);"
             title={l.title}
           >
-            <span class={`aka-icon aka-icon-${l.icon}`} aria-hidden="true" style="width:14px;height:14px;"></span>
+            <span
+              class={l.iconUrl ? 'aka-icon' : `aka-icon aka-icon-${l.icon}`}
+              style={`width:14px;height:14px;${l.iconUrl ? `background-image:url('${l.iconUrl}')` : ''}`}
+              aria-hidden="true"
+            ></span>
             aka.ms/{l.link}
           </a>
         </li>

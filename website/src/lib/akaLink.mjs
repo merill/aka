@@ -11,23 +11,10 @@
  * duplicate record.
  */
 
-/** Categories offered in the UI, in display order. */
-export const CATEGORIES = [
-  { value: 'azure', label: 'Azure' },
-  { value: 'azuread', label: 'Microsoft Entra ID' },
-  { value: 'defender', label: 'Defender' },
-  { value: 'dynamics365', label: 'Dynamics 365' },
-  { value: 'exchange', label: 'Exchange' },
-  { value: 'graph', label: 'Microsoft Graph' },
-  { value: 'intune', label: 'Intune' },
-  { value: 'learn', label: 'Microsoft Learn' },
-  { value: 'microsoft365', label: 'Microsoft 365' },
-  { value: 'powerplatform', label: 'Power Platform' },
-  { value: 'powertoys', label: 'PowerToys' },
-  { value: 'security', label: 'Security' },
-  { value: 'sqlserver', label: 'SQL Server' },
-  { value: 'windows365', label: 'Windows 365' },
-];
+// Shared taxonomy, generated from getyako.com by build/scripts/sync-yako.mjs.
+// akams.fyi and yako use one vocabulary so links group the same way on both.
+export { CATEGORIES } from '../data/categories.mjs';
+import { CATEGORIES } from '../data/categories.mjs';
 
 const CATEGORY_VALUES = new Set(CATEGORIES.map((c) => c.value));
 
@@ -120,10 +107,50 @@ export function validateLinkName(name) {
   return errors;
 }
 
-/** Validate an optional category. Empty is allowed. */
+/**
+ * Resolve a category from either its value or its display label.
+ *
+ * The issue form shows friendly labels ("Microsoft 365") while records store
+ * values ("microsoft-365"), and older submissions may still carry pre-migration
+ * slugs. Accepting all three keeps a hand-filed issue from being rejected over
+ * a formatting difference. Returns '' when there is no match.
+ */
+export function normalizeCategory(raw) {
+  if (!raw) return '';
+  const input = String(raw).trim();
+  if (!input || /^(none|n\/a)$/i.test(input)) return '';
+
+  if (CATEGORY_VALUES.has(input)) return input;
+
+  const lower = input.toLowerCase();
+  for (const c of CATEGORIES) {
+    if (c.value === lower || c.label.toLowerCase() === lower) return c.value;
+  }
+
+  // Pre-migration slugs, so an old bookmark or a stale form still resolves.
+  const LEGACY = {
+    azuread: 'entra',
+    microsoft365: 'microsoft-365',
+    dynamics365: 'dynamics-365',
+    powerplatform: 'power-platform',
+    windows365: 'windows-365',
+    sqlserver: 'sql-server',
+    graph: 'developer',
+    learn: 'training',
+    security: 'defender',
+  };
+  return LEGACY[lower] || '';
+}
+
+/** True for anything meaning "no category" — blank, or the form's sentinel. */
+function isNoCategory(raw) {
+  return !raw || /^(none|n\/a)$/i.test(String(raw).trim());
+}
+
+/** Validate an optional category. Empty, and the "None" sentinel, are allowed. */
 export function validateCategory(category) {
-  if (!category) return [];
-  return CATEGORY_VALUES.has(category)
+  if (isNoCategory(category)) return [];
+  return normalizeCategory(category)
     ? []
     : [`"${category}" is not a known category.`];
 }

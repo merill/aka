@@ -56,9 +56,39 @@ const ICONS = new Set([
  * records fell through to the generic icon and that CSS rule was dead code.
  */
 const ICON_ALIASES = {
+  // Post-migration category values.
+  entra: 'azuread',
+  'microsoft-365': 'm365',
+  'dynamics-365': 'dynamics365',
+  developer: 'graph',
+  training: 'microsoft',
+  'my-pages': 'mypages',
+  // Pre-migration slugs, kept so an un-migrated record still resolves.
+  azuread: 'azuread',
   microsoft365: 'm365',
   learn: 'microsoft',
 };
+
+/**
+ * Icon URLs harvested from yako, used only where the rules above fall through
+ * to the generic glyph — 647 of 1453 links did. Hand-verified domain rules
+ * keep priority: a host like github.com or aka.ms serves many unrelated
+ * products, so trusting yako there produces confidently wrong icons.
+ */
+import YAKO_ICONS from '../data/yako-icons.json';
+
+function yakoIcon(url) {
+  if (!url) return '';
+  let host, pathname;
+  try {
+    const u = new URL(url);
+    host = u.hostname.toLowerCase().replace(/^www\./, '');
+    pathname = u.pathname.replace(/\/$/, '').toLowerCase();
+  } catch {
+    return '';
+  }
+  return YAKO_ICONS.exact[host + pathname] || YAKO_ICONS.hosts[host] || '';
+}
 
 /**
  * Pick the icon for a record.
@@ -146,6 +176,11 @@ export function getLinks() {
       dateChecked: json.dateChecked || '',
       isDead: json.status === 'dead',
       icon: resolveIcon(json.url, json.category),
+      // Empty unless the local icon came out generic and yako knows better.
+      iconUrl:
+        resolveIcon(json.url, json.category) === 'general'
+          ? yakoIcon(json.url)
+          : '',
     });
   }
 
@@ -262,7 +297,7 @@ export function getUsedCategories() {
  *
  * Array-of-arrays rather than array-of-objects: repeating six keys across 1452
  * records is roughly 40% of the payload for no benefit.
- * Field order: [link, title, keywords, category, url, icon, dateAdded, dead]
+ * Field order: [link, title, keywords, category, url, icon, dateAdded, dead, iconUrl]
  */
 export function getSearchIndex() {
   return getLinks().map((l) => [
@@ -274,6 +309,7 @@ export function getSearchIndex() {
     l.icon,
     l.dateAdded ? l.dateAdded.slice(0, 10) : '',
     l.isDead ? 1 : 0,
+    l.iconUrl || '',
   ]);
 }
 

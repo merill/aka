@@ -52,7 +52,7 @@ async function refresh(file) {
       fetch(`https://aka.ms/${encodeURI(name)}`, {
         method: 'HEAD',
         redirect: 'manual',
-        headers: { 'user-agent': 'akaSearch (+https://akasearch.net)' },
+        headers: { 'user-agent': 'akams.fyi-bot (+https://akams.fyi)' },
       })
     );
   } catch {
@@ -75,7 +75,7 @@ async function refresh(file) {
       fetch(location, {
         redirect: 'follow',
         headers: {
-          'user-agent': 'akaSearch (+https://akasearch.net)',
+          'user-agent': 'akams.fyi-bot (+https://akams.fyi)',
           accept: 'text/html',
         },
       })

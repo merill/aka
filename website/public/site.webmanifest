@@ -1,6 +1,6 @@
 {
-  "name": "akaSearch",
-  "short_name": "akaSearch",
+  "name": "akams.fyi — aka.ms link directory",
+  "short_name": "akams.fyi",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
