@@ -4,5 +4,6 @@
   "autoCrawledTitle": "GitHub - microsoft/winget-cli: WinGet is the Windows Package Manager. This project includes a CLI (Command Line Interface), PowerShell modules, and a COM (Component Object Model) API (Application Programming Interface).",
   "keywords": null,
   "category": null,
-  "url": "https://github.com/microsoft/winget-cli"
+  "url": "https://github.com/microsoft/winget-cli",
+  "dateAdded": "2023-07-17T12:29:00Z"
 }

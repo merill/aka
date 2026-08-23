@@ -4,5 +4,6 @@
   "autoCrawledTitle": "Sign in to your account",
   "keywords": "",
   "category": "azuread",
-  "url": "https://login.microsoftonline.com/common/oauth2/deviceauth"
+  "url": "https://login.microsoftonline.com/common/oauth2/deviceauth",
+  "dateAdded": "2023-05-07T16:48:34+10:00"
 }

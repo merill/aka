@@ -4,5 +4,6 @@
   "autoCrawledTitle": "GitHub - microsoft/go-sqlcmd: The new sqlcmd, CLI for SQL Server and Azure SQL (winget install sqlcmd / sqlcmd create mssql / sqlcmd open ads)",
   "keywords": null,
   "category": null,
-  "url": "https://github.com/microsoft/go-sqlcmd/#readme"
+  "url": "https://github.com/microsoft/go-sqlcmd/#readme",
+  "dateAdded": "2023-06-01T10:22:20Z"
 }

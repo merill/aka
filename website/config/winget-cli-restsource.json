@@ -4,5 +4,6 @@
   "autoCrawledTitle": "GitHub - microsoft/winget-cli-restsource: This project aims to provide a reference implementation for creating a REST based package source for the winget client.",
   "keywords": null,
   "category": null,
-  "url": "https://github.com/microsoft/winget-cli-restsource"
+  "url": "https://github.com/microsoft/winget-cli-restsource",
+  "dateAdded": "2023-07-17T12:28:56Z"
 }

@@ -4,5 +4,6 @@
   "autoCrawledTitle": "Terraform Registry",
   "keywords": "",
   "category": "azure",
-  "url": "https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest"
+  "url": "https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest",
+  "dateAdded": "2023-05-07T16:48:34+10:00"
 }

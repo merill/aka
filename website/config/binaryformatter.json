@@ -4,5 +4,6 @@
   "autoCrawledTitle": "Deserialization risks in use of BinaryFormatter and related types | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/dotnet/standard/serialization/binaryformatter-security-guide"
+  "url": "https://learn.microsoft.com/dotnet/standard/serialization/binaryformatter-security-guide",
+  "dateAdded": "2023-05-10T21:48:36+10:00"
 }

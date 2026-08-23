@@ -1,8 +1,9 @@
 {
-  "link": "HierarchySettings#setting---require-authorization",
+  "link": "hierarchysettings",
   "title": null,
   "autoCrawledTitle": "How to protect your resource hierarchy - Azure Governance - Azure governance | Microsoft Learn",
   "keywords": null,
   "category": "azure",
-  "url": "https://learn.microsoft.com/azure/governance/management-groups/how-to/protect-resource-hierarchy"
+  "url": "https://learn.microsoft.com/azure/governance/management-groups/how-to/protect-resource-hierarchy",
+  "dateAdded": "2024-06-13T20:52:34Z"
 }
