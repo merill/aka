@@ -1,0 +1,149 @@
+---
+/**
+ * The search table.
+ *
+ * The first page of rows is server-rendered as real markup so the page paints
+ * (and crawls) without JavaScript; search-table.js then loads the full index
+ * and takes over rendering. The Docusaurus version rendered all ~1450 rows into
+ * the HTML on three separate routes, which is where the 118 KB gzipped homepage
+ * came from.
+ */
+import { getLinks, getUsedCategories } from '../lib/links.mjs';
+
+export interface Props {
+  /** Prefills the search box — used by the 404 page. */
+  initialQuery?: string;
+  /** Rows rendered server-side before the island takes over. */
+  ssrRows?: number;
+}
+
+const { initialQuery = '', ssrRows = 50 } = Astro.props;
+
+const all = getLinks();
+const categories = getUsedCategories();
+
+// Newest-first, matching the island's default sort so the handover doesn't
+// visibly reshuffle the table.
+const initialRows = [...all]
+  .sort((a, b) => (b.dateAdded || '').localeCompare(a.dateAdded || ''))
+  .slice(0, ssrRows);
+
+const fmt = (iso: string) =>
+  iso ? new Date(iso).toISOString().slice(0, 10) : '';
+---
+
+<div
+  id="aka-search"
+  data-total={all.length}
+  data-initial-query={initialQuery}
+>
+  {/* Search comes first in DOM order so that on a narrow screen it takes the
+      whole first row and the controls wrap beneath it, rather than all four
+      controls fighting over 375px and squashing the input to three characters. */}
+  <div class="flex flex-wrap items-center gap-2">
+    <label class="sr-only" for="aka-query">Search links</label>
+    <input
+      id="aka-query"
+      type="search"
+      autocomplete="off"
+      autofocus
+      value={initialQuery}
+      placeholder="Search links…"
+      class="w-full min-w-0 rounded border px-3 py-2 text-base sm:w-auto sm:min-w-64 sm:flex-1"
+      style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+    />
+
+    <label class="sr-only" for="aka-category">Filter by category</label>
+    <select
+      id="aka-category"
+      class="flex-1 rounded border px-2 py-2 text-sm sm:flex-none"
+      style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+    >
+      <option value="">All categories</option>
+      {categories.map((c) => <option value={c}>{c}</option>)}
+    </select>
+
+    <label class="sr-only" for="aka-sort">Sort</label>
+    <select
+      id="aka-sort"
+      class="flex-1 rounded border px-2 py-2 text-sm sm:flex-none"
+      style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+    >
+      <option value="newest">Newest</option>
+      <option value="link">A–Z</option>
+      <option value="title">Title</option>
+    </select>
+
+    <a
+      href="/add"
+      aria-label="Add an aka.ms link"
+      class="rounded px-3 py-2 text-sm font-medium no-underline hover:no-underline"
+      style="background: var(--aka-btn-bg); color: var(--aka-btn-fg);"
+    >
+      <span aria-hidden="true">✚</span>
+      <span class="hidden sm:inline">&nbsp;Add a link</span>
+    </a>
+  </div>
+
+  <p id="aka-status" class="mt-3 mb-0 text-sm" style="color: var(--aka-muted);" aria-live="polite">
+    Showing the {initialRows.length} most recently added of {all.length} links.
+  </p>
+
+  <div class="mt-3 overflow-x-auto">
+    <table class="w-full border-collapse text-sm">
+      <thead>
+        <tr class="text-left" style="color: var(--aka-muted);">
+          <th scope="col" class="w-8 px-2 py-2"><span class="sr-only">Category</span></th>
+          <th scope="col" class="px-2 py-2 font-medium">Link</th>
+          <th scope="col" class="hidden px-2 py-2 font-medium sm:table-cell">Title</th>
+          <th scope="col" class="hidden px-2 py-2 font-medium lg:table-cell">Destination</th>
+          <th scope="col" class="hidden px-2 py-2 font-medium md:table-cell">Added</th>
+        </tr>
+      </thead>
+      <tbody id="aka-rows">
+        {initialRows.map((l) => (
+          <tr class="border-t align-top" style="border-color: var(--aka-border);">
+            <td class="px-2 py-2">
+              <span class={`aka-icon aka-icon-${l.icon}`} aria-hidden="true"></span>
+            </td>
+            <td class="px-2 py-2">
+              <span class="whitespace-nowrap">
+                <a href={`/${l.link}`}>aka.ms/<b>{l.link}</b></a>
+                <button
+                  type="button"
+                  class="aka-copy ml-1 cursor-pointer border-0 bg-transparent p-0 align-middle"
+                  data-link={l.link}
+                  aria-label={`Copy aka.ms/${l.link}`}
+                >
+                  <span class="aka-icon aka-icon-copy" aria-hidden="true"></span>
+                </button>
+              </span>
+              {/* Below sm the Title column is hidden and the title stacks here
+                  instead, so a narrow screen never has to scroll sideways. */}
+              <span class="mt-0.5 block text-xs sm:hidden" style="color: var(--aka-muted); overflow-wrap: anywhere;">
+                {l.title}
+              </span>
+            </td>
+            <td class="hidden px-2 py-2 sm:table-cell" style="overflow-wrap: anywhere;">
+              <a href={l.url} target="_blank" rel="noopener nofollow" data-aka-out={l.link}>
+                {l.title}
+              </a>
+            </td>
+            <td class="hidden max-w-xs truncate px-2 py-2 lg:table-cell" style="color: var(--aka-muted);">
+              <a href={l.url} target="_blank" rel="noopener nofollow" data-aka-out={l.link} style="color: var(--aka-muted);">
+                {l.url}
+              </a>
+            </td>
+            <td class="hidden px-2 py-2 whitespace-nowrap md:table-cell" style="color: var(--aka-muted);">
+              {fmt(l.dateAdded)}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p id="aka-more" class="mt-4 text-sm" style="color: var(--aka-muted);"></p>
+</div>
+
+<script src="./search-table.js"></script>

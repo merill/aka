@@ -1,0 +1,6 @@
+# /home was a duplicate of / (same table, same content) and is gone.
+/home  /  301
+
+# @astrojs/sitemap emits an index; keep the old single-file URL that search
+# engines already have on record resolving.
+/sitemap.xml  /sitemap-index.xml  301

@@ -2,46 +2,108 @@
 
 🚀 → [akaSearch.net](https://akasearch.net) = Search aka.ms links!
 
-This repository hosts the source code for [akaSearch.net](https://akasearch.net), a crowd sourced database of aka.ms links.
+This repository hosts the source for [akaSearch.net](https://akasearch.net), a crowd-sourced directory of Microsoft's aka.ms links.
 
-![image](/website/static/OpenGraphImage.png)
+![image](/website/public/OpenGraphImage.png)
 
 ## Contributing
 
-There are a few different ways to contribute to this project.
-
 ### Adding a new aka.ms link
 
-#### By submitting an issue (recommended)
+#### From the site (recommended)
 
-This is the easiest way to add a link and will result in the link being added to the site in minutes. Use the [New aka.ms link](https://github.com/merill/aka/issues/new?assignees=&labels=&template=add-link.yaml&title=New+aka.ms+link+) issue template to submit a new link.
+Use **[akasearch.net/add](https://akasearch.net/add)** — no GitHub account required. The form checks the link resolves and shows you where it goes before you submit.
 
-#### By submitting a pull request (advanced)
+Submissions are published in an hourly batch, so allow a little time for a new link to appear.
 
-This option is best to make updates to existing links, delete links and bulk add links.
+#### By opening an issue
 
-Each link is stored as a .json file at [/website/config](https://github.com/merill/aka/tree/main/website/config). 
+If you'd rather use GitHub, the [Add a new aka.ms link](https://github.com/merill/aka/issues/new?template=add-link.yaml) template feeds into the same queue.
 
-Some conventions to follow when creating a pull request using this method.
+#### By pull request (advanced)
 
-* The file name is short url of the aka.ms link.
-  * e.g. aka.ms/intune → intune.json.
-* The file name should be lower case.
-* Links with / in the url should be replace with ~
-  * e.g. aka.ms/ad/ca → ad~ca.json
-* Contents in the file
-  * **link** - The short name part of the aka.ms link.
-  * **title** - The title of the page. Use this field if the link is for a non-public page or if the default title on the target page is not meaningful.
-  * **keywords** - A list of comma separated keywords that can be used to include this link when a user searches for it. Useful to include old product names when products are renamed.
-  * **category** - The name of the category this link belongs to. This is used to group products together on the site.
-    * New categories can be added (check the dropdown on the site for the list of existing categories). Avoid adding alternate names for existing categories.
-    * When adding a new category, update the [Add aka.ms issue template](https://github.com/merill/aka/blob/main/.github/ISSUE_TEMPLATE/add-link.yaml) to include the new category.
-    * If you wish to go the extra mile you can also add an icon for the category at [/static/img/](https://github.com/merill/aka/tree/main/website/static/img). This is optional, a default icon will be used if a custom one is not provided.
-  * **autoCrawledTitle^** - The title of the page. Use this field if the link is for a non-public page or if the default title on the target page is not meaningful.
-  * **url^** - The final destination url.
+Best for editing existing links, deleting links, or adding many at once.
 
-  ^ A daily job will crawl the aka.ms links in this list and update the autoCrawledTitle and url fields to reflect any changes made to the source aka.ms link.
+Each link is one `.json` file in [website/config](https://github.com/merill/aka/tree/main/website/config):
 
-### Reporting Issues
+* The filename is the aka.ms short name — `aka.ms/intune` → `intune.json`.
+* Use lowercase.
+* A `/` in the link becomes `~` — `aka.ms/ad/ca` → `ad~ca.json`.
 
-Open a [new bug](https://github.com/merill/aka/issues/new?assignees=&labels=&template=add-bug.yaml&title=%5BBug%5D) to report issues.
+Fields:
+
+| Field | Meaning |
+| --- | --- |
+| `link` | The short name, without the `aka.ms/` prefix. |
+| `title` | Human-written title. Use when the destination's own title isn't meaningful, or the page is not public. Takes precedence over `autoCrawledTitle`. |
+| `keywords` | Comma-separated search aliases. Useful for former product names. |
+| `category` | Product family, used for grouping and the icon. See `CATEGORIES` in [akaLink.mjs](website/src/lib/akaLink.mjs) for the list; add an icon at [website/public/img](website/public/img) to give a category its own glyph. |
+| `autoCrawledTitle` † | Destination page title. |
+| `url` † | Final destination URL. |
+| `dateAdded` | ISO 8601 timestamp, used for "recently added" and sorting. |
+| `status` † | Set to `dead` when aka.ms stops resolving the link. Dead records stay in the repo but are hidden from the site. |
+
+† Maintained automatically by the daily crawl ([refresh-links.yaml](.github/workflows/refresh-links.yaml)); you don't need to fill these in.
+
+### Reporting issues
+
+Open a [new bug](https://github.com/merill/aka/issues/new?template=add-bug.yaml), or use the "Report a problem with this link" link at the bottom of any link page.
+
+## How it works
+
+Astro static site, deployed to Cloudflare Pages. `website/config` is the source of truth — there is no database.
+
+```
+visitor → /add → POST /api/submit (Pages Function)
+                   ├─ validates + confirms aka.ms resolves
+                   └─ files a labelled GitHub issue
+                            ↓
+        hourly: drain-issues.mjs → ONE commit per batch → one Pages build
+```
+
+Submissions are batched rather than committed individually because every commit triggers a Pages build, and the free plan allows 500 a month.
+
+| Path | Purpose |
+| --- | --- |
+| `website/config/` | The link records. Source of truth. |
+| `website/src/lib/akaLink.mjs` | Validation and normalization. Shared by the browser, the Function and the workflows — one implementation, so the tiers can't disagree. |
+| `website/src/lib/links.mjs` | Build-time loader. Vite-only (`import.meta.glob`). |
+| `website/functions/api/submit.js` | The no-signin submission endpoint. |
+| `build/scripts/drain-issues.mjs` | Turns open submission issues into one commit. |
+| `build/scripts/refresh-links.mjs` | Daily re-crawl of destinations and titles. |
+| `build/scripts/backfill-dates.mjs` | One-off; already run. |
+
+### Local development
+
+```bash
+cd website
+npm ci
+npm run dev            # http://localhost:4321
+npm run build          # → dist/
+npx wrangler pages dev dist   # includes /api/submit
+```
+
+### Deployment configuration
+
+Set in the Cloudflare Pages project, not in this repo:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Root directory | `website` |
+| `GITHUB_TOKEN` | Fine-grained PAT, `merill/aka`, Issues: read & write. Encrypted. |
+
+Analytics is Microsoft Clarity, with the project ID hardcoded in
+[Base.astro](website/src/layouts/Base.astro). It is not a secret — it appears in
+the page source — and Astro inlines `import.meta.env` at build time, so a
+Cloudflare Pages *secret* (runtime-only) would resolve to `undefined` and
+silently emit nothing. It is omitted from dev builds so local browsing doesn't
+pollute the data.
+
+Also add a WAF rate-limiting rule on `/api/*` (Free plan allows one rule: IP
+only, 10-second window and 10-second block, both fixed). Edge-blocked requests
+never invoke the Function, so they don't spend the daily Functions allowance.
+Treat it as a burst limiter rather than a quota guarantee — the actual cost
+guarantee is that the Cloudflare free plan has hard ceilings and no overage
+billing, and static delivery is unmetered and unaffected either way.

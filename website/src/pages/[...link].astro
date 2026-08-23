@@ -1,0 +1,178 @@
+---
+/**
+ * A page per aka.ms link.
+ *
+ * This is the SEO payload: 1452 individually indexable URLs where previously
+ * the entire dataset was table rows on a single route and therefore invisible
+ * to search engines. Ships zero JavaScript beyond the shared theme toggle.
+ *
+ * A rest parameter (not [link]) because 237 records are nested — `ad/ca` is
+ * stored as ad~ca.json and must serve at /ad/ca.
+ */
+import Base from '../layouts/Base.astro';
+import {
+  getRoutableLinks,
+  getRelatedLinks,
+  getRelatedLabel,
+} from '../lib/links.mjs';
+
+export function getStaticPaths() {
+  return getRoutableLinks().map((link) => ({
+    params: { link: link.link },
+    props: { link },
+  }));
+}
+
+const { link } = Astro.props;
+const related = getRelatedLinks(link, 8);
+const relatedLabel = getRelatedLabel(link);
+
+const akaUrl = `https://aka.ms/${link.link}`;
+const hasTitle = link.title && link.title !== link.link;
+
+const pageTitle = hasTitle
+  ? `aka.ms/${link.link} — ${link.title}`
+  : `aka.ms/${link.link}`;
+
+const description = hasTitle
+  ? `aka.ms/${link.link} redirects to ${link.title}. See the destination URL and related Microsoft aka.ms links.`
+  : `Where aka.ms/${link.link} goes, plus related Microsoft aka.ms links.`;
+
+let destinationHost = '';
+try {
+  destinationHost = new URL(link.url).hostname.replace(/^www\./, '');
+} catch {
+  destinationHost = '';
+}
+
+const added = link.dateAdded
+  ? new Date(link.dateAdded).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  : '';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `https://akasearch.net/${link.link}`,
+      url: `https://akasearch.net/${link.link}`,
+      name: pageTitle,
+      description,
+      isPartOf: { '@type': 'WebSite', name: 'akaSearch', url: 'https://akasearch.net/' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'akaSearch', item: 'https://akasearch.net/' },
+        { '@type': 'ListItem', position: 2, name: `aka.ms/${link.link}` },
+      ],
+    },
+  ],
+};
+---
+
+<Base
+  title={pageTitle}
+  description={description}
+  canonical={`/${link.link}`}
+  jsonLd={jsonLd}
+>
+  <nav aria-label="Breadcrumb" class="mb-4 text-sm" style="color: var(--aka-muted);">
+    <a href="/">akaSearch</a> <span aria-hidden="true">/</span> aka.ms/{link.link}
+  </nav>
+
+  <div class="flex items-start gap-3">
+    <span class={`aka-icon aka-icon-${link.icon}`} aria-hidden="true" style="width:32px;height:32px;"></span>
+    <div class="min-w-0">
+      <h1 class="mt-0 mb-1 text-2xl font-bold sm:text-3xl" style="overflow-wrap: anywhere;">
+        aka.ms/{link.link}
+      </h1>
+      {hasTitle && (
+        <p class="mt-0 mb-0 text-lg" style="color: var(--aka-muted);">{link.title}</p>
+      )}
+    </div>
+  </div>
+
+  <div class="mt-6 flex flex-wrap items-center gap-3">
+    <a
+      href={akaUrl}
+      target="_blank"
+      rel="noopener nofollow"
+      data-aka-out={link.link}
+      class="rounded px-4 py-2 font-medium no-underline hover:no-underline"
+      style="background: var(--aka-btn-bg); color: var(--aka-btn-fg);"
+    >
+      Open aka.ms/{link.link} →
+    </a>
+    <button
+      type="button"
+      class="aka-copy cursor-pointer rounded border px-4 py-2 text-sm"
+      data-link={link.link}
+      style="border-color: var(--aka-border); color: var(--aka-fg); background: transparent;"
+    >
+      Copy link
+    </button>
+  </div>
+
+  <dl class="mt-8 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-[8rem_1fr]">
+    <dt class="font-semibold">Destination</dt>
+    <dd class="m-0" style="overflow-wrap: anywhere;">
+      <a href={link.url} target="_blank" rel="noopener nofollow" data-aka-out={link.link}>
+        {link.url}
+      </a>
+    </dd>
+
+    {destinationHost && (
+      <>
+        <dt class="font-semibold">Site</dt>
+        <dd class="m-0">{destinationHost}</dd>
+      </>
+    )}
+
+    {link.category && (
+      <>
+        <dt class="font-semibold">Category</dt>
+        <dd class="m-0">{link.category}</dd>
+      </>
+    )}
+
+    {added && (
+      <>
+        <dt class="font-semibold">Added</dt>
+        <dd class="m-0">
+          <time datetime={link.dateAdded.slice(0, 10)}>{added}</time>
+        </dd>
+      </>
+    )}
+  </dl>
+
+  {related.length > 0 && (
+    <section class="mt-10">
+      <h2 class="mb-3 text-lg font-semibold">{relatedLabel}</h2>
+      <ul class="m-0 grid list-none gap-2 p-0 sm:grid-cols-2">
+        {related.map((r) => (
+          <li class="min-w-0">
+            <a href={`/${r.link}`} class="block truncate">
+              aka.ms/<b>{r.link}</b>
+              <span class="ml-2 text-sm" style="color: var(--aka-muted);">{r.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <p class="mt-10 text-sm" style="color: var(--aka-muted);">
+    <a href="/">← Search all aka.ms links</a>
+    <span class="mx-2" aria-hidden="true">·</span>
+    <a
+      href={`https://github.com/merill/aka/issues/new?title=${encodeURIComponent(`Problem with aka.ms/${link.link}`)}&body=${encodeURIComponent(`The record for aka.ms/${link.link} looks wrong.\n\nWhat's wrong:\n\n`)}`}
+      rel="noopener"
+    >Report a problem with this link</a>
+  </p>
+
+</Base>

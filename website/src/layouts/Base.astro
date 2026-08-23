@@ -1,0 +1,353 @@
+---
+/**
+ * Site shell: head metadata, navbar, footer, dark mode.
+ * Replaces the Infima theme that came with Docusaurus.
+ *
+ * Every page gets canonical + OG/Twitter tags from here. Previously only the
+ * homepage had them, so /about and the 404 shipped none at all.
+ */
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  /** Path-only canonical, e.g. "/about". Defaults to the current URL. */
+  canonical?: string;
+  ogImage?: string;
+  /** Rendered into <head> as application/ld+json. */
+  jsonLd?: unknown;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/OpenGraphImage.png',
+  jsonLd,
+  noindex = false,
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://akasearch.net');
+
+// Trailing slash, to match both what Cloudflare Pages actually serves (the
+// build emits <name>/index.html, and /name 308s to /name/) and what
+// @astrojs/sitemap lists. A canonical that disagrees with the sitemap is a
+// duplicate-content signal for the sake of one character.
+const canonicalPath = (canonical ?? Astro.url.pathname).replace(/\/?$/, '/');
+const canonicalUrl = new URL(canonicalPath, site).href;
+const ogImageUrl = new URL(ogImage, site).href;
+
+// Microsoft Clarity project ID.
+//
+// Hardcoded rather than held in an environment variable: it is not a secret —
+// it appears in the page source of every page — and Astro inlines
+// import.meta.env at build time, so a Cloudflare Pages *secret* (which is
+// runtime-only) would resolve to undefined and silently emit no analytics.
+const CLARITY_ID = 'y6s7veubyg';
+
+// Omitted from dev builds so local browsing doesn't pollute the session data.
+const clarityId = import.meta.env.PROD ? CLARITY_ID : null;
+
+const navLinks = [
+  { href: 'https://cmd.ms', label: 'cmd.ms', external: true },
+  { href: 'https://merill.net', label: 'merill.net', external: true },
+  { href: '/add', label: 'Add a link', external: false },
+  { href: '/about', label: 'About', external: false },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="akaSearch" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@merill" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#012eb7" />
+
+    {/* Served from every page so browsers can register akaSearch as a search
+        engine. It previously lived only on /home, which no page linked to. */}
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="akaSearch"
+      href="/opensearch.xml"
+    />
+
+    {jsonLd && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(jsonLd)}
+      />
+    )}
+
+    {/* Applies the stored theme before first paint. Inline and synchronous on
+        purpose: deferring it produces a white flash for dark-mode users. */}
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme =
+            stored ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+
+    {clarityId && (
+      <script is:inline define:vars={{ clarityId }}>
+        (function (c, l, a, r, i, t, y) {
+          c[a] =
+            c[a] ||
+            function () {
+              (c[a].q = c[a].q || []).push(arguments);
+            };
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = 'https://www.clarity.ms/tag/' + i;
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        })(window, document, 'clarity', 'script', clarityId);
+      </script>
+    )}
+  </head>
+
+  <body>
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-2 focus:rounded focus:bg-white focus:p-2 focus:text-black">
+      Skip to content
+    </a>
+
+    <header
+      class="sticky top-0 z-40 border-b backdrop-blur"
+      style="border-color: var(--aka-border); background: color-mix(in srgb, var(--aka-bg) 88%, transparent);"
+    >
+      <nav class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3">
+        <a href="/" class="flex items-center gap-2 font-semibold no-underline" style="color: var(--aka-fg);">
+          <img src="/img/logo.png" alt="" width="28" height="28" />
+          <span>akaSearch</span>
+        </a>
+
+        <div class="ml-auto flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+          {navLinks.map((l) => (
+            <a
+              href={l.href}
+              class="no-underline hover:underline"
+              style="color: var(--aka-fg);"
+              {...(l.external ? { rel: 'noopener' } : {})}
+            >
+              {l.label}
+            </a>
+          ))}
+
+          <a
+            href="https://github.com/merill/aka"
+            aria-label="GitHub repository"
+            rel="noopener"
+            class="aka-icon aka-icon-github opacity-80 hover:opacity-100"
+          ></a>
+
+          <button
+            type="button"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+            class="cursor-pointer rounded border px-2 py-1 text-sm leading-none"
+            style="border-color: var(--aka-border); color: var(--aka-fg); background: transparent;"
+          >
+            <span aria-hidden="true" id="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+      <slot />
+    </main>
+
+    <footer class="mt-16 border-t py-8 text-sm" style="border-color: var(--aka-border); color: var(--aka-muted);">
+      <div class="mx-auto flex max-w-6xl flex-wrap gap-8 px-4">
+        <div>
+          <div class="mb-2 font-semibold" style="color: var(--aka-fg);">akaSearch</div>
+          <ul class="space-y-1 list-none p-0 m-0">
+            <li><a href="/about">About</a></li>
+            <li><a href="/add">Add a link</a></li>
+            <li><a href="https://github.com/merill/aka" rel="noopener">Source on GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="mb-2 font-semibold" style="color: var(--aka-fg);">More projects</div>
+          <ul class="space-y-1 list-none p-0 m-0">
+            <li><a href="https://cmd.ms" rel="noopener">cmd.ms</a></li>
+            <li><a href="https://graphxray.merill.net" rel="noopener">Graph X-Ray</a></li>
+            <li><a href="https://graphpermissions.merill.net" rel="noopener">Graph Permissions Explorer</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="mb-2 font-semibold" style="color: var(--aka-fg);">Elsewhere</div>
+          <ul class="space-y-1 list-none p-0 m-0">
+            <li><a href="https://merill.net" rel="noopener">Blog</a></li>
+            <li><a href="https://twitter.com/merill" rel="noopener">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mx-auto mt-8 max-w-6xl px-4">
+        <p class="m-0">
+          Copyright © {new Date().getFullYear()} Merill Fernando. akaSearch is not
+          a Microsoft product or service.
+        </p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var icon = document.getElementById('theme-toggle-icon');
+        if (btn && icon) {
+          var sync = function () {
+            icon.textContent =
+              document.documentElement.getAttribute('data-theme') === 'dark'
+                ? '\u2600\uFE0F'
+                : '\uD83C\uDF19';
+          };
+          sync();
+          btn.addEventListener('click', function () {
+            var next =
+              document.documentElement.getAttribute('data-theme') === 'dark'
+                ? 'light'
+                : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            try {
+              localStorage.setItem('theme', next);
+            } catch (e) {}
+            sync();
+          });
+        }
+
+        function track(event, link) {
+          try {
+            if (typeof window.clarity !== 'function') return;
+            window.clarity('event', event);
+            if (link) window.clarity('set', 'aka_link', link);
+          } catch (e) {
+            /* analytics must never break the page */
+          }
+        }
+
+        /**
+         * Copy with a fallback.
+         *
+         * navigator.clipboard needs a secure context and can still reject (no
+         * permission, document not focused). The first version bailed out in
+         * that case, which meant no feedback and no event — the exact silent
+         * failure this button already had before the rebuild. The legacy
+         * execCommand path covers it.
+         */
+        function copyText(text) {
+          if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text).catch(function () {
+              return legacyCopy(text);
+            });
+          }
+          return legacyCopy(text);
+        }
+
+        function legacyCopy(text) {
+          return new Promise(function (resolve, reject) {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.top = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            var ok = false;
+            try {
+              ok = document.execCommand('copy');
+            } catch (e) {
+              ok = false;
+            }
+            document.body.removeChild(ta);
+            ok ? resolve() : reject(new Error('copy unavailable'));
+          });
+        }
+
+        function flash(button, message) {
+          // Link pages use a labelled button; table rows use an icon button, so
+          // append a note there rather than replacing the icon.
+          var label = button.getAttribute('data-label');
+          if (label !== null || button.textContent.trim()) {
+            if (label === null) {
+              button.setAttribute('data-label', button.textContent);
+              label = button.textContent;
+            }
+            button.textContent = message;
+            setTimeout(function () {
+              button.textContent = label;
+            }, 1200);
+            return;
+          }
+          if (button.parentElement.querySelector('.aka-copied')) return;
+          var note = document.createElement('span');
+          note.className = 'aka-copied text-xs';
+          note.style.color = 'var(--aka-muted)';
+          note.textContent = ' ' + message;
+          button.parentElement.appendChild(note);
+          setTimeout(function () {
+            note.remove();
+          }, 1200);
+        }
+
+        // Delegated from the document so it covers server-rendered rows, rows
+        // the search island re-renders, and link pages — one implementation.
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest) return;
+
+          var copy = e.target.closest('.aka-copy');
+          if (copy) {
+            var link = copy.getAttribute('data-link');
+            copyText('https://aka.ms/' + link).then(
+              function () {
+                track('copy_link', link);
+                flash(copy, 'Copied!');
+              },
+              function () {
+                flash(copy, 'Press \u2318C');
+              }
+            );
+            return;
+          }
+
+          var out = e.target.closest('[data-aka-out]');
+          if (out) track('aka_click', out.getAttribute('data-aka-out'));
+        });
+      })();
+    </script>
+  </body>
+</html>

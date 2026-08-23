@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/*
+ * Dark mode is driven by a data-theme attribute set on <html> by an inline
+ * script in Base.astro, rather than by the prefers-color-scheme media query
+ * alone, so an explicit user choice survives a reload.
+ */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --aka-accent: #012eb7;
+  --aka-accent-hover: #012080;
+  /* Primary buttons get their own pair. In dark mode the accent lightens for
+     link legibility, which would leave white button text on a pale blue fill;
+     the foreground flips to near-black there instead. */
+  --aka-btn-bg: #012eb7;
+  --aka-btn-fg: #ffffff;
+  --aka-bg: #ffffff;
+  --aka-fg: #1c1e21;
+  --aka-muted: #5c5f66;
+  --aka-border: #e3e5e8;
+  --aka-surface: #f8f9fa;
+  --aka-row-hover: #f1f5f9;
+}
+
+[data-theme="dark"] {
+  --aka-accent: #7daefc;
+  --aka-accent-hover: #b4d0fd;
+  --aka-btn-bg: #7daefc;
+  --aka-btn-fg: #0b1220;
+  --aka-bg: #18191a;
+  --aka-fg: #e3e3e3;
+  --aka-muted: #9fa3a8;
+  --aka-border: #35373b;
+  --aka-surface: #242526;
+  --aka-row-hover: #2c2e30;
+}
+
+/*
+ * Element defaults live in @layer base so Tailwind's utilities — which sit in
+ * the utilities layer — still win. An unlayered `a { color: … }` rule beats a
+ * layered `.text-white` no matter the specificity, which silently turned the
+ * primary buttons into blue-on-blue.
+ */
+@layer base {
+  html {
+    background: var(--aka-bg);
+    color-scheme: light;
+  }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background: var(--aka-bg);
+    color: var(--aka-fg);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--aka-accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h1, h2, h3 {
+    color: var(--aka-fg);
+  }
+}
+
+/* The gradient wordmark carried over from the Docusaurus build. */
+.aka-gradient {
+  background: linear-gradient(45deg, #ff00cc, #0575e6 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/*
+ * Category and copy icons.
+ *
+ * Previously each of the ~1450 rows rendered an <img> with no src whose image
+ * came from a CSS `content:` rule. These are background-image based instead so
+ * the element is a span with no broken-image semantics, and the sprite is a
+ * handful of cached SVG requests rather than markup repeated per row.
+ */
+.aka-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex: none;
+}
+.aka-icon-azure       { background-image: url("/img/azure.svg"); }
+.aka-icon-azuread     { background-image: url("/img/azuread.svg"); }
+.aka-icon-defender    { background-image: url("/img/defender.svg"); }
+.aka-icon-dynamics365 { background-image: url("/img/dynamics365.svg"); }
+.aka-icon-general     { background-image: url("/img/general.svg"); }
+.aka-icon-github      { background-image: url("/img/github.svg"); }
+.aka-icon-graph       { background-image: url("/img/graph.svg"); }
+.aka-icon-intune      { background-image: url("/img/intune.svg"); }
+.aka-icon-m365        { background-image: url("/img/m365.svg"); }
+.aka-icon-microsoft   { background-image: url("/img/microsoft.svg"); }
+.aka-icon-mypages     { background-image: url("/img/mypages.svg"); }
+.aka-icon-copy        { background-image: url("/img/copy.svg"); }
+
+/* github.svg is a dark glyph; invert it so it stays visible on a dark ground. */
+[data-theme="dark"] .aka-icon-github {
+  filter: invert(1);
+}
+
+/* Respect users who have asked for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

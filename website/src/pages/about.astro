@@ -1,0 +1,77 @@
+---
+import Base from '../layouts/Base.astro';
+import { getLinks } from '../lib/links.mjs';
+
+const count = getLinks().length;
+const title = 'About akaSearch';
+const description =
+  'akaSearch is a community-maintained, open source directory of Microsoft aka.ms short links. It is not a Microsoft product or service.';
+---
+
+<Base title={title} description={description} canonical="/about">
+  <h1 class="mt-0 text-3xl font-bold">☀️ About akaSearch</h1>
+
+  <div class="max-w-3xl space-y-6">
+    <p>
+      akaSearch is a crowd-sourced directory of Microsoft's aka.ms links —
+      currently {count} of them. akaSearch is not an official Microsoft product
+      or service. If you like shortcuts, also check out
+      <a href="https://cmd.ms" rel="noopener">cmd.ms</a>, the Microsoft Cloud
+      command line.
+    </p>
+
+    <section>
+      <h2 class="text-xl font-semibold">🔗 What is aka.ms?</h2>
+      <p>
+        aka.ms is Microsoft's URL shortening service, available to Microsoft
+        employees to create short links in the form
+        <code>aka.ms/shortname</code>. They turn up throughout documentation,
+        presentations and support articles.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold">💡 Why akaSearch?</h2>
+      <p>
+        There are curated lists of aka.ms links, like the
+        <a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/readiness/readiness-bcall" rel="noopener">
+          Dynamics 365 collection</a>, but no central place to look one up. That
+        is what akaSearch is for.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold">👨🏽‍🦲 Who built this?</h2>
+      <p>
+        This is an open source project built by
+        <a href="https://merill.net" rel="noopener">Merill Fernando</a> as a
+        Learning Day exercise. The source is at
+        <a href="https://github.com/merill/aka" rel="noopener">github.com/merill/aka</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold">✍️ How can I contribute?</h2>
+      <p>
+        Use the <a href="/add">Add a link</a> form — no GitHub account needed.
+        To correct a title, category or destination, open a pull request against
+        the <a href="https://github.com/merill/aka/tree/main/website/config" rel="noopener">config directory</a>,
+        where every link is a single JSON file.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold">🙅‍♂️ Is this a Microsoft product?</h2>
+      <p>No. This is a community-driven project, not a Microsoft product or service.</p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold">🤙 How can I get in touch?</h2>
+      <p>
+        You can reach out on
+        <a href="https://twitter.com/merill" rel="noopener">Twitter</a> or
+        <a href="https://github.com/merill/aka/issues" rel="noopener">open an issue on GitHub</a>.
+      </p>
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,60 @@
+---
+/**
+ * 404 / catch-all search page.
+ *
+ * akasearch.net/<anything> that isn't a known link lands here, which is what
+ * makes the OpenSearch integration work: the browser sends the search term as
+ * a path and this page turns it back into a query. The Docusaurus version
+ * rendered the table with an empty filter and discarded the term entirely.
+ */
+import Base from '../layouts/Base.astro';
+import SearchTable from '../components/SearchTable.astro';
+---
+
+<Base
+  title="Search aka.ms links — akaSearch"
+  description="Search the community-maintained directory of Microsoft aka.ms short links."
+  noindex
+>
+  <h1 class="mt-0 mb-2 text-2xl font-bold sm:text-3xl" id="nf-heading">
+    Search aka.ms links
+  </h1>
+  <p id="nf-sub" class="mt-0 mb-6" style="color: var(--aka-muted);">
+    Search below, or <a href="/add">add a link</a> that's missing.
+  </p>
+
+  <SearchTable />
+
+  {/* Placed after the table so #aka-query exists, and left inline (not a
+      module) so it runs during parsing — ahead of the deferred island script,
+      which reads the input's value on its first render. */}
+  <script is:inline>
+    (function () {
+      try {
+        var raw = decodeURIComponent(location.pathname).replace(/^\/+|\/+$/g, '');
+        if (!raw) return;
+
+        var term = raw.replace(/[-_/+]+/g, ' ').trim();
+        if (!term) return;
+
+        var esc = function (s) {
+          return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        };
+
+        var heading = document.getElementById('nf-heading');
+        if (heading) heading.textContent = 'No page for “' + raw + '”';
+
+        var sub = document.getElementById('nf-sub');
+        if (sub) {
+          sub.innerHTML =
+            'Showing search results instead. Not listed? ' +
+            '<a href="/add?link=' + encodeURIComponent(raw) + '">' +
+            'Add aka.ms/' + esc(raw) + '</a>.';
+        }
+
+        var input = document.getElementById('aka-query');
+        if (input) input.value = term;
+      } catch (e) {}
+    })();
+  </script>
+</Base>

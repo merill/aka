@@ -2,10 +2,8 @@
 /node_modules
 
 # Production
-/website/build
 
 # Generated files
-.docusaurus
 .cache-loader
 
 # Misc
@@ -126,7 +124,6 @@ dist
 .cache
 
 # Docusaurus cache and generated files
-.docusaurus
 
 # Serverless directories
 .serverless/
@@ -152,3 +149,8 @@ dist
 
 /website/static/commands.json
 aka.csv
+
+# Astro / Cloudflare Pages
+.astro/
+website/dist/
+.wrangler/

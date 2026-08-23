@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import SearchTable from '../components/SearchTable.astro';
+import { getLinks, getRecentLinks } from '../lib/links.mjs';
+
+const links = getLinks();
+const recent = getRecentLinks(8);
+const count = links.length;
+const rounded = Math.floor(count / 50) * 50;
+
+const title = `akaSearch — search ${rounded}+ Microsoft aka.ms links`;
+const description = `A community-maintained, searchable directory of ${count} Microsoft aka.ms short links. Find the aka.ms link you half-remember, and see where it actually goes.`;
+
+// Lets Google offer a search box for the site directly in results.
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'akaSearch',
+  url: 'https://akasearch.net/',
+  description,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://akasearch.net/{search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<Base title={title} description={description} canonical="/" jsonLd={jsonLd}>
+  <h1 class="mt-0 mb-2 text-3xl font-bold sm:text-4xl">
+    🚀 <span class="aka-gradient">Search for aka.ms links</span>
+  </h1>
+  <p class="mt-0 mb-6 max-w-3xl" style="color: var(--aka-muted);">
+    Microsoft's <a href="https://aka.ms" rel="noopener">aka.ms</a> short links are
+    everywhere and impossible to remember. This is a community-maintained
+    directory of {count} of them — search below, or <a href="/add">add one that's missing</a>.
+  </p>
+
+  <section aria-labelledby="recent-heading" class="mb-8">
+    <h2 id="recent-heading" class="mb-2 text-sm font-semibold uppercase tracking-wide" style="color: var(--aka-muted);">
+      Recently added
+    </h2>
+    <ul class="m-0 flex list-none flex-nowrap gap-2 overflow-x-auto p-0 pb-1 sm:flex-wrap sm:overflow-visible">
+      {recent.map((l) => (
+        <li>
+          <a
+            href={`/${l.link}`}
+            class="inline-flex flex-none items-center gap-1.5 rounded-full border px-3 py-1 text-sm whitespace-nowrap no-underline"
+            style="border-color: var(--aka-border);"
+            title={l.title}
+          >
+            <span class={`aka-icon aka-icon-${l.icon}`} aria-hidden="true" style="width:14px;height:14px;"></span>
+            aka.ms/{l.link}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <SearchTable />
+</Base>

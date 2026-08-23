@@ -1,0 +1,21 @@
+{
+  "name": "akaSearch",
+  "short_name": "akaSearch",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#012eb7",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "description": "Search Microsoft's aka.ms short links",
+  "start_url": "/"
+}
