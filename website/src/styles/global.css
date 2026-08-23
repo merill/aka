@@ -111,6 +111,43 @@
 .aka-icon-microsoft   { background-image: url("/img/microsoft.svg"); }
 .aka-icon-mypages     { background-image: url("/img/mypages.svg"); }
 .aka-icon-copy        { background-image: url("/img/copy.svg"); }
+.aka-icon-details     { background-image: url("/img/details.svg"); }
+
+/*
+ * Row actions sit beside the link text, so they read as secondary to it.
+ *
+ * The glyph is deliberately small, but a 14px target is far below a usable tap
+ * size, so the control around it is padded out to ~28px and pulled back with a
+ * negative margin. The hit area grows; the layout doesn't move.
+ */
+.aka-row-action {
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+  transition: opacity 0.12s ease-in-out;
+}
+
+.aka-copy,
+a:has(> .aka-row-action) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  margin: -7px -3px;
+  border-radius: 4px;
+}
+
+.aka-copy:hover > .aka-row-action,
+a:hover > .aka-row-action,
+.aka-copy:focus-visible > .aka-row-action,
+a:focus-visible > .aka-row-action {
+  opacity: 1;
+}
+
+.aka-copy:hover,
+a:hover:has(> .aka-row-action) {
+  background: var(--aka-row-hover);
+}
 
 /* github.svg is a dark glyph; invert it so it stays visible on a dark ground. */
 [data-theme="dark"] .aka-icon-github {

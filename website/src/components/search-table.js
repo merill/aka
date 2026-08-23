@@ -166,12 +166,21 @@ function init(root) {
     return 3;
   }
 
+  /** Display form of a destination: no scheme, no www, no trailing slash. */
+  function prettyUrl(u) {
+    return escapeHtml(
+      String(u || '')
+        .replace(/^https?:\/\//, '')
+        .replace(/^www\./, '')
+        .replace(/\/$/, '')
+    );
+  }
+
   function rowHtml(r) {
     const link = escapeHtml(r[LINK]);
     const title = escapeHtml(r[TITLE]);
     const url = escapeHtml(r[URL_]);
     const icon = escapeHtml(r[ICON]);
-    const date = escapeHtml(r[DATE] || '');
     const dead = r[DEAD] === 1;
     const iconUrl = r[ICON_URL] || '';
     const iconCell = iconUrl
@@ -184,15 +193,20 @@ function init(root) {
       '<tr class="border-t align-top" style="border-color: var(--aka-border);">' +
       `<td class="px-2 py-2">${iconCell}</td>` +
       '<td class="px-2 py-2"><span class="whitespace-nowrap">' +
-      `<a href="/${link}"${dead ? ' style="color:var(--aka-muted);"' : ''}>aka.ms/<b>${link}</b></a>` + badge +
-      `<button type="button" class="aka-copy ml-1 cursor-pointer border-0 bg-transparent p-0 align-middle" data-link="${link}" aria-label="Copy aka.ms/${link}">` +
-      '<span class="aka-icon aka-icon-copy" aria-hidden="true"></span></button></span>' +
+      // The link goes where a reader expects — straight to aka.ms. The details
+      // icon beside it opens our own page for it.
+      `<a href="https://aka.ms/${link}" target="_blank" rel="noopener nofollow" data-aka-out="${link}"${
+        dead ? ' style="color:var(--aka-muted);"' : ''
+      }>aka.ms/<b>${link}</b></a>` + badge +
+      `<button type="button" class="aka-copy ml-1.5 cursor-pointer border-0 bg-transparent p-0 align-middle" data-link="${link}" title="Copy aka.ms/${link}" aria-label="Copy aka.ms/${link}">` +
+      '<span class="aka-icon aka-icon-copy aka-row-action" aria-hidden="true"></span></button>' +
+      `<a href="/${link}" class="ml-1 align-middle" title="Details for aka.ms/${link}" aria-label="Details for aka.ms/${link}">` +
+      '<span class="aka-icon aka-icon-details aka-row-action" aria-hidden="true"></span></a></span>' +
       // Mirrors the stacked-title markup the server renders below the sm breakpoint.
       `<span class="mt-0.5 block text-xs sm:hidden" style="color: var(--aka-muted); overflow-wrap: anywhere;">${title}</span>` +
       '</td>' +
       `<td class="hidden px-2 py-2 sm:table-cell" style="overflow-wrap: anywhere;"><a href="${url}" target="_blank" rel="noopener nofollow" data-aka-out="${link}">${title}</a></td>` +
-      `<td class="hidden max-w-xs truncate px-2 py-2 lg:table-cell" style="color: var(--aka-muted);"><a href="${url}" target="_blank" rel="noopener nofollow" data-aka-out="${link}" style="color: var(--aka-muted);">${url}</a></td>` +
-      `<td class="hidden px-2 py-2 whitespace-nowrap md:table-cell" style="color: var(--aka-muted);">${date}</td>` +
+      `<td class="hidden max-w-xs truncate px-2 py-2 lg:table-cell" style="color: var(--aka-muted);"><a href="${url}" target="_blank" rel="noopener nofollow" data-aka-out="${link}" style="color: var(--aka-muted);">${prettyUrl(r[URL_])}</a></td>` +
       '</tr>'
     );
   }

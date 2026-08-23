@@ -42,6 +42,14 @@ const description = link.isDead
     ? `aka.ms/${link.link} redirects to ${link.title}. See the destination URL and related Microsoft aka.ms links.`
     : `Where aka.ms/${link.link} goes, plus related Microsoft aka.ms links.`;
 
+// The subtitle shows the human title when there is one, which means the
+// destination page's own title is never visible on 99 records where the two
+// differ — and on the 188 with no human title, nothing shows at all.
+const pageOwnTitle =
+  link.autoCrawledTitle && link.autoCrawledTitle !== link.title
+    ? link.autoCrawledTitle
+    : '';
+
 const checked = link.dateChecked
   ? new Date(link.dateChecked).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -162,6 +170,13 @@ const jsonLd = {
       </a>
     </dd>
 
+    {pageOwnTitle && (
+      <>
+        <dt class="font-semibold">Page title</dt>
+        <dd class="m-0" style="overflow-wrap: anywhere;">{pageOwnTitle}</dd>
+      </>
+    )}
+
     {destinationHost && (
       <>
         <dt class="font-semibold">Site</dt>
@@ -172,7 +187,7 @@ const jsonLd = {
     {link.category && (
       <>
         <dt class="font-semibold">Category</dt>
-        <dd class="m-0">{link.category}</dd>
+        <dd class="m-0">{link.categoryLabel}</dd>
       </>
     )}
 

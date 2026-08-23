@@ -15,8 +15,14 @@
 import {
   linkNameFromFile,
   normalizeLinkName,
+  CATEGORIES,
   RESERVED_NAMES,
 } from './akaLink.mjs';
+
+/** Category value -> display label, for rendering. */
+const CATEGORY_LABELS = Object.fromEntries(
+  CATEGORIES.map((c) => [c.value, c.label])
+);
 
 /**
  * Every record in website/config, loaded by the bundler at build time.
@@ -169,8 +175,12 @@ export function getLinks() {
       // Human title wins, then the crawled one, then the name itself.
       title: json.title || json.autoCrawledTitle || name,
       hasRealTitle: Boolean(json.title || json.autoCrawledTitle),
+      // Kept separately so the link page can show the destination page's own
+      // title even when a human override is what's displayed as the subtitle.
+      autoCrawledTitle: json.autoCrawledTitle || '',
       keywords: json.keywords || '',
       category: json.category || '',
+      categoryLabel: CATEGORY_LABELS[json.category] || json.category || '',
       url: json.url || '',
       dateAdded: json.dateAdded || '',
       dateChecked: json.dateChecked || '',
@@ -281,7 +291,7 @@ export function getRelatedLinks(link, count = 8) {
 
 /** How `related` was derived, so the heading can describe it honestly. */
 export function getRelatedLabel(link) {
-  if (link.category) return `More ${link.category} links`;
+  if (link.category) return `More ${link.categoryLabel || link.category} links`;
   const host = hostOf(link.url);
   if (host) return `More links to ${host}`;
   return 'Related links';

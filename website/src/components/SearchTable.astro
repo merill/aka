@@ -39,8 +39,9 @@ const initialRows = [...all]
   .sort((a, b) => (b.dateAdded || '').localeCompare(a.dateAdded || ''))
   .slice(0, ssrRows);
 
-const fmt = (iso: string) =>
-  iso ? new Date(iso).toISOString().slice(0, 10) : '';
+/** Display form of a destination: no scheme, no www, no trailing slash. */
+const prettyUrl = (url: string) =>
+  (url || '').replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
 ---
 
 <div
@@ -184,7 +185,6 @@ const fmt = (iso: string) =>
           <th scope="col" class="px-2 py-2 font-medium">Link</th>
           <th scope="col" class="hidden px-2 py-2 font-medium sm:table-cell">Title</th>
           <th scope="col" class="hidden px-2 py-2 font-medium lg:table-cell">Destination</th>
-          <th scope="col" class="hidden px-2 py-2 font-medium md:table-cell">Added</th>
         </tr>
       </thead>
       <tbody id="aka-rows">
@@ -199,7 +199,15 @@ const fmt = (iso: string) =>
             </td>
             <td class="px-2 py-2">
               <span class="whitespace-nowrap">
-                <a href={`/${l.link}`} style={l.isDead ? 'color: var(--aka-muted);' : ''}>
+                {/* The link itself goes where the user expects — straight to
+                    aka.ms. The details icon beside it opens our own page. */}
+                <a
+                  href={`https://aka.ms/${l.link}`}
+                  target="_blank"
+                  rel="noopener nofollow"
+                  data-aka-out={l.link}
+                  style={l.isDead ? 'color: var(--aka-muted);' : ''}
+                >
                   aka.ms/<b>{l.link}</b>
                 </a>
                 {l.isDead && (
@@ -211,12 +219,21 @@ const fmt = (iso: string) =>
                 )}
                 <button
                   type="button"
-                  class="aka-copy ml-1 cursor-pointer border-0 bg-transparent p-0 align-middle"
+                  class="aka-copy ml-1.5 cursor-pointer border-0 bg-transparent p-0 align-middle"
                   data-link={l.link}
+                  title={`Copy aka.ms/${l.link}`}
                   aria-label={`Copy aka.ms/${l.link}`}
                 >
-                  <span class="aka-icon aka-icon-copy" aria-hidden="true"></span>
+                  <span class="aka-icon aka-icon-copy aka-row-action" aria-hidden="true"></span>
                 </button>
+                <a
+                  href={`/${l.link}`}
+                  class="ml-1 align-middle"
+                  title={`Details for aka.ms/${l.link}`}
+                  aria-label={`Details for aka.ms/${l.link}`}
+                >
+                  <span class="aka-icon aka-icon-details aka-row-action" aria-hidden="true"></span>
+                </a>
               </span>
               {/* Below sm the Title column is hidden and the title stacks here
                   instead, so a narrow screen never has to scroll sideways. */}
@@ -231,11 +248,8 @@ const fmt = (iso: string) =>
             </td>
             <td class="hidden max-w-xs truncate px-2 py-2 lg:table-cell" style="color: var(--aka-muted);">
               <a href={l.url} target="_blank" rel="noopener nofollow" data-aka-out={l.link} style="color: var(--aka-muted);">
-                {l.url}
+                {prettyUrl(l.url)}
               </a>
-            </td>
-            <td class="hidden px-2 py-2 whitespace-nowrap md:table-cell" style="color: var(--aka-muted);">
-              {fmt(l.dateAdded)}
             </td>
           </tr>
         ))}
