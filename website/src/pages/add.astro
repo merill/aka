@@ -10,9 +10,10 @@
  */
 import Base from '../layouts/Base.astro';
 import { CATEGORIES } from '../lib/akaLink.mjs';
-import { getLinks } from '../lib/links.mjs';
+import { getLinks, getIndexVersion } from '../lib/links.mjs';
 
 const count = getLinks().length;
+const indexVersion = getIndexVersion();
 const title = 'Add an aka.ms link — akaSearch';
 const description =
   'Submit a Microsoft aka.ms short link to akaSearch. No GitHub account required.';
@@ -25,7 +26,7 @@ const description =
     no GitHub account needed. We'll check that it resolves before it goes in.
   </p>
 
-  <form id="add-form" class="max-w-2xl space-y-6" novalidate>
+  <form id="add-form" class="max-w-2xl space-y-6" novalidate data-index-version={indexVersion}>
     <div>
       <label for="f-link" class="mb-1 block text-sm font-medium">
         aka.ms link <span aria-hidden="true" style="color:#dc2626;">*</span>

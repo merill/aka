@@ -60,7 +60,13 @@ function init() {
 
   async function loadIndex() {
     try {
-      const res = await fetch('/commands.json', { cache: 'force-cache' });
+      // Same versioned-URL rule as the search island: a fixed URL plus
+      // force-cache would let a returning visitor validate against a stale
+      // index and be told a link is missing when it isn't.
+      const version = form.dataset.indexVersion || '';
+      const res = await fetch(
+        '/commands.json' + (version ? '?v=' + encodeURIComponent(version) : '')
+      );
       if (res.ok) index = await res.json();
     } catch (err) {
       // Duplicate detection is then left to the server; not fatal.

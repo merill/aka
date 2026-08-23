@@ -30,13 +30,25 @@ const relatedLabel = getRelatedLabel(link);
 const akaUrl = `https://aka.ms/${link.link}`;
 const hasTitle = link.title && link.title !== link.link;
 
-const pageTitle = hasTitle
-  ? `aka.ms/${link.link} — ${link.title}`
-  : `aka.ms/${link.link}`;
+const pageTitle = link.isDead
+  ? `aka.ms/${link.link} (retired)`
+  : hasTitle
+    ? `aka.ms/${link.link} — ${link.title}`
+    : `aka.ms/${link.link}`;
 
-const description = hasTitle
-  ? `aka.ms/${link.link} redirects to ${link.title}. See the destination URL and related Microsoft aka.ms links.`
-  : `Where aka.ms/${link.link} goes, plus related Microsoft aka.ms links.`;
+const description = link.isDead
+  ? `aka.ms/${link.link} no longer resolves. Its last known destination and related Microsoft aka.ms links.`
+  : hasTitle
+    ? `aka.ms/${link.link} redirects to ${link.title}. See the destination URL and related Microsoft aka.ms links.`
+    : `Where aka.ms/${link.link} goes, plus related Microsoft aka.ms links.`;
+
+const checked = link.dateChecked
+  ? new Date(link.dateChecked).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  : '';
 
 let destinationHost = '';
 try {
@@ -80,6 +92,7 @@ const jsonLd = {
   description={description}
   canonical={`/${link.link}`}
   jsonLd={jsonLd}
+  noindex={link.isDead}
 >
   <nav aria-label="Breadcrumb" class="mb-4 text-sm" style="color: var(--aka-muted);">
     <a href="/">akaSearch</a> <span aria-hidden="true">/</span> aka.ms/{link.link}
@@ -97,6 +110,21 @@ const jsonLd = {
     </div>
   </div>
 
+  {link.isDead && (
+    <div
+      class="mt-6 rounded border p-4 text-sm"
+      style="border-color: #b45309; background: color-mix(in srgb, #b45309 10%, transparent);"
+      role="note"
+    >
+      <p class="mt-0 mb-1 font-semibold">⚠️ This aka.ms link no longer resolves</p>
+      <p class="mt-0 mb-0" style="color: var(--aka-muted);">
+        aka.ms/{link.link} now returns a search page rather than redirecting.
+        Microsoft appears to have retired it. The last known destination is kept
+        below for reference{checked ? `, last checked ${checked}` : ''}.
+      </p>
+    </div>
+  )}
+
   <div class="mt-6 flex flex-wrap items-center gap-3">
     <a
       href={akaUrl}
@@ -104,9 +132,13 @@ const jsonLd = {
       rel="noopener nofollow"
       data-aka-out={link.link}
       class="rounded px-4 py-2 font-medium no-underline hover:no-underline"
-      style="background: var(--aka-btn-bg); color: var(--aka-btn-fg);"
+      style={
+        link.isDead
+          ? 'background: transparent; color: var(--aka-fg); border: 1px solid var(--aka-border);'
+          : 'background: var(--aka-btn-bg); color: var(--aka-btn-fg);'
+      }
     >
-      Open aka.ms/{link.link} →
+      {link.isDead ? 'Try it anyway' : `Open aka.ms/${link.link}`} →
     </a>
     <button
       type="button"
@@ -119,7 +151,7 @@ const jsonLd = {
   </div>
 
   <dl class="mt-8 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-[8rem_1fr]">
-    <dt class="font-semibold">Destination</dt>
+    <dt class="font-semibold">{link.isDead ? 'Last known destination' : 'Destination'}</dt>
     <dd class="m-0" style="overflow-wrap: anywhere;">
       <a href={link.url} target="_blank" rel="noopener nofollow" data-aka-out={link.link}>
         {link.url}

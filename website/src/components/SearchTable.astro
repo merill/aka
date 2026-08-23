@@ -8,7 +8,11 @@
  * the HTML on three separate routes, which is where the 118 KB gzipped homepage
  * came from.
  */
-import { getLinks, getUsedCategories } from '../lib/links.mjs';
+import {
+  getLinks,
+  getUsedCategories,
+  getIndexVersion,
+} from '../lib/links.mjs';
 
 export interface Props {
   /** Prefills the search box — used by the 404 page. */
@@ -20,6 +24,7 @@ export interface Props {
 const { initialQuery = '', ssrRows = 50 } = Astro.props;
 
 const all = getLinks();
+const indexVersion = getIndexVersion();
 const categories = getUsedCategories();
 
 // Newest-first, matching the island's default sort so the handover doesn't
@@ -36,6 +41,7 @@ const fmt = (iso: string) =>
   id="aka-search"
   data-total={all.length}
   data-initial-query={initialQuery}
+  data-index-version={indexVersion}
 >
   {/* Search comes first in DOM order so that on a narrow screen it takes the
       whole first row and the controls wrap beneath it, rather than all four
@@ -108,7 +114,16 @@ const fmt = (iso: string) =>
             </td>
             <td class="px-2 py-2">
               <span class="whitespace-nowrap">
-                <a href={`/${l.link}`}>aka.ms/<b>{l.link}</b></a>
+                <a href={`/${l.link}`} style={l.isDead ? 'color: var(--aka-muted);' : ''}>
+                  aka.ms/<b>{l.link}</b>
+                </a>
+                {l.isDead && (
+                  <span
+                    class="ml-1 rounded px-1.5 py-0.5 align-middle text-[10px] font-medium uppercase tracking-wide"
+                    style="border: 1px solid var(--aka-border); color: var(--aka-muted);"
+                    title="This aka.ms link no longer resolves"
+                  >retired</span>
+                )}
                 <button
                   type="button"
                   class="aka-copy ml-1 cursor-pointer border-0 bg-transparent p-0 align-middle"

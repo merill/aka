@@ -21,6 +21,7 @@ const CATEGORY = 3;
 const URL_ = 4;
 const ICON = 5;
 const DATE = 6;
+const DEAD = 7;
 
 const root = document.getElementById('aka-search');
 if (root) init(root);
@@ -59,7 +60,13 @@ function init(root) {
 
   async function loadIndex() {
     try {
-      const res = await fetch('/commands.json', { cache: 'force-cache' });
+      // Versioned URL, so force-cache is safe: the query changes whenever the
+      // data does, and a stale entry can never be served.
+      const version = root.dataset.indexVersion || '';
+      const res = await fetch(
+        '/commands.json' + (version ? '?v=' + encodeURIComponent(version) : ''),
+        { cache: 'force-cache' }
+      );
       if (!res.ok) throw new Error('HTTP ' + res.status);
       index = await res.json();
     } catch (err) {
@@ -143,6 +150,9 @@ function init(root) {
     if (q) {
       copy.sort((a, b) => rank(a[LINK], q) - rank(b[LINK], q));
     }
+
+    // Retired links stay searchable but never outrank a working one.
+    copy.sort((a, b) => (a[DEAD] || 0) - (b[DEAD] || 0));
     return copy;
   }
 
@@ -159,11 +169,15 @@ function init(root) {
     const url = escapeHtml(r[URL_]);
     const icon = escapeHtml(r[ICON]);
     const date = escapeHtml(r[DATE] || '');
+    const dead = r[DEAD] === 1;
+    const badge = dead
+      ? '<span class="ml-1 rounded px-1.5 py-0.5 align-middle text-[10px] font-medium uppercase tracking-wide" style="border:1px solid var(--aka-border);color:var(--aka-muted);" title="This aka.ms link no longer resolves">retired</span>'
+      : '';
     return (
       '<tr class="border-t align-top" style="border-color: var(--aka-border);">' +
       `<td class="px-2 py-2"><span class="aka-icon aka-icon-${icon}" aria-hidden="true"></span></td>` +
       '<td class="px-2 py-2"><span class="whitespace-nowrap">' +
-      `<a href="/${link}">aka.ms/<b>${link}</b></a>` +
+      `<a href="/${link}"${dead ? ' style="color:var(--aka-muted);"' : ''}>aka.ms/<b>${link}</b></a>` + badge +
       `<button type="button" class="aka-copy ml-1 cursor-pointer border-0 bg-transparent p-0 align-middle" data-link="${link}" aria-label="Copy aka.ms/${link}">` +
       '<span class="aka-icon aka-icon-copy" aria-hidden="true"></span></button></span>' +
       // Mirrors the stacked-title markup the server renders below the sm breakpoint.

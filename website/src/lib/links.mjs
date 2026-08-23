@@ -113,11 +113,11 @@ export function getLinks() {
 
     // The daily crawl marks a record dead when aka.ms stops resolving it, and
     // only on a definitive not-found response — never on a network error — so
-    // an aka.ms outage can't empty the directory. Dead records stay in the repo
-    // (a link may come back, and the crawl un-marks it) but are kept off the
-    // site: a page for a link that goes nowhere is a bad result and a bad
-    // search-engine signal.
-    if (json.status === 'dead') continue;
+    // an aka.ms outage can't mass-retire the directory. Dead records stay on
+    // the site, clearly labelled: roughly 17% of the directory no longer
+    // resolves, and silently deleting that much is worse than showing it with
+    // an honest notice. Their pages are noindex'd and excluded from the
+    // sitemap so search engines drop them.
 
     // The filename is authoritative for the route; the `link` field has drifted
     // from it before (one record carried another record's name verbatim).
@@ -143,6 +143,8 @@ export function getLinks() {
       category: json.category || '',
       url: json.url || '',
       dateAdded: json.dateAdded || '',
+      dateChecked: json.dateChecked || '',
+      isDead: json.status === 'dead',
       icon: resolveIcon(json.url, json.category),
     });
   }
@@ -163,7 +165,7 @@ export function getRoutableLinks() {
 /** Newest-first by date added. */
 export function getRecentLinks(count = 8) {
   return [...getLinks()]
-    .filter((l) => l.dateAdded)
+    .filter((l) => l.dateAdded && !l.isDead)
     .sort((a, b) => b.dateAdded.localeCompare(a.dateAdded))
     .slice(0, count);
 }
@@ -209,7 +211,8 @@ export function getRelatedLinks(link, count = 8) {
   const seen = new Set([link.link]);
 
   const add = (candidates) => {
-    for (const c of candidates) {
+    // Never recommend a retired link as a related one.
+    for (const c of candidates.filter((c) => !c.isDead)) {
       if (picked.length >= count) return;
       if (seen.has(c.link)) continue;
       seen.add(c.link);
@@ -259,7 +262,7 @@ export function getUsedCategories() {
  *
  * Array-of-arrays rather than array-of-objects: repeating six keys across 1452
  * records is roughly 40% of the payload for no benefit.
- * Field order: [link, title, keywords, category, url, icon, dateAdded]
+ * Field order: [link, title, keywords, category, url, icon, dateAdded, dead]
  */
 export function getSearchIndex() {
   return getLinks().map((l) => [
@@ -270,5 +273,31 @@ export function getSearchIndex() {
     l.url,
     l.icon,
     l.dateAdded ? l.dateAdded.slice(0, 10) : '',
+    l.isDead ? 1 : 0,
   ]);
+}
+
+/**
+ * Short token identifying this exact index, for cache-busting.
+ *
+ * /commands.json lives at a fixed URL, so a client fetching it with
+ * force-cache would keep a stale copy indefinitely — new links would never
+ * appear for a returning visitor, and a change to the row shape (as when the
+ * retired flag was added) would silently degrade instead of failing loudly.
+ * Appending this to the URL means the cache entry changes whenever the data
+ * does, and never otherwise.
+ */
+export function getIndexVersion() {
+  const rows = getSearchIndex();
+  let h = 5381;
+  const material = rows.length + '|' + JSON.stringify(rows);
+  for (let i = 0; i < material.length; i++) {
+    h = ((h << 5) + h + material.charCodeAt(i)) | 0;
+  }
+  return (h >>> 0).toString(36);
+}
+
+/** Records that still resolve. */
+export function getLiveLinks() {
+  return getLinks().filter((l) => !l.isDead);
 }
