@@ -82,28 +82,3 @@ npm run dev            # http://localhost:4321
 npm run build          # → dist/
 npx wrangler pages dev dist   # includes /api/submit
 ```
-
-### Deployment configuration
-
-Set in the Cloudflare Pages project, not in this repo:
-
-| Setting | Value |
-| --- | --- |
-| Build command | `npm run build` |
-| Build output directory | `dist` |
-| Root directory | `website` |
-| `GITHUB_TOKEN` | Fine-grained PAT, `merill/aka`, Issues: read & write. Encrypted. |
-
-Analytics is Microsoft Clarity, with the project ID hardcoded in
-[Base.astro](website/src/layouts/Base.astro). It is not a secret — it appears in
-the page source — and Astro inlines `import.meta.env` at build time, so a
-Cloudflare Pages *secret* (runtime-only) would resolve to `undefined` and
-silently emit nothing. It is omitted from dev builds so local browsing doesn't
-pollute the data.
-
-Also add a WAF rate-limiting rule on `/api/*` (Free plan allows one rule: IP
-only, 10-second window and 10-second block, both fixed). Edge-blocked requests
-never invoke the Function, so they don't spend the daily Functions allowance.
-Treat it as a burst limiter rather than a quota guarantee — the actual cost
-guarantee is that the Cloudflare free plan has hard ceilings and no overage
-billing, and static delivery is unmetered and unaffected either way.
