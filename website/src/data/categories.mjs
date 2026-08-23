@@ -3,35 +3,43 @@
 export const CATEGORIES = [
   {
     "value": "entra",
-    "label": "Entra"
+    "label": "Entra",
+    "iconUrl": "https://getyako.com/ms/logos/entra/microsoft-entra-bw-icon-(product-family).svg"
   },
   {
     "value": "intune",
-    "label": "Intune"
+    "label": "Intune",
+    "iconUrl": "https://getyako.com/ms/icons/intune/10332-icon-service-devices.svg"
   },
   {
     "value": "defender",
-    "label": "Defender"
+    "label": "Defender",
+    "iconUrl": "https://getyako.com/ms/icons/fabric/fabric-icons/report.svg"
   },
   {
     "value": "xdr-sentinel",
-    "label": "XDR Sentinel"
+    "label": "XDR Sentinel",
+    "iconUrl": "https://getyako.com/ms/logos/microsoft-sentinel/10248-icon-service-azure-sentinel.svg"
   },
   {
     "value": "purview",
-    "label": "Purview"
+    "label": "Purview",
+    "iconUrl": "https://getyako.com/ms/icons/fabric/fabric-icons/purview.svg"
   },
   {
     "value": "microsoft-365",
-    "label": "Microsoft 365"
+    "label": "Microsoft 365",
+    "iconUrl": "https://getyako.com/ms/icons/azure/10824-icon-service-power.svg"
   },
   {
     "value": "azure",
-    "label": "Azure"
+    "label": "Azure",
+    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
   },
   {
     "value": "power-platform",
-    "label": "Power Platform"
+    "label": "Power Platform",
+    "iconUrl": "https://getyako.com/ms/logos/copilot-studio/copilotstudio-scalable.svg"
   },
   {
     "value": "dynamics-365",
@@ -55,66 +63,82 @@ export const CATEGORIES = [
   },
   {
     "value": "developer",
-    "label": "Developer"
+    "label": "Developer",
+    "iconUrl": "https://getyako.com/ms/icons/azure/10787-icon-service-code.svg"
   },
   {
     "value": "licensing",
-    "label": "Licensing"
+    "label": "Licensing",
+    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
   },
   {
     "value": "partner",
-    "label": "Partner"
+    "label": "Partner",
+    "iconUrl": "https://getyako.com/ms/icons/azure/00321-icon-service-security.svg"
   },
   {
     "value": "trials",
-    "label": "Trials"
+    "label": "Trials",
+    "iconUrl": "https://getyako.com/ms/logos/defender/defender-512.png"
   },
   {
     "value": "health-status",
-    "label": "Health & Status"
+    "label": "Health & Status",
+    "iconUrl": "https://getyako.com/ms/icons/azure/10004-icon-service-service-health.svg"
   },
   {
     "value": "my-pages",
-    "label": "My Pages"
+    "label": "My Pages",
+    "iconUrl": "https://getyako.com/ms/icons/azure/10002-icon-service-subscriptions.svg"
   },
   {
     "value": "training",
-    "label": "Training"
+    "label": "Training",
+    "iconUrl": "https://getyako.com/ms/icons/azure/10816-icon-service-learn.svg"
   },
   {
     "value": "certification",
-    "label": "Certification"
+    "label": "Certification",
+    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
   },
   {
     "value": "education",
-    "label": "Education"
+    "label": "Education",
+    "iconUrl": "https://getyako.com/ms/icons/azure/00026-icon-service-education.svg"
   },
   {
     "value": "consumer",
-    "label": "Consumer"
+    "label": "Consumer",
+    "iconUrl": "https://getyako.com/ms/icons/intune/10332-icon-service-devices.svg"
   },
   {
     "value": "us-government",
-    "label": "US Government"
+    "label": "US Government",
+    "iconUrl": "https://getyako.com/ms/icons/azure/00321-icon-service-security.svg"
   },
   {
     "value": "regional",
-    "label": "Regional"
+    "label": "Regional",
+    "iconUrl": "https://getyako.com/ms/logos/microsoft-365/microsoft-365-620x620-(white-background).png"
   },
   {
     "value": "accessibility",
-    "label": "Accessibility"
+    "label": "Accessibility",
+    "iconUrl": "https://getyako.com/ms/logos/access/access-512.png"
   },
   {
     "value": "third-party",
-    "label": "Third party"
+    "label": "Third party",
+    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
   },
   {
     "value": "other",
-    "label": "Other"
+    "label": "Other",
+    "iconUrl": "https://getyako.com/ms/logos/azure/azure-256x256-padded.png"
   },
   {
     "value": "general",
-    "label": "General"
+    "label": "General",
+    "iconUrl": "https://getyako.com/ms/icons/azure/02266-icon-service-partner-namespace.svg"
   }
 ];

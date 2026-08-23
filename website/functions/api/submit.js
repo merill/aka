@@ -23,6 +23,7 @@ import {
   isNotFoundRedirect,
   extractTitle,
 } from '../../src/lib/akaLink.mjs';
+import { suggestCategory } from '../../src/lib/categorize.mjs';
 
 const DEFAULT_REPO = 'merill/aka';
 const LABEL = 'add-link';
@@ -50,7 +51,15 @@ export async function onRequestGet({ request, env }) {
   }
 
   const resolved = await resolveCached(name);
-  return json(resolved, 200, {
+
+  // Suggest a category from the destination and page title, so Verify can fill
+  // it in for the submitter. Only ever a suggestion — the form pre-selects it
+  // and the user can change it.
+  const suggestion = resolved.ok
+    ? suggestCategory(resolved.url, resolved.title)
+    : { category: '', confidence: 'none', reason: '' };
+
+  return json({ ...resolved, suggestion }, 200, {
     'cache-control': `public, max-age=${RESOLVE_CACHE_SECONDS}`,
   });
 }

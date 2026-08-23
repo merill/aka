@@ -10,6 +10,7 @@
  */
 import { getLinks, getIndexVersion } from '../lib/links.mjs';
 import { CATEGORIES } from '../lib/akaLink.mjs';
+import CategoryCombobox from './CategoryCombobox.astro';
 
 export interface Props {
   /** Prefills the search box — used by the 404 page. */
@@ -66,90 +67,12 @@ const prettyUrl = (url: string) =>
       style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
     />
 
-    {/* Searchable category combobox, mirroring the shadcn-style one in yako's
-        catalog browser. A plain <select> was fine for 14 categories; with 29
-        shared ones it needs filtering. Renders as a real button + listbox so
-        keyboard and screen-reader behaviour is explicit, and the hidden input
-        keeps the value readable the same way the old select was. */}
-    <div class="relative" id="aka-category-combo">
-      <button
-        type="button"
-        id="aka-category-button"
-        class="flex min-w-44 items-center justify-between gap-2 rounded border px-3 py-2 text-sm"
-        style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
-        aria-haspopup="listbox"
-        aria-expanded="false"
-        aria-controls="aka-category-menu"
-      >
-        <span id="aka-category-label">All categories</span>
-        <span aria-hidden="true" style="color: var(--aka-muted);">▾</span>
-      </button>
-      <input type="hidden" id="aka-category" value="" />
-
-      <div
-        id="aka-category-menu"
-        class="absolute left-0 z-50 mt-1 hidden w-64 rounded border shadow-lg"
-        style="border-color: var(--aka-border); background: var(--aka-bg);"
-      >
-        <div class="border-b p-2" style="border-color: var(--aka-border);">
-          <label class="sr-only" for="aka-category-search">Search categories</label>
-          <input
-            id="aka-category-search"
-            type="text"
-            autocomplete="off"
-            placeholder="Search categories…"
-            class="w-full rounded border px-2 py-1.5 text-sm"
-            style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
-          />
-        </div>
-        <ul
-          id="aka-category-list"
-          role="listbox"
-          aria-labelledby="aka-category-button"
-          class="m-0 max-h-72 list-none overflow-y-auto p-1"
-        >
-          <li>
-            <button
-              type="button"
-              role="option"
-              aria-selected="true"
-              data-value=""
-              data-label="All categories"
-              class="aka-cat-option flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm"
-              style="background: transparent; color: var(--aka-fg); border: 0; cursor: pointer;"
-            >
-              <span class="aka-cat-check" aria-hidden="true" style="width:1rem;">✓</span>
-              <span>All categories</span>
-              <span class="ml-auto text-xs" style="color: var(--aka-muted);">{all.length}</span>
-            </button>
-          </li>
-          {categories.map((c) => (
-            <li>
-              <button
-                type="button"
-                role="option"
-                aria-selected="false"
-                data-value={c.value}
-                data-label={c.label}
-                class="aka-cat-option flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm"
-                style="background: transparent; color: var(--aka-fg); border: 0; cursor: pointer;"
-              >
-                <span class="aka-cat-check invisible" aria-hidden="true" style="width:1rem;">✓</span>
-                <span>{c.label}</span>
-                <span class="ml-auto text-xs" style="color: var(--aka-muted);">{c.count}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-        <p
-          id="aka-category-empty"
-          class="m-0 hidden px-3 py-4 text-center text-sm"
-          style="color: var(--aka-muted);"
-        >
-          No categories found.
-        </p>
-      </div>
-    </div>
+    <CategoryCombobox
+      id="aka-category"
+      options={categories}
+      emptyLabel="All categories"
+      emptyCount={all.length}
+    />
 
     <label class="sr-only" for="aka-sort">Sort</label>
     <select

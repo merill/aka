@@ -1,0 +1,152 @@
+---
+/**
+ * Searchable category picker, shared by the homepage filter and the /add form.
+ *
+ * Written once rather than twice: the two differ only in their "no category"
+ * label, whether they show counts, and whether a value is required. Behaviour
+ * lives in category-combobox.js.
+ *
+ * Renders a button plus a listbox rather than a <select> so it can show an icon
+ * per option and filter as you type — a plain select could do neither, and the
+ * shared taxonomy has 29 entries.
+ */
+export interface Option {
+  value: string;
+  label: string;
+  iconUrl?: string;
+  count?: number;
+}
+
+export interface Props {
+  /** Base id; child elements derive theirs from it. */
+  id: string;
+  options: Option[];
+  /** Label for the empty choice, e.g. "All categories". */
+  emptyLabel: string;
+  /** Count shown against the empty choice, when counts are in use. */
+  emptyCount?: number;
+  /** Name for the hidden input, when inside a form. */
+  name?: string;
+  value?: string;
+  minWidth?: string;
+}
+
+const {
+  id,
+  options,
+  emptyLabel,
+  emptyCount,
+  name,
+  value = '',
+  minWidth = '11rem',
+} = Astro.props;
+
+const selected = options.find((o) => o.value === value);
+---
+
+<div class="relative" id={`${id}-combo`} data-category-combobox>
+  <button
+    type="button"
+    id={`${id}-button`}
+    class="flex w-full items-center justify-between gap-2 rounded border px-3 py-2 text-sm"
+    style={`border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg); min-width: ${minWidth};`}
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-controls={`${id}-menu`}
+  >
+    <span class="flex min-w-0 items-center gap-2">
+      <span
+        id={`${id}-icon`}
+        class={selected?.iconUrl ? 'aka-icon' : 'aka-icon hidden'}
+        style={selected?.iconUrl
+          ? `width:16px;height:16px;background-image:url('${selected.iconUrl}')`
+          : 'width:16px;height:16px;'}
+        aria-hidden="true"></span>
+      <span class="truncate" id={`${id}-label`}>{selected?.label ?? emptyLabel}</span>
+    </span>
+    <span aria-hidden="true" style="color: var(--aka-muted);">▾</span>
+  </button>
+
+  <input type="hidden" id={id} name={name} value={value} />
+
+  <div
+    id={`${id}-menu`}
+    class="absolute left-0 z-50 mt-1 hidden w-72 rounded border shadow-lg"
+    style="border-color: var(--aka-border); background: var(--aka-bg);"
+  >
+    <div class="border-b p-2" style="border-color: var(--aka-border);">
+      <label class="sr-only" for={`${id}-search`}>Search categories</label>
+      <input
+        id={`${id}-search`}
+        type="text"
+        autocomplete="off"
+        placeholder="Search categories…"
+        class="w-full rounded border px-2 py-1.5 text-sm"
+        style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+      />
+    </div>
+
+    <ul
+      id={`${id}-list`}
+      role="listbox"
+      aria-labelledby={`${id}-button`}
+      class="m-0 max-h-72 list-none overflow-y-auto p-1"
+    >
+      <li>
+        <button
+          type="button"
+          role="option"
+          aria-selected={value === '' ? 'true' : 'false'}
+          data-value=""
+          data-label={emptyLabel}
+          data-icon=""
+          class="aka-cat-option flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm"
+          style="background: transparent; color: var(--aka-fg); border: 0; cursor: pointer;"
+        >
+          <span class={`aka-cat-check${value === '' ? '' : ' invisible'}`} aria-hidden="true" style="width:1rem;">✓</span>
+          <span class="truncate">{emptyLabel}</span>
+          {emptyCount !== undefined && (
+            <span class="ml-auto text-xs" style="color: var(--aka-muted);">{emptyCount}</span>
+          )}
+        </button>
+      </li>
+
+      {options.map((o) => (
+        <li>
+          <button
+            type="button"
+            role="option"
+            aria-selected={o.value === value ? 'true' : 'false'}
+            data-value={o.value}
+            data-label={o.label}
+            data-icon={o.iconUrl ?? ''}
+            class="aka-cat-option flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm"
+            style="background: transparent; color: var(--aka-fg); border: 0; cursor: pointer;"
+          >
+            <span class={`aka-cat-check${o.value === value ? '' : ' invisible'}`} aria-hidden="true" style="width:1rem;">✓</span>
+            {o.iconUrl ? (
+              <span
+                class="aka-icon"
+                style={`width:16px;height:16px;background-image:url('${o.iconUrl}')`}
+                aria-hidden="true"></span>
+            ) : (
+              <span style="width:16px;" aria-hidden="true"></span>
+            )}
+            <span class="truncate">{o.label}</span>
+            {o.count !== undefined && (
+              <span class="ml-auto text-xs" style="color: var(--aka-muted);">{o.count}</span>
+            )}
+          </button>
+        </li>
+      ))}
+    </ul>
+
+    <p
+      id={`${id}-empty`}
+      class="m-0 hidden px-3 py-4 text-center text-sm"
+      style="color: var(--aka-muted);"
+    >
+      No categories found.
+    </p>
+  </div>
+</div>

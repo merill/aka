@@ -10,6 +10,7 @@
  */
 import Base from '../layouts/Base.astro';
 import { CATEGORIES } from '../lib/akaLink.mjs';
+import CategoryCombobox from '../components/CategoryCombobox.astro';
 import { getLinks, getIndexVersion } from '../lib/links.mjs';
 
 const count = getLinks().length;
@@ -50,23 +51,33 @@ const description =
           aria-describedby="f-link-help f-link-status"
         />
       </div>
-      <p id="f-link-help" class="mt-1 mb-0 text-xs" style="color: var(--aka-muted);">
-        Paste the whole URL if it's easier — we'll trim it down.
-      </p>
-      <p id="f-link-status" class="mt-1 mb-0 text-sm" aria-live="polite"></p>
+      <div class="mt-2 flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          id="f-verify"
+          class="cursor-pointer rounded border px-3 py-1.5 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50"
+          style="border-color: var(--aka-border); color: var(--aka-fg); background: transparent;"
+          disabled
+        >
+          Verify link
+        </button>
+        <p id="f-link-help" class="m-0 text-xs" style="color: var(--aka-muted);">
+          Checks the link resolves and suggests a category.
+        </p>
+      </div>
+      <div id="f-link-status" class="mt-2 text-sm" aria-live="polite"></div>
     </div>
 
     <div>
-      <label for="f-category" class="mb-1 block text-sm font-medium">Category</label>
-      <select
+      <span class="mb-1 block text-sm font-medium" id="f-category-heading">Category</span>
+      <CategoryCombobox
         id="f-category"
         name="category"
-        class="w-full rounded border px-3 py-2 text-base sm:w-64"
-        style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
-      >
-        <option value="">Not sure / none</option>
-        {CATEGORIES.map((c) => <option value={c.value}>{c.label}</option>)}
-      </select>
+        options={CATEGORIES}
+        emptyLabel="Not sure / none"
+        minWidth="16rem"
+      />
+      <p id="f-category-note" class="mt-1 mb-0 text-xs" style="color: var(--aka-muted);"></p>
     </div>
 
     <div>
