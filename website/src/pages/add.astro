@@ -1,0 +1,135 @@
+---
+/**
+ * Submit a new aka.ms link.
+ *
+ * The point of this page is that it needs no GitHub account. Previously the
+ * "Add" button linked straight to a GitHub issue form, so anyone without a
+ * session hit a login wall at the last step. Here the browser validates format
+ * and duplicates instantly, the Function confirms the link actually resolves,
+ * and the Function holds the credential that files the issue.
+ */
+import Base from '../layouts/Base.astro';
+import { CATEGORIES } from '../lib/akaLink.mjs';
+import { getLinks } from '../lib/links.mjs';
+
+const count = getLinks().length;
+const title = 'Add an aka.ms link — akaSearch';
+const description =
+  'Submit a Microsoft aka.ms short link to akaSearch. No GitHub account required.';
+---
+
+<Base title={title} description={description} canonical="/add">
+  <h1 class="mt-0 mb-2 text-3xl font-bold">Add an aka.ms link</h1>
+  <p class="mt-0 mb-8 max-w-2xl" style="color: var(--aka-muted);">
+    Know an aka.ms link that isn't in the {count} already listed? Add it here —
+    no GitHub account needed. We'll check that it resolves before it goes in.
+  </p>
+
+  <form id="add-form" class="max-w-2xl space-y-6" novalidate>
+    <div>
+      <label for="f-link" class="mb-1 block text-sm font-medium">
+        aka.ms link <span aria-hidden="true" style="color:#dc2626;">*</span>
+      </label>
+      <div
+        class="flex items-center rounded border focus-within:ring"
+        style="border-color: var(--aka-border);"
+      >
+        <span class="pl-3 text-sm select-none" style="color: var(--aka-muted);">aka.ms/</span>
+        <input
+          id="f-link"
+          name="link"
+          type="text"
+          required
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          placeholder="intune"
+          class="min-w-0 flex-1 border-0 bg-transparent px-1 py-2 text-base outline-none"
+          style="color: var(--aka-fg);"
+          aria-describedby="f-link-help f-link-status"
+        />
+      </div>
+      <p id="f-link-help" class="mt-1 mb-0 text-xs" style="color: var(--aka-muted);">
+        Paste the whole URL if it's easier — we'll trim it down.
+      </p>
+      <p id="f-link-status" class="mt-1 mb-0 text-sm" aria-live="polite"></p>
+    </div>
+
+    <div>
+      <label for="f-category" class="mb-1 block text-sm font-medium">Category</label>
+      <select
+        id="f-category"
+        name="category"
+        class="w-full rounded border px-3 py-2 text-base sm:w-64"
+        style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+      >
+        <option value="">Not sure / none</option>
+        {CATEGORIES.map((c) => <option value={c.value}>{c.label}</option>)}
+      </select>
+    </div>
+
+    <div>
+      <label for="f-title" class="mb-1 block text-sm font-medium">
+        Title <span class="font-normal" style="color: var(--aka-muted);">(optional)</span>
+      </label>
+      <input
+        id="f-title"
+        name="title"
+        type="text"
+        class="w-full rounded border px-3 py-2 text-base"
+        style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+        placeholder="Leave blank to use the destination page title"
+      />
+    </div>
+
+    <div>
+      <label for="f-keywords" class="mb-1 block text-sm font-medium">
+        Search keywords <span class="font-normal" style="color: var(--aka-muted);">(optional)</span>
+      </label>
+      <input
+        id="f-keywords"
+        name="keywords"
+        type="text"
+        class="w-full rounded border px-3 py-2 text-base"
+        style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+        placeholder="conditional access, ca policy"
+        aria-describedby="f-keywords-help"
+      />
+      <p id="f-keywords-help" class="mt-1 mb-0 text-xs" style="color: var(--aka-muted);">
+        Comma-separated alternative terms people might search for.
+      </p>
+    </div>
+
+    <div>
+      <label for="f-by" class="mb-1 block text-sm font-medium">
+        Your name or handle <span class="font-normal" style="color: var(--aka-muted);">(optional)</span>
+      </label>
+      <input
+        id="f-by"
+        name="submittedBy"
+        type="text"
+        class="w-full rounded border px-3 py-2 text-base sm:w-64"
+        style="border-color: var(--aka-border); background: var(--aka-bg); color: var(--aka-fg);"
+        placeholder="@merill"
+      />
+    </div>
+
+    <div class="flex flex-wrap items-center gap-4">
+      <button
+        id="f-submit"
+        type="submit"
+        class="cursor-pointer rounded px-5 py-2.5 font-medium disabled:cursor-not-allowed disabled:opacity-50"
+        style="background: var(--aka-btn-bg); color: var(--aka-btn-fg);"
+      >
+        Submit link
+      </button>
+      <a id="f-github" href="https://github.com/merill/aka/issues/new?template=add-link.yaml" class="text-sm" rel="noopener">
+        Prefer to file it on GitHub?
+      </a>
+    </div>
+
+    <div id="f-result" class="mt-4" aria-live="polite"></div>
+  </form>
+
+  <script src="../components/add-link-form.js"></script>
+</Base>

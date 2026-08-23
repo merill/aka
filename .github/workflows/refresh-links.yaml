@@ -1,0 +1,41 @@
+name: Refresh link destinations
+
+# The daily crawl the README has always described. Re-resolves every aka.ms
+# link, updates destinations and titles, and flags ones that stopped resolving.
+# Commits once for the whole sweep, so it costs at most one Pages build a day.
+on:
+  schedule:
+    - cron: "31 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-links
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Re-resolve every link
+        run: node build/scripts/refresh-links.mjs
+
+      - name: Commit changes, if any
+        run: |
+          if [ -z "$(git status --porcelain website/config)" ]; then
+            echo "No destination or title changes; nothing to commit."
+            exit 0
+          fi
+          git config user.name  "akasearch-bot"
+          git config user.email "akasearch-bot@users.noreply.github.com"
+          git add website/config
+          git commit -m "chore: refresh link destinations and titles"
+          git push

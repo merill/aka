@@ -1,30 +1,38 @@
-name: Add new aka.ms link
-description: Use this form to submit an [aka.ms] link to [akaSearch.net](https://akasearch.net).
-title: "New aka.ms link"
+name: Add a new aka.ms link
+description: Submit an aka.ms link to akaSearch.net
+title: "Add: "
+labels: ["add-link"]
 body:
   - type: markdown
     attributes:
       value: |
-        🙏 Thank you for taking the time to submit a new aka.ms link to [akaSearch.net](https://akasearch.net)!
-        
+        🙏 Thanks for adding a link to [akaSearch](https://akasearch.net)!
+
+        **You don't need to use this form.** [akasearch.net/add](https://akasearch.net/add)
+        does the same thing without a GitHub account, and checks the link
+        resolves while you type.
+
         A few notes:
-        * It will take a few minutes after you submit for the link to appear at [akaSearch.net](https://akasearch.net).
-        * Avoid submitting links that are not meant for public use.
-        * Submit a pull request to make advanced edits such as updating the title or deleting an entry. See [Contributing](https://github.com/merill/aka#contributing) for details.
+        * Links are published in a batch every hour, so give it a little while to appear.
+        * Please don't submit links that aren't meant to be public.
+        * To change a title, category or destination, edit the JSON file in
+          [website/config](https://github.com/merill/aka/tree/main/website/config)
+          and open a pull request.
   - type: input
     id: link
     attributes:
       label: Aka.ms link name
-      description: Feel free to omit the aka.ms part of the url. E.g. https://aka.ms/intune → intune
-      placeholder: ex. intune
+      description: The aka.ms part is optional — paste the whole URL if that's easier.
+      placeholder: intune
     validations:
       required: true
   - type: dropdown
     id: category
     attributes:
-      label: Category (Optional. Select None to auto-select)
-      description: The category will allow the link to be grouped with it's product family. To add a new category, edit [this file](https://github.com/merill/aka/edit/main/.github/ISSUE_TEMPLATE/add-link.yaml) and submit a pull request.
+      label: Category
+      description: Optional. Groups the link with its product family.
       options:
+        - None
         - azure
         - azuread
         - defender
@@ -32,12 +40,36 @@ body:
         - exchange
         - graph
         - intune
-        - kql
         - learn
         - microsoft365
         - powerplatform
+        - powertoys
         - security
         - sqlserver
         - windows365
+    validations:
+      required: false
+  - type: input
+    id: link_title
+    attributes:
+      label: Title
+      description: Optional. Leave blank to use the destination page's own title.
+      placeholder: Microsoft Intune admin center
+    validations:
+      required: false
+  - type: input
+    id: keywords
+    attributes:
+      label: Search keywords
+      description: Optional. Comma-separated alternative terms people might search for.
+      placeholder: conditional access, ca policy
+    validations:
+      required: false
+  - type: input
+    id: submitted_by
+    attributes:
+      label: Your name or handle
+      description: Optional, for credit.
+      placeholder: "@merill"
     validations:
       required: false

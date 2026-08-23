@@ -1,30 +1,37 @@
-on:
-  issues:
-    types:
-      - opened
-  workflow_dispatch:
+name: Publish submitted links
 
-concurrency: add-link
+# Deliberately NOT triggered by `issues: [opened]`.
+#
+# Every commit to main triggers a Cloudflare Pages build, and the free plan
+# allows 500 builds a month (~16/day). Publishing on each issue would spend one
+# build per submission. Draining on a schedule turns a burst of submissions into
+# a single commit, and a run with an empty queue commits nothing at all — so it
+# costs no build.
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch: # "publish now"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: add-link
+  cancel-in-progress: false
 
 jobs:
-  update_issue:
+  publish:
     runs-on: ubuntu-latest
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
-      contents: write
-      issues: write
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Process new link request
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Drain open submissions into one commit
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        shell: pwsh
-        run: |
-          Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module -Name PowerShellForGitHub
-          Set-GitHubConfiguration -DisableTelemetry
-          . ./build/scripts/AkaUtils.ps1
-          Set-AkaGitHubAuth
-          Update-AllOpenGitHubIssues
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node build/scripts/drain-issues.mjs
