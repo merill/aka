@@ -4,6 +4,7 @@
   "autoCrawledTitle": "Microsoft Learn - \"\"Azure AD Connect: Version release history - Microsoft Entra\"\"",
   "keywords": "",
   "category": "",
-  "url": "https://learn.microsoft.com/api/search/rss?search=%22Azure+AD+Connect%3A+Version+release+history+-+Microsoft+Entra%22&locale=en-us&facet=category&%24filter=category+eq+%27Documentation%27",
-  "dateAdded": "2023-05-07T15:54:01+10:00"
+  "url": "https://learn.microsoft.com/api/search/rss?search=%22Microsoft%20Entra%20Connect:%20Version%20release%20history%22&locale=en-us&facet=category&%24filter=category+eq+%27Documentation%27",
+  "dateAdded": "2023-05-07T15:54:01+10:00",
+  "dateChecked": "2026-08-24T04:13:21.437Z"
 }

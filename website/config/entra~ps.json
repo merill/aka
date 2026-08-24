@@ -4,6 +4,7 @@
   "autoCrawledTitle": "Microsoft Entra PowerShell documentation - Microsoft Entra PowerShell | Microsoft Learn",
   "keywords": null,
   "category": "entra",
-  "url": "https://learn.microsoft.com/powershell/entra-powershell/",
-  "dateAdded": "2024-06-29T23:17:46Z"
+  "url": "https://github.com/microsoftgraph/entra-powershell",
+  "dateAdded": "2024-06-29T23:17:46Z",
+  "dateChecked": "2026-08-24T04:13:47.398Z"
 }

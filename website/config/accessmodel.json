@@ -1,9 +1,10 @@
 {
   "link": "AccessModel",
   "title": null,
-  "autoCrawledTitle": "Securing privileged access Enterprise access model | Microsoft Learn",
+  "autoCrawledTitle": "Securing privileged access Enterprise access model - Privileged access | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/security/compass/privileged-access-access-model",
-  "dateAdded": "2023-05-10T20:58:26+10:00"
+  "url": "https://learn.microsoft.com/security/privileged-access-workstations/privileged-access-access-model",
+  "dateAdded": "2023-05-10T20:58:26+10:00",
+  "dateChecked": "2026-08-24T04:13:22.255Z"
 }

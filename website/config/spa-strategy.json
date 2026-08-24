@@ -1,9 +1,10 @@
 {
   "link": "SPA-Strategy",
   "title": null,
-  "autoCrawledTitle": "Developing a privileged access strategy | Microsoft Learn",
+  "autoCrawledTitle": "Developing a privileged access strategy - Privileged access | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/security/compass/privileged-access-strategy",
-  "dateAdded": "2023-05-10T20:58:26+10:00"
+  "url": "https://learn.microsoft.com/security/privileged-access-workstations/privileged-access-strategy",
+  "dateAdded": "2023-05-10T20:58:26+10:00",
+  "dateChecked": "2026-08-24T04:14:30.428Z"
 }

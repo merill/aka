@@ -1,9 +1,10 @@
 {
   "link": "M365Lighthouse",
   "title": null,
-  "autoCrawledTitle": "Microsoft 365 & Security for Partners",
+  "autoCrawledTitle": "Microsoft 365 Lighthouse",
   "keywords": null,
   "category": null,
-  "url": "https://cloudpartners.transform.microsoft.com/products/m365-lighthouse",
-  "dateAdded": "2023-05-24T23:05:05Z"
+  "url": "https://cloudpartners.transform.microsoft.com/partner-gtm/csp/m365-lighthouse",
+  "dateAdded": "2023-05-24T23:05:05Z",
+  "dateChecked": "2026-08-24T04:13:59.173Z"
 }

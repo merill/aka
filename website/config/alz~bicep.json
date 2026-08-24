@@ -1,9 +1,10 @@
 {
   "link": "alz/bicep",
   "title": "Azure Landing Zones - Bicep modules",
-  "autoCrawledTitle": "GitHub - Azure/ALZ-Bicep: This repository contains the Azure Landing Zones (ALZ) Bicep modules that help deliver and deploy the Azure Landing Zone conceptual architecture in a modular approach. https://aka.ms/alz/docs",
+  "autoCrawledTitle": "Bicep | Azure landing zone Documentation",
   "keywords": "",
   "category": "azure",
-  "url": "https://github.com/Azure/ALZ-Bicep",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "url": "https://azure.github.io/Azure-Landing-Zones/bicep/",
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:13:26.460Z"
 }

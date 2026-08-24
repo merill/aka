@@ -1,9 +1,10 @@
 {
   "link": "GetMicrosoftAuthenticator",
   "title": null,
-  "autoCrawledTitle": "‎Microsoft Authenticator on the App Store",
+  "autoCrawledTitle": "Microsoft Mobile Phone Authenticator | Microsoft Security",
   "keywords": null,
   "category": null,
-  "url": "https://app.adjust.com/vgfp7d_40oczo?fallback=https%3A%2F%2Fwww.microsoft.com%2Fauthenticator%3Fcmp%3Dvgfp7d_40oczo",
-  "dateAdded": "2023-05-12T15:43:30+10:00"
+  "url": "https://www.microsoft.com/security/mobile-authenticator-app",
+  "dateAdded": "2023-05-12T15:43:30+10:00",
+  "dateChecked": "2026-08-24T04:13:49.085Z"
 }

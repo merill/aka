@@ -1,9 +1,10 @@
 {
   "link": "KustoQueryLimits",
   "title": null,
-  "autoCrawledTitle": "Query limits - Azure Data Explorer | Microsoft Learn",
+  "autoCrawledTitle": "Query limits - Kusto | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/kusto/concepts/querylimits",
-  "dateAdded": "2023-05-30T22:40:23Z"
+  "dateAdded": "2023-05-30T22:40:23Z",
+  "dateChecked": "2026-08-24T04:13:55.414Z"
 }

@@ -4,6 +4,7 @@
   "autoCrawledTitle": "Microsoft Azure",
   "keywords": null,
   "category": "azure",
-  "url": "https://portal.azure.com/#view/AppInsightsExtension/UsageNotebookBlade/ComponentId/Azure%20Advisor/ConfigurationId/community-Workbooks%2FAzure%20Advisor%2FAzureServiceRetirement/Type/workbook/WorkbookTemplateName/Service%20Retirement%20(Preview)",
-  "dateAdded": "2024-04-19T00:14:55Z"
+  "url": "https://portal.azure.com/#view/AppInsightsExtension/UsageNotebookBlade/ComponentId/Azure%20Advisor/ConfigurationId/community-Workbooks%2FAzure%20Advisor%2FAzureServiceRetirement/Type/workbook/WorkbookTemplateName/Service%20Retirement",
+  "dateAdded": "2024-04-19T00:14:55Z",
+  "dateChecked": "2026-08-24T04:14:28.713Z"
 }

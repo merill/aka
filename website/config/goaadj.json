@@ -1,9 +1,10 @@
 {
   "link": "goaadj",
   "title": null,
-  "autoCrawledTitle": "Tutorial-Get started with cloud-native Windows endpoints - Microsoft Intune | Microsoft Learn",
+  "autoCrawledTitle": "Tutorial - Set up cloud-native Windows endpoints with Microsoft Intune - Microsoft Intune | Microsoft Learn",
   "keywords": null,
   "category": "intune",
-  "url": "https://learn.microsoft.com/mem/cloud-native-windows-endpoints",
-  "dateAdded": "2023-05-09T03:25:22Z"
+  "url": "https://learn.microsoft.com/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
+  "dateAdded": "2023-05-09T03:25:22Z",
+  "dateChecked": "2026-08-24T04:13:49.928Z"
 }

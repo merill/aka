@@ -1,9 +1,10 @@
 {
   "link": "OnboardWithVID",
   "title": null,
-  "autoCrawledTitle": "Onboard new remote employees using ID verification - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Onboard new remote employees using ID verification - Microsoft Entra Verified ID | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/active-directory/verifiable-credentials/remote-onboarding-new-employees-id-verification",
-  "dateAdded": "2023-05-12T19:51:10Z"
+  "dateAdded": "2023-05-12T19:51:10Z",
+  "dateChecked": "2026-08-24T04:14:15.445Z"
 }

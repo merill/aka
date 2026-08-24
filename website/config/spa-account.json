@@ -1,9 +1,10 @@
 {
   "link": "SPA-account",
   "title": null,
-  "autoCrawledTitle": "Securing privileged access accounts | Microsoft Learn",
+  "autoCrawledTitle": "Securing privileged access accounts - Privileged access | Microsoft Learn",
   "keywords": null,
   "category": "defender",
-  "url": "https://learn.microsoft.com/security/compass/privileged-access-accounts",
-  "dateAdded": "2023-05-21T08:21:28Z"
+  "url": "https://learn.microsoft.com/security/privileged-access-workstations/privileged-access-accounts",
+  "dateAdded": "2023-05-21T08:21:28Z",
+  "dateChecked": "2026-08-24T04:14:30.119Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "SecureWorkstation",
   "title": null,
-  "autoCrawledTitle": "Why are privileged access devices important | Microsoft Learn",
+  "autoCrawledTitle": "Why are privileged access devices important - Privileged access | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/security/compass/privileged-access-devices",
-  "dateAdded": "2023-05-11T12:03:37Z"
+  "url": "https://learn.microsoft.com/security/privileged-access-workstations/privileged-access-devices",
+  "dateAdded": "2023-05-11T12:03:37Z",
+  "dateChecked": "2026-08-24T04:14:27.061Z"
 }

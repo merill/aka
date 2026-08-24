@@ -1,9 +1,10 @@
 {
   "link": "ESAE",
   "title": null,
-  "autoCrawledTitle": "Enhanced Security Admin Environment (ESAE) architecture mainstream retirement | Microsoft Learn",
+  "autoCrawledTitle": "Enhanced Security Admin Environment (ESAE) architecture mainstream retirement - Privileged access | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/security/compass/esae-retirement",
-  "dateAdded": "2023-05-10T20:58:26+10:00"
+  "url": "https://learn.microsoft.com/security/privileged-access-workstations/esae-retirement",
+  "dateAdded": "2023-05-10T20:58:26+10:00",
+  "dateChecked": "2026-08-24T04:13:47.553Z"
 }

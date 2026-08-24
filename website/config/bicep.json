@@ -1,9 +1,10 @@
 {
   "link": "bicep",
   "title": null,
-  "autoCrawledTitle": "Bicep language for deploying Azure resources - Azure Resource Manager | Microsoft Learn",
+  "autoCrawledTitle": "What is Bicep? - Azure Resource Manager | Microsoft Learn",
   "keywords": null,
   "category": "azure",
   "url": "https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview",
-  "dateAdded": "2023-05-10T11:01:55Z"
+  "dateAdded": "2023-05-10T11:01:55Z",
+  "dateChecked": "2026-08-24T04:13:37.000Z"
 }

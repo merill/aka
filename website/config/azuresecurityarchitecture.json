@@ -1,9 +1,10 @@
 {
   "link": "AzureSecurityArchitecture",
   "title": null,
-  "autoCrawledTitle": "Overview of the security pillar - Microsoft Azure Well-Architected Framework | Microsoft Learn",
+  "autoCrawledTitle": "Security quick links - Microsoft Azure Well-Architected Framework | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/architecture/security/overview",
-  "dateAdded": "2023-05-10T18:26:06+10:00"
+  "dateAdded": "2023-05-10T18:26:06+10:00",
+  "dateChecked": "2026-08-24T04:13:33.808Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "EnablePasskeys",
   "title": null,
-  "autoCrawledTitle": "How to enable passkeys in Microsoft Authenticator for Microsoft Entra ID (preview) - Microsoft Entra ID | Microsoft Learn",
+  "autoCrawledTitle": "Enable and support passkeys in Authenticator for Microsoft Entra ID - Microsoft Entra ID | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-authenticator-passkey",
-  "dateAdded": "2024-05-02T22:15:26Z"
+  "dateAdded": "2024-05-02T22:15:26Z",
+  "dateChecked": "2026-08-24T04:13:45.945Z"
 }

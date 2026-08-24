@@ -1,9 +1,10 @@
 {
   "link": "EAdocs",
   "title": null,
-  "autoCrawledTitle": "What is Endpoint analytics? - Microsoft Intune | Microsoft Learn",
+  "autoCrawledTitle": "Endpoint analytics overview - Microsoft Intune | Microsoft Learn",
   "keywords": null,
   "category": "intune",
-  "url": "https://learn.microsoft.com/mem/analytics/overview",
-  "dateAdded": "2023-09-14T15:01:49Z"
+  "url": "https://learn.microsoft.com/intune/endpoint-analytics/?pivots=intune",
+  "dateAdded": "2023-09-14T15:01:49Z",
+  "dateChecked": "2026-08-24T04:13:45.238Z"
 }

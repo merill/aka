@@ -1,9 +1,10 @@
 {
   "link": "waf",
   "title": "Azure Landing Zones - Well Architected Framework",
-  "autoCrawledTitle": "Microsoft Azure Well-Architected Framework - Azure Well-Architected Framework | Microsoft Learn",
+  "autoCrawledTitle": "Azure Well-Architected Framework - Microsoft Azure Well-Architected Framework | Microsoft Learn",
   "keywords": "",
   "category": "azure",
   "url": "https://learn.microsoft.com/azure/well-architected/",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:14:35.330Z"
 }

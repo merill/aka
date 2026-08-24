@@ -1,9 +1,10 @@
 {
   "link": "mcra",
   "title": null,
-  "autoCrawledTitle": "Microsoft Cybersecurity Reference Architectures - Security documentation | Microsoft Learn",
+  "autoCrawledTitle": "Review Microsoft Cybersecurity Reference Architectures (MCRA) | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/security/cybersecurity-reference-architecture/mcra",
-  "dateAdded": "2023-05-10T18:26:06+10:00"
+  "url": "https://learn.microsoft.com/en-us/security/zero-trust/microsoft-reference-architecture",
+  "dateAdded": "2023-05-10T18:26:06+10:00",
+  "dateChecked": "2026-08-24T04:14:01.812Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "ALZ/TechDocs",
   "title": null,
-  "autoCrawledTitle": "Azure Landing Zones Documentation",
+  "autoCrawledTitle": "Azure landing zone Documentation",
   "keywords": null,
   "category": "azure",
   "url": "https://azure.github.io/Azure-Landing-Zones/",
-  "dateAdded": "2025-01-29T19:21:24Z"
+  "dateAdded": "2025-01-29T19:21:24Z",
+  "dateChecked": "2026-08-24T04:13:27.156Z"
 }

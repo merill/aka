@@ -1,9 +1,10 @@
 {
   "link": "AuthStrengthDocs",
   "title": null,
-  "autoCrawledTitle": "Overview of Azure Active Directory authentication strength - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Overview of Conditional Access Authentication Strengths - Microsoft Entra ID | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/azure/active-directory/authentication/concept-authentication-strengths",
-  "dateAdded": "2023-06-02T08:42:14Z"
+  "url": "https://learn.microsoft.com/entra/identity/authentication/concept-authentication-strengths",
+  "dateAdded": "2023-06-02T08:42:14Z",
+  "dateChecked": "2026-08-24T04:13:29.590Z"
 }

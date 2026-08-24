@@ -4,6 +4,7 @@
   "autoCrawledTitle": "GitHub - mspnp/AzureNamingTool: The Azure Naming Tool is a .NET 7 Blazor application, with a RESTful API. The UI consists of several pages to allow the configuration and generation of Azure Resource names. The API provides a programmatic interface for the functionality.",
   "keywords": null,
   "category": null,
-  "url": "https://github.com/mspnp/AzureNamingTool",
-  "dateAdded": "2023-08-09T07:33:58Z"
+  "url": "https://github.com/Azure/AzureNamingTool",
+  "dateAdded": "2023-08-09T07:33:58Z",
+  "dateChecked": "2026-08-24T04:13:33.804Z"
 }

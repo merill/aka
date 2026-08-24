@@ -1,9 +1,10 @@
 {
   "link": "azvpnclientdownload",
   "title": null,
-  "autoCrawledTitle": "App Center",
+  "autoCrawledTitle": "Download Azure VPN Client from Official Microsoft Download Center",
   "keywords": null,
   "category": "azure",
-  "url": "https://install.appcenter.ms/users/user-microsoft/apps/azure-vpn-client-1/distribution_groups/publicgroup/releases/21",
-  "dateAdded": "2025-04-16T15:29:38Z"
+  "url": "https://www.microsoft.com/en-us/download/details.aspx?id=108598",
+  "dateAdded": "2025-04-16T15:29:38Z",
+  "dateChecked": "2026-08-24T04:13:36.520Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "macOSEnrollmentGuide",
   "title": null,
-  "autoCrawledTitle": "macOS device enrollment guide for  Microsoft Intune | Microsoft Learn",
+  "autoCrawledTitle": "macOS device enrollment guide for Microsoft Intune - Microsoft Intune | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/mem/intune/fundamentals/deployment-guide-enrollment-macos",
-  "dateAdded": "2023-07-17T10:07:07Z"
+  "url": "https://learn.microsoft.com/intune/device-enrollment/apple/guide-macos",
+  "dateAdded": "2023-07-17T10:07:07Z",
+  "dateChecked": "2026-08-24T04:13:59.577Z"
 }

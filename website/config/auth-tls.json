@@ -1,9 +1,10 @@
 {
   "link": "auth-tls",
   "title": null,
-  "autoCrawledTitle": "Configure TLS mutual authentication - Azure App Service | Microsoft Learn",
+  "autoCrawledTitle": "Set Up TLS Mutual Authentication - Azure App Service | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/azure/app-service/app-service-web-configure-tls-mutual-auth",
-  "dateAdded": "2023-09-26T10:02:00Z"
+  "dateAdded": "2023-09-26T10:02:00Z",
+  "dateChecked": "2026-08-24T04:13:29.157Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "rename",
   "title": null,
-  "autoCrawledTitle": "Azure AD is Becoming Microsoft Entra ID - Microsoft Community Hub",
+  "autoCrawledTitle": "How to rename Azure Active Directory (Azure AD) - Microsoft Entra | Microsoft Learn",
   "keywords": null,
   "category": "entra",
-  "url": "https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/azure-ad-is-becoming-microsoft-entra-id/ba-p/2520436",
-  "dateAdded": "2023-07-11T17:11:44Z"
+  "url": "https://learn.microsoft.com/en-us/entra/fundamentals/how-to-rename-azure-ad",
+  "dateAdded": "2023-07-11T17:11:44Z",
+  "dateChecked": "2026-08-24T04:14:25.232Z"
 }

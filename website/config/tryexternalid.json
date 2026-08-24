@@ -1,9 +1,10 @@
 {
   "link": "TryExternalID",
   "title": null,
-  "autoCrawledTitle": "Microsoft Entra admin center",
+  "autoCrawledTitle": "External Tenant Quickstart - Microsoft Entra External ID | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://entra.microsoft.com/#view/Microsoft_AAD_B2CAdmin/TrialTenantFirstTimeUser.ReactView",
-  "dateAdded": "2023-07-11T17:05:34Z"
+  "url": "https://learn.microsoft.com/entra/external-id/customers/quickstart-tenant-setup",
+  "dateAdded": "2023-07-11T17:05:34Z",
+  "dateChecked": "2026-08-24T04:14:33.375Z"
 }

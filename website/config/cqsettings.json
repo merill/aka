@@ -1,9 +1,10 @@
 {
   "link": "cqsettings",
   "title": null,
-  "autoCrawledTitle": "User Settings Portal",
+  "autoCrawledTitle": "Microsoft PSTN User Settings",
   "keywords": null,
   "category": null,
-  "url": "https://mysettings.lync.com/callqueues",
-  "dateAdded": "2023-05-17T16:51:29Z"
+  "url": "https://dialin.teams.cloud.microsoft/usp/callqueues",
+  "dateAdded": "2023-05-17T16:51:29Z",
+  "dateChecked": "2026-08-24T04:13:41.449Z"
 }

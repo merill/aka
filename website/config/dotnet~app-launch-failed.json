@@ -1,9 +1,10 @@
 {
   "link": "dotnet/app-launch-failed",
   "title": null,
-  "autoCrawledTitle": "Troubleshoot app launch failures | Microsoft Learn",
+  "autoCrawledTitle": "Troubleshoot app launch failures - .NET | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/dotnet/core/runtime-discovery/troubleshoot-app-launch",
-  "dateAdded": "2023-05-10T21:48:36+10:00"
+  "dateAdded": "2023-05-10T21:48:36+10:00",
+  "dateChecked": "2026-08-24T04:13:44.502Z"
 }

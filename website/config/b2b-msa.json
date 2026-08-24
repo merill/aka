@@ -1,9 +1,10 @@
 {
   "link": "B2B-MSA",
   "title": null,
-  "autoCrawledTitle": "Add Microsoft account (MSA) as an identity provider - Microsoft Entra External ID | Microsoft Learn",
+  "autoCrawledTitle": "Use Microsoft Accounts - Microsoft Entra External ID | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/active-directory/external-identities/microsoft-account",
-  "dateAdded": "2024-03-11T09:28:21Z"
+  "dateAdded": "2024-03-11T09:28:21Z",
+  "dateChecked": "2026-08-24T04:13:36.650Z"
 }

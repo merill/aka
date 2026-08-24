@@ -1,9 +1,10 @@
 {
   "link": "backup-operation-failed",
   "title": null,
-  "autoCrawledTitle": "Troubleshoot Agent and extension issues - Azure Backup | Microsoft Learn",
+  "autoCrawledTitle": "Troubleshoot Azure Backup failures caused by agent or extension issues - Azure Backup | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/backup/backup-azure-troubleshoot-vm-backup-fails-snapshot-timeout#backupoperationfailed--backupoperationfailedv2---backup-fails-with-an-internal-error",
-  "dateAdded": "2024-01-22T08:08:06Z"
+  "dateAdded": "2024-01-22T08:08:06Z",
+  "dateChecked": "2026-08-24T04:13:36.634Z"
 }

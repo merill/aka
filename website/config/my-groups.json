@@ -1,9 +1,10 @@
 {
   "link": "my-groups",
   "title": "My Groups",
-  "autoCrawledTitle": "Sign in to your account",
+  "autoCrawledTitle": "My Apps",
   "keywords": "",
   "category": "entra",
   "url": "https://account.activedirectory.windowsazure.com/r#/groups",
-  "dateAdded": "2023-05-07T14:16:29+10:00"
+  "dateAdded": "2023-05-07T14:16:29+10:00",
+  "dateChecked": "2026-08-24T04:14:12.095Z"
 }

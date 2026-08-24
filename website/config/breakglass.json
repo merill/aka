@@ -1,9 +1,10 @@
 {
   "link": "breakglass",
   "title": null,
-  "autoCrawledTitle": "Secure access practices for administrators in Azure AD - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Secure access practices for administrators in Microsoft Entra ID - Microsoft Entra ID | Microsoft Learn",
   "keywords": null,
   "category": "microsoft-365",
   "url": "https://learn.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure",
-  "dateAdded": "2023-05-20T08:28:55Z"
+  "dateAdded": "2023-05-20T08:28:55Z",
+  "dateChecked": "2026-08-24T04:13:37.635Z"
 }

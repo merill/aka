@@ -1,9 +1,10 @@
 {
   "link": "WindowsEnrollmentGuide",
   "title": null,
-  "autoCrawledTitle": "Windows device enrollment guide for  Microsoft Intune | Microsoft Learn",
+  "autoCrawledTitle": "Windows device enrollment guide for Microsoft Intune - Microsoft Intune | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/mem/intune/fundamentals/deployment-guide-enrollment-windows",
-  "dateAdded": "2023-07-17T10:05:11Z"
+  "url": "https://learn.microsoft.com/intune/device-enrollment/windows/guide",
+  "dateAdded": "2023-07-17T10:05:11Z",
+  "dateChecked": "2026-08-24T04:14:36.685Z"
 }

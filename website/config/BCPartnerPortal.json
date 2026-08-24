@@ -1,9 +1,10 @@
 {
   "link": "BCPartnerPortal",
   "title": "",
-  "autoCrawledTitle": "Dynamics 365 Partner Portal",
+  "autoCrawledTitle": "Business Central",
   "keywords": "",
   "category": "dynamics-365",
-  "url": "https://dynamicspartners.transform.microsoft.com/products/dynamics-365-business-central?tab=drive-readiness",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "url": "https://microsoftpartners.microsoft.com/csp/bc-overview/",
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:13:17.970Z"
 }

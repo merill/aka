@@ -1,9 +1,10 @@
 {
   "link": "deletenic",
   "title": null,
-  "autoCrawledTitle": "Create, change, or delete an Azure network interface | Microsoft Learn",
+  "autoCrawledTitle": "Create, Change, or Delete Azure Network Interfaces | Microsoft Learn",
   "keywords": null,
   "category": "azure",
   "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface#delete-a-network-interface",
-  "dateAdded": "2023-07-03T17:13:48Z"
+  "dateAdded": "2023-07-03T17:13:48Z",
+  "dateChecked": "2026-08-24T04:13:42.781Z"
 }

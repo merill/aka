@@ -4,6 +4,7 @@
   "autoCrawledTitle": "",
   "keywords": null,
   "category": null,
-  "url": "https://automlcesdkdataresources.blob.core.windows.net/datasets/daily-bike-share.csv",
-  "dateAdded": "2023-06-13T10:25:43Z"
+  "url": "https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/ml/bike-data.zip",
+  "dateAdded": "2023-06-13T10:25:43Z",
+  "dateChecked": "2026-08-24T04:13:37.042Z"
 }

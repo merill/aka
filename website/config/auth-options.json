@@ -1,9 +1,10 @@
 {
   "link": "auth-options",
   "title": null,
-  "autoCrawledTitle": "Authentication for Azure AD hybrid identity solutions - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Authentication for Microsoft Entra hybrid identity solutions - Microsoft Entra ID | Microsoft Learn",
   "keywords": null,
   "category": "entra",
-  "url": "https://learn.microsoft.com/azure/active-directory/hybrid/choose-ad-authn",
-  "dateAdded": "2023-05-20T07:15:22Z"
+  "url": "https://learn.microsoft.com/entra/identity/hybrid/connect/choose-ad-authn",
+  "dateAdded": "2023-05-20T07:15:22Z",
+  "dateChecked": "2026-08-24T04:13:29.159Z"
 }

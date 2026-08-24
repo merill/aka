@@ -1,9 +1,10 @@
 {
   "link": "build",
   "title": null,
-  "autoCrawledTitle": "Microsoft Build",
+  "autoCrawledTitle": "Your home for Microsoft Build",
   "keywords": null,
   "category": null,
-  "url": "https://build.microsoft.com/",
-  "dateAdded": "2023-05-29T13:56:00Z"
+  "url": "https://build.microsoft.com",
+  "dateAdded": "2023-05-29T13:56:00Z",
+  "dateChecked": "2026-08-24T04:13:38.081Z"
 }

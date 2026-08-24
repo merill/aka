@@ -1,9 +1,10 @@
 {
   "link": "aadv2",
   "title": null,
-  "autoCrawledTitle": "Microsoft identity platform documentation - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Microsoft identity platform documentation - Microsoft identity platform | Microsoft Learn",
   "keywords": null,
   "category": "entra",
   "url": "https://learn.microsoft.com/azure/active-directory/develop/",
-  "dateAdded": "2023-08-14T17:56:00Z"
+  "dateAdded": "2023-08-14T17:56:00Z",
+  "dateChecked": "2026-08-24T04:13:21.860Z"
 }

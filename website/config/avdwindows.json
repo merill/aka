@@ -1,9 +1,10 @@
 {
   "link": "AVDWindows",
   "title": null,
-  "autoCrawledTitle": "Use the Remote Desktop client to connect to Azure Virtual Desktop - Remote Desktop client | Microsoft Learn",
+  "autoCrawledTitle": "Connect to Windows devices and apps with Windows App - Windows App | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/en-us/previous-versions/remote-desktop-client/connect-windows-cloud-services?tabs=windows-msrdc-msi",
-  "dateAdded": "2025-07-03T07:56:51Z"
+  "url": "https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps?tabs=windows-avd%2Cwindows-w365%2Cwindows-devbox%2Cmacos-rds%2Cmacos-pc&pivots=azure-virtual-desktop#prerequisites",
+  "dateAdded": "2025-07-03T07:56:51Z",
+  "dateChecked": "2026-08-24T04:13:30.359Z"
 }

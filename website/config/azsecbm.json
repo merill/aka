@@ -1,9 +1,10 @@
 {
   "link": "azsecbm",
   "title": null,
-  "autoCrawledTitle": "Overview of the Microsoft cloud security benchmark | Microsoft Learn",
+  "autoCrawledTitle": "Overview of the Microsoft cloud security benchmark v2 (preview) | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/azure/security/benchmarks/overview",
-  "dateAdded": "2023-07-18T14:21:33Z"
+  "dateAdded": "2023-07-18T14:21:33Z",
+  "dateChecked": "2026-08-24T04:13:32.566Z"
 }

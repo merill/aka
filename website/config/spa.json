@@ -1,9 +1,10 @@
 {
   "link": "SPA",
   "title": null,
-  "autoCrawledTitle": "Securing privileged access overview | Microsoft Learn",
+  "autoCrawledTitle": "Securing privileged access overview - Privileged access | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/security/compass/overview",
-  "dateAdded": "2023-05-10T09:51:58Z"
+  "url": "https://learn.microsoft.com/security/privileged-access-workstations/overview",
+  "dateAdded": "2023-05-10T09:51:58Z",
+  "dateChecked": "2026-08-24T04:14:30.430Z"
 }

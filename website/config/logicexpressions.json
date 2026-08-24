@@ -1,9 +1,10 @@
 {
   "link": "logicexpressions",
   "title": null,
-  "autoCrawledTitle": "Reference guide for expression functions - Azure Logic Apps | Microsoft Learn",
+  "autoCrawledTitle": "Reference for functions in workflow expressions - Azure Logic Apps | Microsoft Learn",
   "keywords": null,
   "category": "azure",
   "url": "https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference",
-  "dateAdded": "2024-03-30T14:18:14Z"
+  "dateAdded": "2024-03-30T14:18:14Z",
+  "dateChecked": "2026-08-24T04:13:56.061Z"
 }

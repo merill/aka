@@ -1,9 +1,10 @@
 {
   "link": "VMExtensionVMSnapshotLinuxTroubleshoot",
   "title": null,
-  "autoCrawledTitle": "Troubleshoot Agent and extension issues - Azure Backup | Microsoft Learn",
+  "autoCrawledTitle": "Troubleshoot Azure Backup failures caused by agent or extension issues - Azure Backup | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/backup/backup-azure-troubleshoot-vm-backup-fails-snapshot-timeout",
-  "dateAdded": "2024-02-16T19:53:05Z"
+  "dateAdded": "2024-02-16T19:53:05Z",
+  "dateChecked": "2026-08-24T04:14:34.855Z"
 }

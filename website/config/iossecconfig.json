@@ -1,9 +1,10 @@
 {
   "link": "iOSsecconfig",
   "title": null,
-  "autoCrawledTitle": "Step 5 – Enroll devices in Microsoft Intune | Microsoft Learn",
+  "autoCrawledTitle": "Protection and configuration levels overview in Microsoft Intune - Microsoft Intune | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/mem/intune/enrollment/ios-ipados-configuration-framework",
-  "dateAdded": "2023-11-21T09:34:18Z"
+  "url": "https://learn.microsoft.com/intune/intune-service/fundamentals/protection-configuration-levels",
+  "dateAdded": "2023-11-21T09:34:18Z",
+  "dateChecked": "2026-08-24T04:13:54.601Z"
 }

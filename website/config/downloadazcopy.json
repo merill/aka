@@ -1,9 +1,10 @@
 {
   "link": "downloadazcopy",
   "title": null,
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Copy or move data to Azure Storage by using AzCopy v10 | Microsoft Learn",
   "keywords": null,
   "category": "azure",
-  "url": "https://azcopy.azureedge.net/azcopy-8-1-0/MicrosoftAzureStorageAzCopy_netcore_x64.msi",
-  "dateAdded": "2023-06-18T14:17:41Z"
+  "url": "https://learn.microsoft.com/azure/storage/common/storage-use-azcopy-v10#download-azcopy",
+  "dateAdded": "2023-06-18T14:17:41Z",
+  "dateChecked": "2026-08-24T04:13:44.638Z"
 }

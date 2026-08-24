@@ -1,9 +1,10 @@
 {
   "link": "EmailForB2B",
   "title": null,
-  "autoCrawledTitle": "One-time passcode authentication for B2B guest users - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Email one-time passcode authentication - Microsoft Entra External ID | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/azure/active-directory/external-identities/one-time-passcode",
-  "dateAdded": "2023-08-10T12:39:13Z"
+  "dateAdded": "2023-08-10T12:39:13Z",
+  "dateChecked": "2026-08-24T04:13:45.765Z"
 }

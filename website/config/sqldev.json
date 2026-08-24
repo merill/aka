@@ -1,9 +1,10 @@
 {
   "link": "sqldev",
   "title": null,
-  "autoCrawledTitle": "SQL Server - Get Started",
+  "autoCrawledTitle": "SQL Developer Tools | Microsoft",
   "keywords": null,
   "category": null,
-  "url": "https://www.microsoft.com/en-us/sql-server/developer-get-started",
-  "dateAdded": "2023-07-18T20:04:02Z"
+  "url": "https://www.microsoft.com/en-us/sql-server/developer-tools",
+  "dateAdded": "2023-07-18T20:04:02Z",
+  "dateChecked": "2026-08-24T04:14:30.744Z"
 }

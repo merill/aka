@@ -1,9 +1,10 @@
 {
   "link": "BCCountries",
   "title": "",
-  "autoCrawledTitle": "Country/region availability and supported languages - Business Central | Microsoft Learn",
+  "autoCrawledTitle": "Country/Regional Availability and Supported Languages - Business Central | Microsoft Learn",
   "keywords": "",
   "category": "dynamics-365",
-  "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "url": "https://learn.microsoft.com/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations",
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:13:16.763Z"
 }

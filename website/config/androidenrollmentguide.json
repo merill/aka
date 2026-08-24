@@ -1,9 +1,10 @@
 {
   "link": "AndroidEnrollmentGuide",
   "title": null,
-  "autoCrawledTitle": "Android device enrollment guide for Microsoft Intune | Microsoft Learn",
+  "autoCrawledTitle": "Android device enrollment guide for Microsoft Intune - Microsoft Intune | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/mem/intune/fundamentals/deployment-guide-enrollment-android",
-  "dateAdded": "2023-05-16T08:44:05Z"
+  "url": "https://learn.microsoft.com/intune/device-enrollment/android/guide",
+  "dateAdded": "2023-05-16T08:44:05Z",
+  "dateChecked": "2026-08-24T04:13:27.833Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "learn-fabric",
   "title": null,
-  "autoCrawledTitle": "Get started with Microsoft Fabric - Training | Microsoft Learn",
+  "autoCrawledTitle": "Browse all training - Training | Microsoft Learn",
   "keywords": null,
   "category": "training",
-  "url": "https://learn.microsoft.com/training/paths/get-started-fabric/",
-  "dateAdded": "2023-06-20T16:16:11Z"
+  "url": "https://learn.microsoft.com/en-us/training/browse/?products=fabric&resource_type=module",
+  "dateAdded": "2023-06-20T16:16:11Z",
+  "dateChecked": "2026-08-24T04:13:55.515Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "alz/monitor/repo",
   "title": null,
-  "autoCrawledTitle": "GitHub - Azure/alz-monitor: Repository for collaboration on monitor baselines for ALZ",
+  "autoCrawledTitle": "The Azure Landing Zones (ALZ) Pattern :: Azure Monitor Baseline Alerts",
   "keywords": null,
   "category": null,
-  "url": "https://github.com/Azure/alz-monitor",
-  "dateAdded": "2023-07-12T22:02:08Z"
+  "url": "https://aka.ms/amba/alz",
+  "dateAdded": "2023-07-12T22:02:08Z",
+  "dateChecked": "2026-08-24T04:13:26.732Z"
 }

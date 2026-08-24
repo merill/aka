@@ -1,9 +1,10 @@
 {
   "link": "AuthStrengthB2BXtap",
   "title": null,
-  "autoCrawledTitle": "Configure B2B collaboration cross-tenant access - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Cross-tenant access settings - Microsoft Entra External ID | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/active-directory/external-identities/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims",
-  "dateAdded": "2023-08-09T07:44:20Z"
+  "dateAdded": "2023-08-09T07:44:20Z",
+  "dateChecked": "2026-08-24T04:13:29.331Z"
 }

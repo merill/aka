@@ -1,9 +1,10 @@
 {
   "link": "RiskBasedConsent",
   "title": null,
-  "autoCrawledTitle": "Configure how users consent to applications - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Configure How Users Consent to Applications - Microsoft Entra ID | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/azure/active-directory/manage-apps/configure-user-consent#risk-based-step-up-consent",
-  "dateAdded": "2023-05-12T15:43:30+10:00"
+  "dateAdded": "2023-05-12T15:43:30+10:00",
+  "dateChecked": "2026-08-24T04:14:25.407Z"
 }

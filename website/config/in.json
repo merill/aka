@@ -4,6 +4,7 @@
   "autoCrawledTitle": "Microsoft Intune admin center",
   "keywords": "",
   "category": "intune",
-  "url": "https://intune.microsoft.com/",
-  "dateAdded": "2023-05-07T14:16:29+10:00"
+  "url": "https://intune.microsoft.com",
+  "dateAdded": "2023-05-07T14:16:29+10:00",
+  "dateChecked": "2026-08-24T04:13:53.194Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "CLI_refstatus",
   "title": null,
-  "autoCrawledTitle": "Reference types, status and support levels – Azure CLI | Microsoft Learn",
+  "autoCrawledTitle": "Overview - Azure CLI terminology and support levels | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/cli/azure/reference-types-and-status",
-  "dateAdded": "2023-05-12T15:43:30+10:00"
+  "dateAdded": "2023-05-12T15:43:30+10:00",
+  "dateChecked": "2026-08-24T04:13:39.602Z"
 }

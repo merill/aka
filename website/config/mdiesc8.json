@@ -1,9 +1,10 @@
 {
   "link": "MDIesc8",
   "title": null,
-  "autoCrawledTitle": "Enforce encryption for RPC certificate enrollment interface (ESC8) - Microsoft Defender for Identity | Microsoft Learn",
+  "autoCrawledTitle": "Certificates security posture assessment in Microsoft Defender for Identity - Microsoft Defender for Identity | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/defender-for-identity/security-assessment-enforce-encryption-rpc",
-  "dateAdded": "2024-02-27T17:03:28Z"
+  "dateAdded": "2024-02-27T17:03:28Z",
+  "dateChecked": "2026-08-24T04:14:03.795Z"
 }

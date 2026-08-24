@@ -1,9 +1,10 @@
 {
   "link": "BCOfficeHoursRecordings",
   "title": "",
-  "autoCrawledTitle": "Dynamics 365 Partner Portal",
+  "autoCrawledTitle": "Resource library",
   "keywords": "",
   "category": "dynamics-365",
-  "url": "https://dynamicspartners.transform.microsoft.com/download/protected?assetname=protectedassets/On-demand%20recordings%20of%20OHC.pdf&download=1&protected=1",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "url": "https://microsoftpartners.microsoft.com/abs/resource-library/?query=office+hours&product=dynamics+365+business+central",
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:13:17.846Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "winui",
   "title": null,
-  "autoCrawledTitle": "WinUI",
+  "autoCrawledTitle": "WinUI 3 - Windows apps | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://microsoft.github.io/microsoft-ui-xaml/",
-  "dateAdded": "2023-05-09T10:14:11Z"
+  "url": "https://learn.microsoft.com/en-us/windows/apps/winui/winui3/",
+  "dateAdded": "2023-05-09T10:14:11Z",
+  "dateChecked": "2026-08-24T04:14:36.864Z"
 }

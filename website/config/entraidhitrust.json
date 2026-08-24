@@ -1,9 +1,10 @@
 {
   "link": "entraidhitrust",
   "title": null,
-  "autoCrawledTitle": "Microsoft Entra ID configuration recommendations for HITRUST controls - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Microsoft Entra configuration recommendations for HITRUST controls - Microsoft Entra | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/entra/standards/hipaa-hitrust-controls",
-  "dateAdded": "2024-02-07T00:34:49Z"
+  "dateAdded": "2024-02-07T00:34:49Z",
+  "dateChecked": "2026-08-24T04:13:46.749Z"
 }

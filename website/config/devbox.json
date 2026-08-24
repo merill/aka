@@ -1,9 +1,10 @@
 {
   "link": "devbox",
   "title": null,
-  "autoCrawledTitle": "Microsoft Azure",
+  "autoCrawledTitle": "Microsoft Dev Box | Microsoft Azure",
   "keywords": null,
   "category": "azure",
-  "url": "https://portal.azure.com/#view/Microsoft_Azure_DevCenter/DevCenterMenuBlade/~/devcenters",
-  "dateAdded": "2023-05-12T15:50:40Z"
+  "url": "https://azure.microsoft.com/products/dev-box/",
+  "dateAdded": "2023-05-12T15:50:40Z",
+  "dateChecked": "2026-08-24T04:13:43.345Z"
 }

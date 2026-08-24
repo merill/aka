@@ -1,9 +1,10 @@
 {
   "link": "UpdateLinuxAgent",
   "title": null,
-  "autoCrawledTitle": "Update the Azure Linux Agent from GitHub - Azure Virtual Machines | Microsoft Learn",
+  "autoCrawledTitle": "How to update the Azure Linux Agent on a VM - Azure Virtual Machines | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/azure/virtual-machines/extensions/update-linux-agent",
-  "dateAdded": "2023-09-29T12:59:01Z"
+  "dateAdded": "2023-09-29T12:59:01Z",
+  "dateChecked": "2026-08-24T04:14:34.437Z"
 }

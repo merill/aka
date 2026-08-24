@@ -1,9 +1,10 @@
 {
   "link": "BCCustomerStories",
   "title": "",
-  "autoCrawledTitle": "Microsoft Customer Stories",
+  "autoCrawledTitle": "Search Customer Success Stories | Microsoft",
   "keywords": "",
   "category": "dynamics-365",
-  "url": "https://customers.microsoft.com/en-us/search?sq=%22Dynamics%20365%20Business%20Central%22&ff=story_product_categories%26%3EDynamics%20365&p=0&so=story_publish_date%20desc",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "url": "https://www.microsoft.com/en-gb/customers/search?filters=product%3Adynamics-365%2Fdynamics-365-business-central&ff=story_product_categories%26%3EDynamics+365&p=0&so=story_publish_date+desc",
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:13:16.759Z"
 }

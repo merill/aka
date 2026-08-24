@@ -1,9 +1,10 @@
 {
   "link": "DARTjobs",
   "title": null,
-  "autoCrawledTitle": "Search Jobs | Microsoft Careers",
+  "autoCrawledTitle": "Careers at Microsoft",
   "keywords": null,
   "category": null,
-  "url": "https://jobs.careers.microsoft.com/global/en/search?q=dart",
-  "dateAdded": "2024-05-05T09:02:36Z"
+  "url": "https://apply.careers.microsoft.com/careers?query=dart",
+  "dateAdded": "2024-05-05T09:02:36Z",
+  "dateChecked": "2026-08-24T04:13:42.349Z"
 }

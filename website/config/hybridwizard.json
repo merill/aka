@@ -4,6 +4,7 @@
   "autoCrawledTitle": "",
   "keywords": null,
   "category": "microsoft-365",
-  "url": "https://shcwreleaseprod.blob.core.windows.net/shcw/Microsoft.Online.CSE.Hybrid.Client.application",
-  "dateAdded": "2023-05-09T22:27:32Z"
+  "url": "https://hybridconfigwizard.azurewebsites.net/ClickOnce/Microsoft.Online.CSE.Hybrid.Client.application",
+  "dateAdded": "2023-05-09T22:27:32Z",
+  "dateChecked": "2026-08-24T04:13:52.670Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "mfasetup",
   "title": "Alternative for My Security",
-  "autoCrawledTitle": "Sign in to your account",
+  "autoCrawledTitle": "My Sign-Ins",
   "keywords": "",
   "category": "entra",
-  "url": "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1",
-  "dateAdded": "2023-05-07T14:16:29+10:00"
+  "url": "https://mysignins.microsoft.com/security-info",
+  "dateAdded": "2023-05-07T14:16:29+10:00",
+  "dateChecked": "2026-08-24T04:14:04.732Z"
 }

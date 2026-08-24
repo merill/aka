@@ -1,9 +1,10 @@
 {
   "link": "avm",
   "title": null,
-  "autoCrawledTitle": "Azure Verified Modules",
+  "autoCrawledTitle": "Azure Verified Modules | AVM",
   "keywords": null,
   "category": "azure",
   "url": "https://azure.github.io/Azure-Verified-Modules/",
-  "dateAdded": "2024-04-21T19:48:52Z"
+  "dateAdded": "2024-04-21T19:48:52Z",
+  "dateChecked": "2026-08-24T04:13:30.362Z"
 }

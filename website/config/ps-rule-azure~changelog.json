@@ -1,9 +1,10 @@
 {
   "link": "ps-rule-azure/changelog",
   "title": null,
-  "autoCrawledTitle": "v1 - PSRule for Azure",
+  "autoCrawledTitle": "Change log - PSRule for Azure",
   "keywords": null,
   "category": "azure",
-  "url": "https://azure.github.io/PSRule.Rules.Azure/CHANGELOG-v1/",
-  "dateAdded": "2024-10-10T16:56:22Z"
+  "url": "https://azure.github.io/PSRule.Rules.Azure/changelog/",
+  "dateAdded": "2024-10-10T16:56:22Z",
+  "dateChecked": "2026-08-24T04:14:22.111Z"
 }

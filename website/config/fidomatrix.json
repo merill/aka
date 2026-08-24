@@ -1,9 +1,10 @@
 {
   "link": "FIDOMatrix",
   "title": null,
-  "autoCrawledTitle": "Browser support of FIDO2 passwordless authentication - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Passkey (FIDO2) authentication matrix with Microsoft Entra ID - Microsoft Entra ID | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/active-directory/authentication/fido2-compatibility",
-  "dateAdded": "2023-07-17T23:10:17Z"
+  "dateAdded": "2023-07-17T23:10:17Z",
+  "dateChecked": "2026-08-24T04:13:48.373Z"
 }

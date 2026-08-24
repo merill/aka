@@ -1,9 +1,10 @@
 {
   "link": "deploySPA",
   "title": null,
-  "autoCrawledTitle": "Deploying a privileged access solution | Microsoft Learn",
+  "autoCrawledTitle": "Deploying a privileged access solution - Privileged access | Microsoft Learn",
   "keywords": null,
   "category": null,
-  "url": "https://learn.microsoft.com/security/compass/howto-azure-managed-workstation",
-  "dateAdded": "2023-05-10T09:56:26Z"
+  "url": "https://learn.microsoft.com/security/privileged-access-workstations/privileged-access-deployment",
+  "dateAdded": "2023-05-10T09:56:26Z",
+  "dateChecked": "2026-08-24T04:13:42.990Z"
 }

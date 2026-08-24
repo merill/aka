@@ -1,9 +1,10 @@
 {
   "link": "zero-trust-m365-defender",
   "title": null,
-  "autoCrawledTitle": "Evaluate and pilot Microsoft 365 Defender, an XDR solution | Microsoft Learn",
+  "autoCrawledTitle": "How do I pilot and deploy Microsoft Defender? - Microsoft Defender XDR | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/microsoft-365/security/defender/eval-overview",
-  "dateAdded": "2023-06-13T17:57:03Z"
+  "dateAdded": "2023-06-13T17:57:03Z",
+  "dateChecked": "2026-08-24T04:14:37.815Z"
 }

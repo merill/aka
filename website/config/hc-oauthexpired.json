@@ -1,9 +1,10 @@
 {
   "link": "HC-OAuthExpired",
   "title": null,
-  "autoCrawledTitle": "Can't access OWA/EAC with expired OAuth certificate - Exchange | Microsoft Learn",
+  "autoCrawledTitle": "Can't access Outlook on the web or the EAC with expired OAuth certificate - Exchange | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/exchange/troubleshoot/administration/cannot-access-owa-or-ecp-if-oauth-expired",
-  "dateAdded": "2023-06-15T12:33:47Z"
+  "dateAdded": "2023-06-15T12:33:47Z",
+  "dateChecked": "2026-08-24T04:13:51.678Z"
 }

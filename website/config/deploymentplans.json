@@ -1,9 +1,10 @@
 {
   "link": "DeploymentPlans",
   "title": null,
-  "autoCrawledTitle": "Azure Active Directory deployment plans - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Microsoft Entra deployment plans - Microsoft Entra | Microsoft Learn",
   "keywords": null,
   "category": "entra",
-  "url": "https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-deployment-plans",
-  "dateAdded": "2023-05-10T05:32:37Z"
+  "url": "https://learn.microsoft.com/entra/architecture/deployment-plans",
+  "dateAdded": "2023-05-10T05:32:37Z",
+  "dateChecked": "2026-08-24T04:13:42.812Z"
 }

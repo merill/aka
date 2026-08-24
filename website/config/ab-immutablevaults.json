@@ -1,9 +1,10 @@
 {
   "link": "AB-ImmutableVaults",
   "title": null,
-  "autoCrawledTitle": "Concept of Immutable vault for Azure Backup - Azure Backup | Microsoft Learn",
+  "autoCrawledTitle": "Concept of Immutable Vault for Azure Backup - Azure Backup | Microsoft Learn",
   "keywords": null,
   "category": "azure",
   "url": "https://learn.microsoft.com/azure/backup/backup-azure-immutable-vault-concept",
-  "dateAdded": "2023-05-10T06:44:02Z"
+  "dateAdded": "2023-05-10T06:44:02Z",
+  "dateChecked": "2026-08-24T04:13:22.032Z"
 }

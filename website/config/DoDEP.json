@@ -4,6 +4,7 @@
   "autoCrawledTitle": "Microsoft Intune Government admin center",
   "keywords": "",
   "category": "microsoft-365",
-  "url": "https://endpoint.microsoft.us/",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "url": "https://endpoint.microsoft.us",
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:13:19.356Z"
 }

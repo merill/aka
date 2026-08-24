@@ -1,9 +1,10 @@
 {
   "link": "alz/tf/wiki",
   "title": "Azure Landing Zones - Terraform module wiki",
-  "autoCrawledTitle": "Home · Azure/terraform-azurerm-caf-enterprise-scale Wiki · GitHub",
+  "autoCrawledTitle": "Terraform | Azure landing zone Documentation",
   "keywords": "",
   "category": "azure",
-  "url": "https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "url": "https://azure.github.io/Azure-Landing-Zones/terraform/",
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:13:27.319Z"
 }

@@ -1,9 +1,10 @@
 {
   "link": "BCActionbar",
   "title": "",
-  "autoCrawledTitle": "Modern Action Bar | Microsoft Learn",
+  "autoCrawledTitle": "Action bar improvements - Business Central | Microsoft Learn",
   "keywords": "",
   "category": "dynamics-365",
-  "url": "https://learn.microsoft.com/dynamics365-release-plan/2022wave2/smb/dynamics365-business-central/modern-action-bar",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "url": "https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-action-bar-improvements",
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-08-24T04:13:16.278Z"
 }

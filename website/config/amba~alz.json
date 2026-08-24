@@ -1,9 +1,10 @@
 {
   "link": "amba/alz",
   "title": null,
-  "autoCrawledTitle": "Azure Landing Zones | Azure Monitor Baseline Alerts",
+  "autoCrawledTitle": "The Azure Landing Zones (ALZ) Pattern :: Azure Monitor Baseline Alerts",
   "keywords": null,
   "category": null,
-  "url": "https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/",
-  "dateAdded": "2024-06-13T21:01:12Z"
+  "url": "https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/Overview/ALZ-Pattern/",
+  "dateAdded": "2024-06-13T21:01:12Z",
+  "dateChecked": "2026-08-24T04:13:27.761Z"
 }

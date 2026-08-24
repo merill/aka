@@ -1,9 +1,10 @@
 {
   "link": "YourPC",
   "title": null,
-  "autoCrawledTitle": "Phone Link HVC",
+  "autoCrawledTitle": "Phone Link pairing",
   "keywords": null,
   "category": null,
-  "url": "https://plhvc.microsoft.com/v2/?addons=deeplink-navigation&targetUrl=https://aka.ms/yourpc-a11y-continue-link",
-  "dateAdded": "2023-05-12T15:43:30+10:00"
+  "url": "https://phonelink.microsoft.com/deeplink?targetUrl=https://aka.ms/yourpc-a11y-continue-link",
+  "dateAdded": "2023-05-12T15:43:30+10:00",
+  "dateChecked": "2026-08-24T04:14:37.403Z"
 }

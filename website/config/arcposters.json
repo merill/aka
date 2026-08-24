@@ -1,9 +1,10 @@
 {
   "link": "ArcPosters",
   "title": null,
-  "autoCrawledTitle": "Error",
+  "autoCrawledTitle": "Azure Arc Jumpstart",
   "keywords": null,
   "category": null,
   "url": "https://azurearcjumpstart.com/jumpstart_assets",
-  "dateAdded": "2024-10-22T20:07:43Z"
+  "dateAdded": "2024-10-22T20:07:43Z",
+  "dateChecked": "2026-08-24T04:13:28.439Z"
 }

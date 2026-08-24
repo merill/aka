@@ -1,9 +1,10 @@
 {
   "link": "azurediscord",
   "title": null,
-  "autoCrawledTitle": "Discord",
+  "autoCrawledTitle": "Microsoft Azure",
   "keywords": null,
   "category": null,
-  "url": "https://discord.com/invite/FTHWhKbdYn",
-  "dateAdded": "2023-05-30T11:58:29Z"
+  "url": "https://discord.gg/FTHWhKbdYn",
+  "dateAdded": "2023-05-30T11:58:29Z",
+  "dateChecked": "2026-08-24T04:13:33.408Z"
 }

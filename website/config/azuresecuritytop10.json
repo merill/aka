@@ -1,9 +1,10 @@
 {
   "link": "azuresecuritytop10",
   "title": null,
-  "autoCrawledTitle": "Azure security best practices - Cloud Adoption Framework | Microsoft Learn",
+  "autoCrawledTitle": "Secure Overview - Cloud Adoption Framework | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/azure/cloud-adoption-framework/secure/security-top-10",
-  "dateAdded": "2023-05-10T20:58:26+10:00"
+  "dateAdded": "2023-05-10T20:58:26+10:00",
+  "dateChecked": "2026-08-24T04:13:33.907Z"
 }

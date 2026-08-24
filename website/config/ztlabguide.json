@@ -1,9 +1,10 @@
 {
   "link": "ztlabguide",
   "title": null,
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "🖥️ Lab Guide Overview | Zero Trust Lab Guide",
   "keywords": null,
   "category": "defender",
-  "url": "https://ztlabguide.com/",
-  "dateAdded": "2023-05-20T07:05:48Z"
+  "url": "https://microsoft.github.io/cloudlab/",
+  "dateAdded": "2023-05-20T07:05:48Z",
+  "dateChecked": "2026-08-24T04:14:38.315Z"
 }

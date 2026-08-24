@@ -1,9 +1,10 @@
 {
   "link": "aaddatawhitepaper",
   "title": null,
-  "autoCrawledTitle": "Azure AD and data residency - Microsoft Entra | Microsoft Learn",
+  "autoCrawledTitle": "Microsoft Entra ID and data residency - Microsoft Entra | Microsoft Learn",
   "keywords": null,
   "category": "entra",
   "url": "https://learn.microsoft.com/azure/active-directory/fundamentals/azure-ad-data-residency",
-  "dateAdded": "2023-05-10T10:30:41Z"
+  "dateAdded": "2023-05-10T10:30:41Z",
+  "dateChecked": "2026-08-24T04:13:21.511Z"
 }

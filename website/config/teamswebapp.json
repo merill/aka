@@ -1,9 +1,10 @@
 {
   "link": "teamswebapp",
   "title": null,
-  "autoCrawledTitle": "Checking your credentials...",
+  "autoCrawledTitle": "Unsupported Browser | Microsoft Teams",
   "keywords": null,
   "category": null,
   "url": "https://teams.microsoft.com/?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47",
-  "dateAdded": "2023-05-10T18:26:06+10:00"
+  "dateAdded": "2023-05-10T18:26:06+10:00",
+  "dateChecked": "2026-08-24T04:14:32.891Z"
 }

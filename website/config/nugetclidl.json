@@ -5,5 +5,7 @@
   "keywords": null,
   "category": null,
   "url": "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe",
-  "dateAdded": "2024-03-30T14:24:24Z"
+  "dateAdded": "2024-03-30T14:24:24Z",
+  "status": "dead",
+  "dateChecked": "2026-08-24T04:14:14.234Z"
 }

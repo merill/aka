@@ -1,9 +1,10 @@
 {
   "link": "UnknownBackendHealth",
   "title": null,
-  "autoCrawledTitle": "Troubleshoot backend health issues in Azure Application Gateway | Microsoft Learn",
+  "autoCrawledTitle": "Troubleshoot backend health issues in Azure Application Gateway - Azure | Microsoft Learn",
   "keywords": null,
   "category": "azure",
   "url": "https://learn.microsoft.com/azure/application-gateway/application-gateway-backend-health-troubleshooting#backend-health-status-unknown",
-  "dateAdded": "2023-05-12T15:43:30+10:00"
+  "dateAdded": "2023-05-12T15:43:30+10:00",
+  "dateChecked": "2026-08-24T04:14:34.178Z"
 }

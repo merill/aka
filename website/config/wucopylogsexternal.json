@@ -1,9 +1,10 @@
 {
   "link": "WUCopyLogsExternal",
   "title": null,
-  "autoCrawledTitle": "Windows Update Log Collection Tool",
+  "autoCrawledTitle": "Windows Update Log Collector",
   "keywords": null,
   "category": null,
-  "url": "https://logviz.blob.core.windows.net/$web/index.html",
-  "dateAdded": "2023-07-17T16:16:54Z"
+  "url": "https://sflogejbjsizl5etl4.z5.web.core.windows.net",
+  "dateAdded": "2023-07-17T16:16:54Z",
+  "dateChecked": "2026-08-24T04:14:37.032Z"
 }

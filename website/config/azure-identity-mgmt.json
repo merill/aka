@@ -1,9 +1,10 @@
 {
   "link": "Azure-Identity-Mgmt",
   "title": null,
-  "autoCrawledTitle": "Azure identity & access security best practices | Microsoft Learn",
+  "autoCrawledTitle": "Azure identity management and access control best practices | Microsoft Learn",
   "keywords": null,
   "category": null,
   "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json",
-  "dateAdded": "2023-06-20T16:53:15Z"
+  "dateAdded": "2023-06-20T16:53:15Z",
+  "dateChecked": "2026-08-24T04:13:32.784Z"
 }

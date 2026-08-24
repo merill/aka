@@ -4,6 +4,7 @@
   "autoCrawledTitle": "Latest updates and version history for SQL Server",
   "keywords": null,
   "category": "sql-server",
-  "url": "https://learn.microsoft.com/en-us/troubleshoot/sql/releases/download-and-install-latest-updates",
-  "dateAdded": "2024-07-22T11:21:35+01:00"
+  "url": "https://download.microsoft.com/download/d/3/e/d3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6/SQLServerBuilds.xlsx",
+  "dateAdded": "2024-07-22T11:21:35+01:00",
+  "dateChecked": "2026-08-24T04:14:31.105Z"
 }

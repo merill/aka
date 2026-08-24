@@ -1,9 +1,10 @@
 {
   "link": "aadds",
   "title": null,
-  "autoCrawledTitle": "Overview of Azure Active Directory Domain Services | Microsoft Learn",
+  "autoCrawledTitle": "Overview of Microsoft Entra Domain Services - Microsoft Entra ID | Microsoft Learn",
   "keywords": null,
   "category": "entra",
   "url": "https://learn.microsoft.com/azure/active-directory-domain-services/overview",
-  "dateAdded": "2023-05-10T18:26:06+10:00"
+  "dateAdded": "2023-05-10T18:26:06+10:00",
+  "dateChecked": "2026-08-24T04:13:21.708Z"
 }

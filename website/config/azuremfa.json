@@ -1,9 +1,10 @@
 {
   "link": "AzureMFA",
   "title": null,
-  "autoCrawledTitle": "",
+  "autoCrawledTitle": "Export-MsIdAzureMfaReport | MSIdentityTools",
   "keywords": null,
   "category": "entra",
   "url": "https://azuread.github.io/MSIdentityTools/commands/Export-MsIdAzureMfaReport/",
-  "dateAdded": "2024-05-26T08:42:16Z"
+  "dateAdded": "2024-05-26T08:42:16Z",
+  "dateChecked": "2026-08-24T04:13:33.667Z"
 }

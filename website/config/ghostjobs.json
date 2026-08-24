@@ -1,9 +1,10 @@
 {
   "link": "GhostJobs",
   "title": null,
-  "autoCrawledTitle": "Search Jobs | Microsoft Careers",
+  "autoCrawledTitle": "Careers at Microsoft",
   "keywords": null,
   "category": null,
-  "url": "https://jobs.careers.microsoft.com/global/en/search?q=GHOST&l=en_us&pg=1&pgSz=20&o=Relevance&flt=true",
-  "dateAdded": "2024-03-19T11:40:02Z"
+  "url": "https://apply.careers.microsoft.com/careers?query=%22Global+Hunting%2C+Oversight%2C+and+Strategic+Triage%22&start=0&pid=1970393556657777&sort_by=relevance",
+  "dateAdded": "2024-03-19T11:40:02Z",
+  "dateChecked": "2026-08-24T04:13:49.855Z"
 }

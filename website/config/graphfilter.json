@@ -1,9 +1,10 @@
 {
   "link": "graphfilter",
   "title": "",
-  "autoCrawledTitle": "Use the filter query parameter to filter a collection of objects - Microsoft Graph | Microsoft Learn",
+  "autoCrawledTitle": "Use the $filter query parameter to filter a collection of objects - Microsoft Graph | Microsoft Learn",
   "keywords": "",
   "category": "developer",
   "url": "https://learn.microsoft.com/graph/filter-query-parameter",
-  "dateAdded": "2023-05-07T15:54:01+10:00"
+  "dateAdded": "2023-05-07T15:54:01+10:00",
+  "dateChecked": "2026-08-24T04:13:50.285Z"
 }
