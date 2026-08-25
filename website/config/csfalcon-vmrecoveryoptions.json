@@ -1,9 +1,10 @@
 {
   "link": "CSfalcon-VMRecoveryOptions",
   "title": null,
-  "autoCrawledTitle": "Recovery options for Azure Virtual Machines (VM) affected by CrowdStrike Falcon agent - Microsoft Community Hub",
+  "autoCrawledTitle": "Recovery options for Azure Virtual Machines (VM) affected by CrowdStrike Falcon agent | Microsoft Community Hub",
   "keywords": null,
   "category": null,
   "url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/recovery-options-for-azure-virtual-machines-vm-affected-by/ba-p/4196798",
-  "dateAdded": "2024-07-20T10:16:30Z"
+  "dateAdded": "2024-07-20T10:16:30Z",
+  "dateChecked": "2026-08-25T04:08:09.759Z"
 }
