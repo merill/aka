@@ -1,9 +1,10 @@
 {
   "link": "SecurityLaws",
   "title": null,
-  "autoCrawledTitle": "The immutable laws of security | Microsoft Learn",
+  "autoCrawledTitle": "Tips for an effective security architecture | Microsoft Learn",
   "keywords": null,
   "category": "defender",
-  "url": "https://learn.microsoft.com/security/compass/ten-laws-of-security",
-  "dateAdded": "2023-05-21T08:14:58Z"
+  "url": "https://learn.microsoft.com/security/zero-trust/security-adoption-discipline-architecture-tips",
+  "dateAdded": "2023-05-21T08:14:58Z",
+  "dateChecked": "2026-09-04T08:08:52.388Z"
 }
