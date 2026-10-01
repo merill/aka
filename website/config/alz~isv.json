@@ -1,9 +1,10 @@
 {
   "link": "alz/isv",
   "title": "ISV considerations for Azure Landing Zones",
-  "autoCrawledTitle": "Independent software vendor (ISV) considerations for Azure landing zones - Cloud Adoption Framework | Microsoft Learn",
+  "autoCrawledTitle": "Independent software vendor (ISV) considerations for an Azure landing zone - Cloud Adoption Framework | Microsoft Learn",
   "keywords": "",
   "category": "azure",
   "url": "https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone",
-  "dateAdded": "2023-05-07T16:48:34+10:00"
+  "dateAdded": "2023-05-07T16:48:34+10:00",
+  "dateChecked": "2026-10-01T10:21:08.662Z"
 }
